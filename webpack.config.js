@@ -76,9 +76,6 @@ const commonConfig = merge([
         }
       ]
     },
-    devServer: {
-      historyApiFallback: true
-    },
     plugins: [
       new HtmlWebpackPlugin({
         template: `./src/index.html`
@@ -113,7 +110,8 @@ const developmentConfig = merge([
   {
     devServer: {
       overlay: true,
-      contentBase: PATHS.src
+      contentBase: PATHS.src,
+      historyApiFallback: true
     }
   },
   parts.loadCSS()

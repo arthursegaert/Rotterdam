@@ -10,7 +10,7 @@ import anime from "animejs";
       translateX: "100vw",
       duration: 1000,
       loop: false,
-      easing: "easeInOutQuad"
+      easing: "easeOutQuad"
     });
 
     const logFinished = () => {

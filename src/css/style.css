@@ -45,6 +45,11 @@ a {
   display: none;
 }
 
+h1 {
+  font-size: 10rem;
+  /* animation: 10s linear 0s infinite reverse running bounce; */
+}
+
 .kunstwerk-img {
   width: 50rem;
   height: 50rem;
@@ -55,4 +60,7 @@ a {
   background-color: blue;
   width: 100vw;
   height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  backface-visibility: hidden;
 }
