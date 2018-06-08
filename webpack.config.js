@@ -18,11 +18,12 @@ const commonConfig = merge([
     entry: [
       path.join(PATHS.src, `js/index.jsx`),
       path.join(PATHS.src, `js/script.js`),
-      path.join(PATHS.src, `css/style.css`),
+      path.join(PATHS.src, `css/style.css`)
     ],
     output: {
       path: PATHS.dist,
-      filename: `js/script.[hash].js`
+      filename: `js/script.[hash].js`,
+      publicPath: "/"
     },
     module: {
       rules: [
@@ -60,7 +61,7 @@ const commonConfig = merge([
                 },
                 gifsicle: {
                   interlaced: false
-                }/*,
+                } /*,
                 webp: {
                   quality: 75
                 }*/
@@ -71,9 +72,12 @@ const commonConfig = merge([
         {
           test: /\.(jsx?)$/,
           exclude: /node_modules/,
-          use: [`babel-loader`, `eslint-loader`],
+          use: [`babel-loader`, `eslint-loader`]
         }
       ]
+    },
+    devServer: {
+      historyApiFallback: true
     },
     plugins: [
       new HtmlWebpackPlugin({

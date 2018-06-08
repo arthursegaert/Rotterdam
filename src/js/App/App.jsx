@@ -1,48 +1,66 @@
 import React, { Component } from "react";
-import firebase from "firebase/app";
-import Rebase from "re-base";
-import database from "firebase/database";
+import { app, base } from "./config/fire.js";
+import { Route, Link } from "react-router-dom";
+import Login from "./components/Login.jsx";
+import Logout from "./components/Logout.jsx";
+import Kunstwerken from "./components/Kunstwerken.jsx";
 
 class App extends Component {
   constructor() {
     super();
-    this.state = { kunstwerken: [] };
-
-    // Firebase
-    const config = {
-      apiKey: "AIzaSyBqKXTejPfFjJH5_yaxapBijSnQo2VSMuk",
-      authDomain: "rotterdam-maiv.firebaseapp.com",
-      databaseURL: "https://rotterdam-maiv.firebaseio.com"
+    this.state = {
+      kunstwerken: [],
+      authenticated: false,
+      loading: true
     };
-    const app = firebase.initializeApp(config);
-    const db = firebase.database(app);
-    this.base = Rebase.createClass(db);
   }
 
   componentDidMount = () => {
-    this.base.syncState(`kunstwerken`, {
+    this.removeAuthListener = app.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.setState({
+          authenticated: true,
+          loading: false
+        });
+      } else {
+        this.setState({
+          authenticated: false,
+          loading: false
+        });
+      }
+    });
+    base.syncState(`kunstwerken`, {
       context: this,
       state: "kunstwerken"
     });
   };
 
+  //undo when someone leaves your application
+  componentWillUnmount = () => {
+    this.removeAuthListener();
+  };
+
   render() {
-    const { kunstwerken } = this.state;
+    const { kunstwerken, authenticated } = this.state;
+    if (this.state.loading) {
+      return <p>Loading...</p>;
+    }
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Different vision</h1>
         </header>
-        {kunstwerken.map(kunstwerk => {
-          return (
-            <div key={kunstwerk.id} className="kunstwerk">
-              <p>{kunstwerk.title}</p>
-              <p>{kunstwerk.author}</p>
-              <p>{kunstwerk.desc}</p>
-              <img alt={kunstwerk.desc} className="kunstwerk-img" src={kunstwerk.img} />
-            </div>
-          );
-        })}
+        {authenticated ? (
+          <div>
+            <p>Ingelogd</p>
+            <Link to="/logout">Logout</Link>
+            <Kunstwerken kunstwerken={kunstwerken} />
+          </div>
+        ) : (
+          <Link to="/login">Register / Login</Link>
+        )}
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/logout" component={Logout} />
       </div>
     );
   }
