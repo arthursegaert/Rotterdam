@@ -31,7 +31,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Different vision</h1>
         </header>
         {kunstwerken.map(kunstwerk => {
           return (
@@ -39,7 +39,7 @@ class App extends Component {
               <p>{kunstwerk.title}</p>
               <p>{kunstwerk.author}</p>
               <p>{kunstwerk.desc}</p>
-              <img className="kunstwerk-img" src={kunstwerk.img} />
+              <img alt={kunstwerk.desc} className="kunstwerk-img" src={kunstwerk.img} />
             </div>
           );
         })}
