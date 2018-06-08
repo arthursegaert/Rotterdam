@@ -3,3 +3,9 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.kunstwerk-img {
+  object-fit: cover;
+  width: 10rem;
+  height: 10rem;
+}
