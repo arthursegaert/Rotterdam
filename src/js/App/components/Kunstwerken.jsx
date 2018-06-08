@@ -14,6 +14,8 @@ class Kunstwerken extends Component {
                 alt={kunstwerk.desc}
                 className="kunstwerk-img"
                 src={kunstwerk.img}
+                width="1000"
+                height="1000"
               />
             </div>
           );

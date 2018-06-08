@@ -1,26 +1,24 @@
 @import 'reset';
 @import 'vars';
 @import 'animations';
-
 html {
   font-size: 62.5%;
   box-sizing: border-box;
   height: 100%;
 }
 
-*, *::before, *::after { /* stylelint-disable-line */
+*, *::before, *::after {
+  /* stylelint-disable-line */
   box-sizing: inherit;
 }
 
 .wf-active {
-
   & body {
     visibility: visible;
   }
 }
 
 .wf-inactive {
-
   & body {
     visibility: visible;
     font-family: Helvetica, Arial, sans-serif;
@@ -51,4 +49,10 @@ a {
   width: 50rem;
   height: 50rem;
   object-fit: cover;
+}
+
+.box {
+  background-color: blue;
+  width: 100vw;
+  height: 100vh;
 }
