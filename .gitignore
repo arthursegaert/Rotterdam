@@ -1,11 +1,11 @@
 # dependencies
-app/different-vision/node_modules
+/node_modules
 
 # testing
-app/different-vision/coverage
+/coverage
 
 # production
-app/different-vision/build
+/build
 
 # misc
 .DS_Store
@@ -18,3 +18,4 @@ app/different-vision/yarn.lock
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.DS_Store

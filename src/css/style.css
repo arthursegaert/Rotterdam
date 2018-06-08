@@ -1,0 +1,46 @@
+@import 'reset';
+@import 'vars';
+@import 'animations';
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*, *::before, *::after {
+  /* stylelint-disable-line */
+  box-sizing: inherit;
+}
+
+.wf-active {
+  & body {
+    visibility: visible;
+  }
+}
+
+.wf-inactive {
+  & body {
+    visibility: visible;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+}
+
+body {
+  font-size: var(--font-size-bodycopy);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 120rem;
+  width: 88vw;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hide {
+  display: none;
+}

@@ -1,0 +1,13 @@
+/* animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(1rem);
+  }
+  50% {
+    transform: translateY(3rem);
+  }
+  100% {
+    transform: translateY(1rem);
+  }
+}
