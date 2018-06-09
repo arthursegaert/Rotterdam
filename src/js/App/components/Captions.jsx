@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import { base } from "../config/fire.js";
 
 class Captions extends Component {
+  constructor() {
+    super();
+    this.state = {
+      captions: {}
+    };
+  }
   handleNewCaptionSubmit = e => {
     e.preventDefault();
     const caption = this.captionInput.value;
@@ -20,21 +26,31 @@ class Captions extends Component {
     }
   };
 
+  componentDidMount = () => {
+    base.syncState(`captions`, {
+      context: this,
+      state: "captions"
+    });
+  };
+
   render() {
     return (
-      <form
-        ref={form => {
-          this.captionForm = form;
-        }}
-        onSubmit={this.handleNewCaptionSubmit}
-      >
-        <input
-          ref={input => {
-            this.captionInput = input;
+      <div>
+        {console.log(this.state.captions)}
+        <form
+          ref={form => {
+            this.captionForm = form;
           }}
-        />
-        <button>Voeg een caption toe</button>
-      </form>
+          onSubmit={this.handleNewCaptionSubmit}
+        >
+          <input
+            ref={input => {
+              this.captionInput = input;
+            }}
+          />
+          <button>Voeg een caption toe</button>
+        </form>
+      </div>
     );
   }
 }
