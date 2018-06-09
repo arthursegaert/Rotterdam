@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { base } from "../config/fire.js";
+import { app, base } from "../config/fire.js";
 import { StatusContext } from "../context/statusContext.js";
 
 class Captions extends Component {
@@ -12,11 +12,12 @@ class Captions extends Component {
   handleNewCaptionSubmit = e => {
     e.preventDefault();
     const caption = this.captionInput.value;
+    const user = app.auth().currentUser.displayName;
 
     if (caption.trim().length !== 0) {
       base
-        .push("captions", {
-          data: { caption: caption }
+        .push(`captions`, {
+          data: { caption: caption, userName: user }
         })
         .then(() => {
           this.captionForm.reset();
@@ -39,9 +40,14 @@ class Captions extends Component {
       <StatusContext.Consumer>
         {({ authenticated }) => (
           <div>
-            {Object.entries(this.state.captions).map(caption => (
-              <p>{caption[1].caption}</p>
-            ))}
+            {Object.entries(this.state.captions).map(caption => {
+              return (
+                <div>
+                  <p>{caption[1].caption}</p>
+                  <p>Posted by - {caption[1].userName}</p>
+                </div>
+              );
+            })}
             {authenticated ? (
               <form
                 ref={form => {
