@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Home extends Component {
   constructor(props) {
@@ -42,38 +43,47 @@ class Home extends Component {
           <nav>
             <ul class="navigation">
               <li class="nav-item">
-                <a class="grid__item" href="#preview-1">
+                <Link class="grid__item" to="/">
                   <span class="box__title">
                     <span class="box__title-inner" data-hover="Home">
                       Home
                     </span>
                   </span>
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
-                <a class="grid__item" href="#preview-1">
+                <Link to="/captions" class="grid__item">
                   <span class="box__title">
                     <span class="box__title-inner" data-hover="Captions">
                       Captions
                     </span>
                   </span>
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
-                <a class="grid__item" href="#preview-1">
+                <Link class="grid__item" to="/werken">
                   <span class="box__title">
-                    <span class="box__title-inner" data-hover="#Stick-it">
-                      #Stick-it
+                    <span class="box__title-inner" data-hover="Werken">
+                      Werken
                     </span>
                   </span>
-                </a>
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link class="grid__item" to="/account">
+                  <span class="box__title">
+                    <span class="box__title-inner" data-hover="Account">
+                      Account
+                    </span>
+                  </span>
+                </Link>
               </li>
             </ul>
           </nav>
           <div class="cta">
-            <a class="cta-link" href="#">
+            <Link class="cta-link" to="/sticker">
               Sticker action
-            </a>
+            </Link>
           </div>
           <svg
             class="svg1"

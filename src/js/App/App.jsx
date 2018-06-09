@@ -5,6 +5,10 @@ import Login from "./components/Login.jsx";
 import Register from "./components/Register.jsx";
 import Logout from "./components/Logout.jsx";
 import Home from "./components/Home.jsx";
+import Werken from "./components/Werken.jsx";
+import Account from "./components/Account.jsx";
+import Sticker from "./components/Sticker.jsx";
+import Captions from "./components/Captions.jsx";
 
 class App extends Component {
   constructor() {
@@ -67,6 +71,10 @@ class App extends Component {
         <Route exact path="/login" component={Login} />
         <Route exact path="/Register" component={Register} />
         <Route exact path="/logout" component={Logout} />
+        <Route exact path="/werken" component={Werken} />
+        <Route exact path="/account" component={Account} />
+        <Route exact path="/captions" component={Captions} />
+        <Route exact path="/sticker" component={Sticker} />
       </div>
     );
   }
