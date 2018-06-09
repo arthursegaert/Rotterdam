@@ -69,7 +69,7 @@ class Register extends Component {
             Register with Facebook
           </button>
           <p>If you have an account already:</p>
-          <Link to="/signin">Sign in</Link>
+          <Link to="/login">Log in</Link>
           <form
             onSubmit={e => {
               this.authWithEmailPassword(e);

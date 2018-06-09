@@ -4,7 +4,7 @@ import { Route, Link } from "react-router-dom";
 import Login from "./components/Login.jsx";
 import Register from "./components/Register.jsx";
 import Logout from "./components/Logout.jsx";
-import Kunstwerken from "./components/Kunstwerken.jsx";
+import Home from "./components/Home.jsx";
 
 class App extends Component {
   constructor() {
@@ -51,11 +51,11 @@ class App extends Component {
     }
     return (
       <div className="App">
+        <Link to="/">Home</Link>
         {authenticated ? (
           <div>
             <p>Ingelogd, welkom: {username}</p>
             <Link to="/logout">Logout</Link>
-            <Kunstwerken kunstwerken={kunstwerken} />
           </div>
         ) : (
           <div>
@@ -63,6 +63,7 @@ class App extends Component {
             <Link to="/register">Register</Link>
           </div>
         )}
+        <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/Register" component={Register} />
         <Route exact path="/logout" component={Logout} />
