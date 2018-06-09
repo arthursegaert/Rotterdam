@@ -6,17 +6,18 @@ class Captions extends Component {
   constructor() {
     super();
     this.state = {
-      captions: {}
+      captions: []
     };
   }
   handleNewCaptionSubmit = e => {
     e.preventDefault();
     const caption = this.captionInput.value;
     const user = app.auth().currentUser.displayName;
+    const userid = app.auth().currentUser.uid;
 
     if (caption.trim().length !== 0) {
       base
-        .push(`captions`, {
+        .push(`captions/${userid}`, {
           data: { caption: caption, userName: user }
         })
         .then(() => {
@@ -31,7 +32,8 @@ class Captions extends Component {
   componentDidMount = () => {
     base.syncState(`captions`, {
       context: this,
-      state: "captions"
+      state: "captions",
+      asArray: true
     });
   };
 
@@ -40,14 +42,18 @@ class Captions extends Component {
       <StatusContext.Consumer>
         {({ authenticated }) => (
           <div>
-            {Object.entries(this.state.captions).map(caption => {
-              return (
-                <div>
-                  <p>{caption[1].caption}</p>
-                  <p>Posted by - {caption[1].userName}</p>
-                </div>
-              );
-            })}
+            {this.state.captions.map(captions =>
+              Object.entries(captions).map(
+                c =>
+                  c[1].caption !== undefined ? (
+                    <p>
+                      {c[1].caption} - Posted by {c[1].userName}
+                    </p>
+                  ) : (
+                    ""
+                  )
+              )
+            )}
             {authenticated ? (
               <form
                 ref={form => {
