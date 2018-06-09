@@ -66,10 +66,10 @@ class Register extends Component {
       return (
         <div>
           <button onClick={() => this.authWithFacebook()}>
-            Login with Facebook
+            Register with Facebook
           </button>
-          <p>If you don't have an account already:</p>
-          <Link to="/register">Register</Link>
+          <p>If you have an account already:</p>
+          <Link to="/signin">Sign in</Link>
           <form
             onSubmit={e => {
               this.authWithEmailPassword(e);
