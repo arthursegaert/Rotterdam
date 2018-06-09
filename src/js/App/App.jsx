@@ -9,6 +9,7 @@ import Werken from "./components/Werken.jsx";
 import Account from "./components/Account.jsx";
 import Sticker from "./components/Sticker.jsx";
 import Captions from "./components/Captions.jsx";
+import { StatusContext } from "./context/statusContext.js";
 
 class App extends Component {
   constructor() {
@@ -54,28 +55,30 @@ class App extends Component {
       return <p>Loading...</p>;
     }
     return (
-      <div className="App">
-        <Link to="/">Home</Link>
-        {authenticated ? (
-          <div>
-            <p>Ingelogd, welkom: {username}</p>
-            <Link to="/logout">Logout</Link>
-          </div>
-        ) : (
-          <div>
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
-          </div>
-        )}
-        <Route exact path="/" component={Home} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/Register" component={Register} />
-        <Route exact path="/logout" component={Logout} />
-        <Route exact path="/werken" component={Werken} />
-        <Route exact path="/account" component={Account} />
-        <Route exact path="/captions" component={Captions} />
-        <Route exact path="/sticker" component={Sticker} />
-      </div>
+      <StatusContext.Provider value={this.state}>
+        <div className="App">
+          <Link to="/">Home</Link>
+          {authenticated ? (
+            <div>
+              <p>Ingelogd, welkom: {username}</p>
+              <Link to="/logout">Logout</Link>
+            </div>
+          ) : (
+            <div>
+              <Link to="/login">Login</Link>
+              <Link to="/register">Register</Link>
+            </div>
+          )}
+          <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/Register" component={Register} />
+          <Route exact path="/logout" component={Logout} />
+          <Route exact path="/werken" component={Werken} />
+          <Route exact path="/account" component={Account} />
+          <Route exact path="/captions" component={Captions} />
+          <Route exact path="/sticker" component={Sticker} />
+        </div>
+      </StatusContext.Provider>
     );
   }
 }
