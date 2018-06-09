@@ -10,6 +10,7 @@ const config = {
 const app = firebase.initializeApp(config);
 const db = firebase.database(app);
 const base = Rebase.createClass(db);
+const ref = firebase.database().ref();
 const facebookProvider = new firebase.auth.FacebookAuthProvider();
 
-export { app, db, base, facebookProvider };
+export { app, db, base, facebookProvider, ref };
