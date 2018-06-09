@@ -27,7 +27,8 @@ class Register extends Component {
     e.preventDefault(); //no refresh
     const email = this.emailInput.value;
     const password = this.passwordInput.value;
-
+    const username = this.usernameInput.value;
+    let user = null;
     app
       .auth()
       .fetchSignInMethodsForEmail(email)
@@ -35,7 +36,24 @@ class Register extends Component {
         if (providers.length === 0) {
           //person doesn't have an account
           //create an account
-          return app.auth().createUserWithEmailAndPassword(email, password);
+          return app
+            .auth()
+            .createUserWithEmailAndPassword(email, password)
+            .then(() => {
+              user = app.auth().currentUser;
+            })
+            .then(() => {
+              user.updateProfile({
+                displayName: username
+              });
+            })
+            .then(() => {
+              this.loginForm.reset();
+              this.setState({ redirect: true });
+            })
+            .catch(function(error) {
+              console.log(error.message);
+            });
         } else if (providers.indexOf("password") === -1) {
           //they already have an account with facebook
           this.loginForm.reset();
@@ -46,12 +64,6 @@ class Register extends Component {
           //user already has an account
           this.loginForm.reset();
           return alert("You already have an account, please sign in.");
-        }
-      })
-      .then(user => {
-        if (user && user.email) {
-          this.loginForm.reset();
-          this.setState({ redirect: true });
         }
       })
       .catch(err => {
@@ -80,12 +92,23 @@ class Register extends Component {
           >
             <label>Email</label>
             <input
+              required
               name="email"
               type="email"
               ref={input => {
                 this.emailInput = input;
               }}
               placeholder="email"
+            />
+            <label>Username</label>
+            <input
+              required
+              name="username"
+              type="text"
+              ref={input => {
+                this.usernameInput = input;
+              }}
+              placeholder="username"
             />
             <label>Password</label>
             <input

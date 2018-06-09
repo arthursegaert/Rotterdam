@@ -46,7 +46,7 @@ class Login extends Component {
         }
       })
       .then(user => {
-        if (user && user.email) {
+        if (user) {
           this.loginForm.reset();
           this.setState({ redirect: true });
         }
