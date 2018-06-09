@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { app, facebookProvider } from "../config/fire.js";
 import { Link, Redirect } from "react-router-dom";
+import { app, facebookProvider } from "../config/fire.js";
 
-class Login extends Component {
+class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,15 +34,18 @@ class Login extends Component {
       .then(providers => {
         if (providers.length === 0) {
           //person doesn't have an account
-          return alert("You have to register first.");
-          //return app.auth().createUserWithEmailAndPassword(email, password);
+          //create an account
+          return app.auth().createUserWithEmailAndPassword(email, password);
         } else if (providers.indexOf("password") === -1) {
-          //they didn't sign up with email password but with facebook
+          //they already have an account with facebook
           this.loginForm.reset();
-          return alert("You need to use Facebook to log into your account.");
+          return alert(
+            "You already have an account with Facebook. Please sign in instead."
+          );
         } else {
-          //sign user in
-          return app.auth().signInWithEmailAndPassword(email, password);
+          //user already has an account
+          this.loginForm.reset();
+          return alert("You already have an account, please sign in.");
         }
       })
       .then(user => {
@@ -93,7 +96,7 @@ class Login extends Component {
               }}
               placeholder="password"
             />
-            <input type="submit" value="Log in" />
+            <input type="submit" value="Register" />
           </form>
         </div>
       );
@@ -101,4 +104,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default Register;

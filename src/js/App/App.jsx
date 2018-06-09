@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { app, base } from "./config/fire.js";
 import { Route, Link } from "react-router-dom";
 import Login from "./components/Login.jsx";
+import Register from "./components/Register.jsx";
 import Logout from "./components/Logout.jsx";
 import Kunstwerken from "./components/Kunstwerken.jsx";
 
@@ -11,16 +12,19 @@ class App extends Component {
     this.state = {
       kunstwerken: [],
       authenticated: false,
-      loading: true
+      loading: true,
+      displayName: "Nog signed in"
     };
   }
 
   componentDidMount = () => {
     this.removeAuthListener = app.auth().onAuthStateChanged(user => {
       if (user) {
+        console.log(user);
         this.setState({
           authenticated: true,
-          loading: false
+          loading: false,
+          username: user.displayName
         });
       } else {
         this.setState({
@@ -41,25 +45,26 @@ class App extends Component {
   };
 
   render() {
-    const { kunstwerken, authenticated } = this.state;
+    const { kunstwerken, authenticated, username } = this.state;
     if (this.state.loading) {
       return <p>Loading...</p>;
     }
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Different vision</h1>
-        </header>
         {authenticated ? (
           <div>
-            <p>Ingelogd</p>
+            <p>Ingelogd, welkom: {username}</p>
             <Link to="/logout">Logout</Link>
             <Kunstwerken kunstwerken={kunstwerken} />
           </div>
         ) : (
-          <Link to="/login">Register / Login</Link>
+          <div>
+            <Link to="/login">Login</Link>
+            <Link to="/register">Register</Link>
+          </div>
         )}
         <Route exact path="/login" component={Login} />
+        <Route exact path="/Register" component={Register} />
         <Route exact path="/logout" component={Logout} />
       </div>
     );
