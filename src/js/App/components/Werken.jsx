@@ -1,13 +1,25 @@
 import React, { Component } from "react";
+import { base } from "../config/fire.js";
+import { Link } from "react-router-dom";
+
 class Werken extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      kunstwerken: []
+    };
+  }
+
+  componentDidMount() {
+    base.syncState(`kunstwerken`, {
+      context: this,
+      state: "kunstwerken"
+    });
   }
   render() {
     return (
       <div>
-        {this.props.kunstwerken.map(kunstwerk => {
+        {this.state.kunstwerken.map(kunstwerk => {
           return (
             <div key={kunstwerk.id} className="kunstwerk">
               <p>{kunstwerk.title}</p>
@@ -20,6 +32,13 @@ class Werken extends Component {
                 width="1000"
                 height="1000"
               />
+              <Link
+                to={{
+                  pathname: `/werkdetail/${kunstwerk.id}`
+                }}
+              >
+                Werk detail
+              </Link>
             </div>
           );
         })}
