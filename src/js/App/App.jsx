@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    this.removeAuthListener = app.auth().onAuthStateChanged(user => {
+    app.auth().onAuthStateChanged(user => {
       if (user) {
         this.setState({
           authenticated: true,
@@ -41,11 +41,6 @@ class App extends Component {
       context: this,
       state: "kunstwerken"
     });
-  };
-
-  //undo when someone leaves your application
-  componentWillUnmount = () => {
-    this.removeAuthListener();
   };
 
   render() {

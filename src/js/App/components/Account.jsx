@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { app, base } from "../config/fire.js";
+import { StatusContext } from "../context/statusContext.js";
 
 class Account extends Component {
   constructor(props) {
@@ -10,23 +11,39 @@ class Account extends Component {
   }
 
   componentDidMount = () => {
-    const userid = app.auth().currentUser.uid;
-    base.syncState(`captions/${userid}`, {
-      context: this,
-      state: "captions",
-      asArray: true
+    app.auth().onAuthStateChanged(user => {
+      if (user) {
+        const userid = app.auth().currentUser.uid;
+        base.syncState(`captions/${userid}`, {
+          context: this,
+          state: "captions",
+          asArray: true
+        });
+      }
     });
   };
 
   render() {
     return (
-      <div>
-        <h1>Account</h1>
-        <h2>Jouw captions</h2>
-        <ol>
-          {this.state.captions.map(caption => <li>{caption.caption}</li>)}
-        </ol>
-      </div>
+      <StatusContext.Consumer>
+        {({ authenticated }) => (
+          <div>
+            <h1>Account</h1>
+            {authenticated ? (
+              <div>
+                <h2>Jouw captions</h2>
+                <ol>
+                  {this.state.captions.map(caption => (
+                    <li>{caption.caption}</li>
+                  ))}
+                </ol>
+              </div>
+            ) : (
+              <p>Niet ingelogd</p>
+            )}
+          </div>
+        )}
+      </StatusContext.Consumer>
     );
   }
 }
