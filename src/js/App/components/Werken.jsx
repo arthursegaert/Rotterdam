@@ -37,7 +37,7 @@ class Werken extends Component {
                   pathname: `/werkdetail/${kunstwerk.id}`
                 }}
               >
-                Werk detail
+                Werk Detail
               </Link>
             </div>
           );

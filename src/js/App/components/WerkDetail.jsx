@@ -33,7 +33,12 @@ class WerkDetail extends Component {
         </div>
       );
     }
-    return <p>No match</p>;
+    return (
+      <div>
+        {console.log(this.props)}
+        <p>No match</p>
+      </div>
+    );
   }
 }
 
