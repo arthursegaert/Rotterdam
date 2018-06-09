@@ -36,7 +36,9 @@ class Captions extends Component {
   render() {
     return (
       <div>
-        {console.log(this.state.captions)}
+        {Object.entries(this.state.captions).map(caption => (
+          <p>{caption[1].caption}</p>
+        ))}
         <form
           ref={form => {
             this.captionForm = form;
