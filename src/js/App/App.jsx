@@ -72,7 +72,11 @@ class App extends Component {
           <Route exact path="/login" component={Login} />
           <Route exact path="/Register" component={Register} />
           <Route exact path="/logout" component={Logout} />
-          <Route exact path="/werken" component={Werken} />
+          <Route
+            exact
+            path="/werken"
+            render={() => <Werken kunstwerken={kunstwerken} />}
+          />
           <Route exact path="/account" component={Account} />
           <Route exact path="/captions" component={Captions} />
           <Route exact path="/sticker" component={Sticker} />

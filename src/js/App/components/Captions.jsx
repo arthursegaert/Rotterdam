@@ -42,18 +42,20 @@ class Captions extends Component {
       <StatusContext.Consumer>
         {({ authenticated }) => (
           <div>
-            {this.state.captions.map(captions =>
-              Object.entries(captions).map(
-                c =>
-                  c[1].caption !== undefined ? (
-                    <p>
-                      {c[1].caption} - Posted by {c[1].userName}
-                    </p>
-                  ) : (
-                    ""
-                  )
-              )
-            )}
+            <ul>
+              {this.state.captions.map(captions =>
+                Object.entries(captions).map(
+                  c =>
+                    c[1].caption !== undefined ? (
+                      <li>
+                        {c[1].caption} - Posted by {c[1].userName}
+                      </li>
+                    ) : (
+                      ""
+                    )
+                )
+              )}
+            </ul>
             {authenticated ? (
               <form
                 ref={form => {
