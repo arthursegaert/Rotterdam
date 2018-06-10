@@ -97,17 +97,21 @@ class WerkDetail extends Component {
                 <p>{result.desc}</p>
                 <p>{result.img}</p>
                 <ul>
-                  {this.state.captions.map(captions =>
-                    Object.entries(captions).map(
-                      c =>
-                        c[1].caption !== undefined ? (
-                          <li>
-                            {c[1].caption} - Posted by {c[1].userName}
-                          </li>
-                        ) : (
-                          ""
-                        )
+                  {result.captions ? (
+                    Object.entries(result.captions).map(captions =>
+                      Object.entries(captions).map(
+                        c =>
+                          c[1].caption !== undefined ? (
+                            <li>
+                              {c[1].caption} - Posted by {c[1].userName}
+                            </li>
+                          ) : (
+                            ""
+                          )
+                      )
                     )
+                  ) : (
+                    <p>Dit werk heeft nog geen captions</p>
                   )}
                 </ul>
                 {authenticated ? (
