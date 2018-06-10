@@ -24,7 +24,6 @@ class Werken extends Component {
             <div key={kunstwerk.id} className="kunstwerk">
               <p>{kunstwerk.title}</p>
               <p>{kunstwerk.author}</p>
-              <p>{kunstwerk.desc}</p>
               <img
                 alt={kunstwerk.desc}
                 className="kunstwerk-img"
@@ -34,7 +33,8 @@ class Werken extends Component {
               />
               <Link
                 to={{
-                  pathname: `/werkdetail/${kunstwerk.id}`
+                  pathname: `/werkdetail/${kunstwerk.id}`,
+                  kunstwerk
                 }}
               >
                 Werk Detail
