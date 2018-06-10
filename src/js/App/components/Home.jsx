@@ -8,6 +8,7 @@ class Home extends Component {
   }
   render() {
     return (
+      <body>
       <header class="header">
         <div class="header-wrap">
           <h1 class="title">Different Vision</h1>
@@ -131,6 +132,61 @@ class Home extends Component {
           </svg>
         </div>
       </header>
+       <main>
+       <h2 class="h2_title">What do you see in artworks?</h2>
+       <div class="home_grid">
+         <article class="artile-artwork article_one">
+           <img src="assets/img/judd.jpg" alt="Dit is een kunstwerk met de naam judd." width="400" height="300" class="black_white"/>
+           <p class="article_artist artist_judd">judd</p>
+           <span class="article-captions captions_judd">12 captions</span>
+         </article>
+         <article class="artile-artwork article_two">
+           <img src="assets/img/shirley.jpg" alt="Dit is een kunstwerk die noemt Shirley van de kunstenaar Dali." width="340" height="254.6" class="black_white"/>
+           <p class="article_artist artist_dali">dali</p>
+           <span class="article-captions captions_dali">23 captions</span>
+           <span class="background_uitspraken uitspraak_one">f*cking <br/> ugly</span>
+         </article>
+         <article class="artile-artwork article_three">
+           <img src="assets/img/manhole.jpg" alt="Dit is een kunstwerk die noemt Shirley van de kunstenaar Dali." width="288" height="360.1" class="black_white"/>
+           <p class="article_artist artist_cattelan">cattelan</p>
+           <span class="article-captions captions_cattelan">14 captions</span>
+         </article>
+         <article class="artile-artwork article_four">
+           <img src="assets/img/manhole.jpg" alt="Dit is een kunstwerk die noemt Shirley van de kunstenaar Dali." width="288" height="360.1" class="black_white"/>
+           <p class="article_artist artist_gogh">van gogh</p>
+           <span class="article-captions captions_gogh">11 captions</span>
+           <span class="background_uitspraken uitspraak_two">damn</span>
+         </article>
+         <p class="captions_button">meer captions</p>
+         <p class="werken_button">meer werken</p>
+       </div>
+       <div class="box_sticker">
+         <h2 class="h2_sticker">&#35;boijmanscaptions</h2>
+         <ol>
+           <li class="li-sticker">
+             <p>find a <span class="span-sticker">ticker</span></p>
+             <p class="text-sticker">Look around you! We put them everywhere, from beer mats to instagram.</p>
+           </li>
+           <li class="li-sticker">
+             <p>create <span class="span-sticker">art</span></p>
+             <p class="text-sticker">... by sticking it on an object that fits the caption.</p>
+           </li>
+           <li class="li-sticker">
+             <p>capture <span class="span-sticker">it</span></p>
+             <p class="text-sticker">Take a picture when you found the perfect combination. Make sure you can read the caption.</p>
+           </li>
+           <li class="li-sticker">
+             <p>share <span class="span-sticker">with everyone</span></p>
+             <p class="text-sticker">Share in person or digital with the hashtag #boijmanscaptions.</p>
+           </li>
+           <li class="li-sticker">
+             <p>win <span class="span-sticker">cool prizes</span></p>
+             <p class="text-sticker">Impress our jury and get a chance to win a bunch of cool prizes. First prize gets exhibition in the renovated museum.</p>
+           </li>
+           </ol>
+         </div>
+       </main>
+       </body>
     );
   }
 }

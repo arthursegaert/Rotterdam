@@ -195,3 +195,232 @@ nav {
 .main {
   height: 100vh;
 }
+
+/*HOME*/
+
+main {
+	background-color: black;
+	z-index: -6;
+	font-family: sans-serif;
+}
+
+.h2_title {
+  font-family: 'Archivo Black', sans-serif;
+  -webkit-text-stroke: 2px white;
+  text-stroke: 2px white;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+}
+
+.black_white {
+	-webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.black_white:hover {
+	-webkit-filter: grayscale(0%);
+  filter: grayscale(O%);
+}
+
+.home_grid {
+	display: grid;
+
+	grid-template-columns: 5% repeat(5, 18%) 5%;
+	grid-template-rows: 38rem 34rem 30rem 43rem 6rem;
+
+	grid-template-areas:
+    ". article_one article_one . . . ."
+		". . . . article_two article_two ."
+		". article_three article_three . . . ."
+		". . . . article_four article_four ."
+		". .  captions_button . werken_button  . ."
+}
+
+.article_one {
+	grid-area: article_one;
+}
+
+.article_two {
+	grid-area: article_two;
+}
+
+.article_three {
+	grid-area: article_three;
+}
+
+.article_four {
+	grid-area: article_four;
+}
+
+.artile-artwork{
+	position: relative;
+}
+
+.article_artist{
+	font-family: 'Archivo Black', sans-serif;
+  -webkit-text-stroke: 2px white;
+  text-stroke: 2px white;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
+  text-transform: uppercase;
+  font-size: 4rem;
+	transform: rotate(-90deg);
+	position: absolute;
+	z-index: 3;
+}
+
+.artist_judd {
+  left: 24rem;
+}
+
+.artist_dali {
+ top: -2.6rem;
+ left: -5rem;
+}
+
+.artist_cattelan {
+	left: 12rem;
+	top: 26rem;
+}
+
+.artist_gogh {
+	left: -12rem;
+	top: 10rem;
+}
+
+.captions_judd {
+	top: 30rem;
+	left: 15rem;
+}
+
+.captions_dali {
+	left: 3rem;
+	top: -3rem;
+}
+
+.captions_cattelan {
+  left: 8rem;
+  top: 36rem;
+}
+
+.captions_gogh {
+  left: 11rem;
+  top: 36rem;
+}
+
+
+.article-captions{
+	font-family: 'Archivo Black', sans-serif;
+	color: #EE483C;
+	position: absolute;
+	z-index: 3;
+}
+
+.background_uitspraken {
+	font-family: 'Archivo Black', sans-serif;
+  -webkit-text-stroke: 2px white;
+  text-stroke: 2px white;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
+  text-transform: uppercase;
+  font-size: 7rem;
+	position: absolute;
+	line-height: 7rem;
+	opacity: 0.3;
+}
+
+.uitspraak_one {
+	left: -5rem;
+	bottom: 5.4rem;
+}
+
+.uitspraak_two {
+	left: -22.6rem;
+	bottom: 8rem;
+}
+
+.captions_button {
+	font-family: sans-serif;
+	text-transform: uppercase;
+	color: #EE483C;
+	grid-area: captions_button;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(to right, #7333A8, #7333A8, white, white);
+	background-size: 200% 100%;
+}
+
+.captions_button:hover {
+	background-position: 100% 0;
+	moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+.werken_button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	background-image: linear-gradient(to right, #EE483C, #EE483C, white, white);
+	grid-area: werken_button;
+	background-size: 200% 100%;
+}
+
+.werken_button:hover {
+		background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+/*STICKER ACTION*/
+
+.box_sticker {
+	background-color: #EE483C;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+}
+
+.h2_sticker {
+	color: white;
+	font-size: 4rem;
+}
+
+.li-sticker {
+	color: white;
+	text-transform: uppercase;
+  margin-bottom: 2rem;
+  list-style-type: decimal;
+  font-size: 3rem;
+}
+
+.text-sticker{
+	color: black;
+  text-transform: lowercase;
+  margin-left: -2rem;
+  font-size: 2rem;
+}
+
+.span-sticker{
+	font-family: 'Archivo Black', sans-serif;
+	-webkit-text-stroke: 1px white;
+	text-stroke: 1px white;
+	-webkit-text-fill-color: transparent;
+	text-fill-color: transparent;
+	color: transparent;
+	text-transform: uppercase;
+}
+
