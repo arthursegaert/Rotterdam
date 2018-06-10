@@ -40,6 +40,13 @@ class WerkDetail extends Component {
       });
   }
 
+  handleClickLike = c => {
+    const kunstwerkId = c.kunstwerkId;
+    const caption = c.caption;
+    const userName = c.userName;
+    console.log(kunstwerkId, caption, userName);
+  };
+
   handleNewCaptionSubmit = e => {
     e.preventDefault();
     const caption = this.captionInput.value;
@@ -96,24 +103,53 @@ class WerkDetail extends Component {
                 <p>{result.date}</p>
                 <p>{result.desc}</p>
                 <p>{result.img}</p>
+                <h2>Captions bij dit kunstwerk:</h2>
                 <ul>
+                  {/*check of er captions zijn voor het kunstwerk*/}
                   {result.captions ? (
                     Object.entries(result.captions).map(captions =>
                       Object.entries(captions).map(
                         c =>
+                          //is de caption niet undefined?
                           c[1].caption !== undefined ? (
                             <li>
-                              {c[1].caption} - Posted by {c[1].userName}
+                              <span>
+                                {c[1].caption} - Posted by {c[1].userName}
+                              </span>
+                              {/*check of het werk likes heeft*/}
+                              {c[1].likes >= 0 ? (
+                                <div>
+                                  <span>{c[1].likes} likes</span>
+                                  <button
+                                    onClick={() => this.handleClickLike(c[1])}
+                                  >
+                                    like this!
+                                  </button>
+                                </div>
+                              ) : (
+                                //als het werk geen likes heeft
+                                <div>
+                                  <span>0 likes - wees de eerste!</span>
+                                  <button
+                                    onClick={() => this.handleClickLike(c[1])}
+                                  >
+                                    like this!
+                                  </button>
+                                </div>
+                              )}
                             </li>
                           ) : (
+                            //as het undefined is, toon niks:
                             ""
                           )
                       )
                     )
                   ) : (
+                    //als er nog geen captions zijn:
                     <p>Dit werk heeft nog geen captions</p>
                   )}
                 </ul>
+                {/* is de gebruiker ingelogt?*/}
                 {authenticated ? (
                   <div>
                     <p>Schrijf hier jouw caption:</p>
@@ -132,6 +168,7 @@ class WerkDetail extends Component {
                     </form>
                   </div>
                 ) : (
+                  //als de gebruiker niet is ingelogd
                   <p>Je moet ingelogd zijn om een caption te schrijven</p>
                 )}
               </div>
