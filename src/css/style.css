@@ -262,6 +262,10 @@ main {
   flex-direction: column;
   background-size: 200% 100%;
   background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+	 -o-transition: all .4s ease-in-out;
+	 -webkit-transition: all .4s ease-in-out;
+	 transition: all .4s ease-in-out;
 }
 
 .pijl-random {
@@ -425,7 +429,11 @@ main {
 	justify-content: center;
 	align-items: center;
 	background-image: linear-gradient(to right, #7333A8, #7333A8, white, white);
-	background-size: 200% 100%;
+  background-size: 200% 100%;
+  moz-transition: all .4s ease-in-out;
+	 -o-transition: all .4s ease-in-out;
+	 -webkit-transition: all .4s ease-in-out;
+	 transition: all .4s ease-in-out;
 }
 
 .captions_button:hover {
@@ -444,7 +452,11 @@ main {
 	text-transform: uppercase;
 	background-image: linear-gradient(to right, #EE483C, #EE483C, white, white);
 	grid-area: werken_button;
-	background-size: 200% 100%;
+  background-size: 200% 100%;
+  moz-transition: all .4s ease-in-out;
+	 -o-transition: all .4s ease-in-out;
+	 -webkit-transition: all .4s ease-in-out;
+	 transition: all .4s ease-in-out;
 }
 
 .werken_button:hover {
