@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "../css/Home.css";
 
 class Home extends Component {
   constructor(props) {
@@ -11,44 +12,44 @@ class Home extends Component {
       <body>
         <header class="header">
           <div class="header-wrap">
-            <h1 class="title">Different Vision</h1>
-            <span class="subtitle">
+            <h1 class="header-title">Different Vision</h1>
+            <span class="header-subtitle">
               boijmans<br />van beuningen
             </span>
             <div class="header-img" />
             <nav class="nav">
-              <ul class="navigation">
-                <li class="nav-item">
-                  <Link class="grid__item" to="/">
-                    <span class="box__title">
-                      <span class="box__title-inner" data-hover="Home">
+              <ul class="nav-list">
+                <li class="nav-list-item">
+                  <Link class="nav-list-item-link" to="/">
+                    <span class="nav-list-item-link-title">
+                      <span class="nav-list-item-link-title-inner" data-hover="Home">
                         Home
                       </span>
                     </span>
                   </Link>
                 </li>
-                <li class="nav-item">
-                  <Link to="/captions" class="grid__item">
-                    <span class="box__title">
-                      <span class="box__title-inner" data-hover="Captions">
+                <li class="nav-list-item">
+                  <Link to="/captions" class="nav-list-item-link">
+                    <span class="nav-list-item-link-title">
+                      <span class="nav-list-item-link-title-inner" data-hover="Captions">
                         Captions
                       </span>
                     </span>
                   </Link>
                 </li>
-                <li class="nav-item">
-                  <Link class="grid__item" to="/werken">
-                    <span class="box__title">
-                      <span class="box__title-inner" data-hover="Werken">
+                <li class="nav-list-item">
+                  <Link class="nav-list-item-link" to="/werken">
+                    <span class="nav-list-item-link-title">
+                      <span class="nav-list-item-link-title-inner" data-hover="Werken">
                         Werken
                       </span>
                     </span>
                   </Link>
                 </li>
-                <li class="nav-item">
-                  <Link class="grid__item" to="/account">
-                    <span class="box__title">
-                      <span class="box__title-inner" data-hover="Account">
+                <li class="nav-list-item">
+                  <Link class="nav-list-item-link" to="/account">
+                    <span class="nav-list-item-link-title">
+                      <span class="nav-list-item-link-title-inner" data-hover="Account">
                         Account
                       </span>
                     </span>
@@ -56,8 +57,8 @@ class Home extends Component {
                 </li>
               </ul>
             </nav>
-            <div class="cta">
-              <Link class="cta-link" to="/sticker">
+            <div class="header-cta">
+              <Link class="header-cta-link" to="/sticker">
                 Sticker action
               </Link>
             </div>
@@ -109,7 +110,7 @@ class Home extends Component {
         </header>
         <main>
           <Link to="/account">
-            <div class="profile">
+            <div class="main-profile">
               <svg
                 class="svg-pijl"
                 xmlns="http://www.w3.org/2000/svg"
@@ -141,16 +142,16 @@ class Home extends Component {
                   />
                 </g>
               </svg>
-              <p class="profile_name">timmy</p>
-              <span class="profile_captions">24 captions</span>
+              <p class="main-profile-name">timmy</p>
+              <span class="main-profile-captions">24 captions</span>
             </div>
           </Link>
-          <h2 class="h2_title">What do you see in artworks?</h2>
-          <div class="random">
+          <p class="main-uitleg">What do you see in artworks?</p>
+          <div class="main-random">
             <Link to="/werkdetail/:id">
-              <div class="random-color">
+              <div class="main-random-color">
                 <svg
-                  class="pijl-random"
+                  class="main-random-pijl"
                   xmlns="http://www.w3.org/2000/svg"
                   width="54.2px"
                   height="54.3px"
@@ -180,110 +181,110 @@ class Home extends Component {
                     />
                   </g>
                 </svg>
-                <p class="button-random">
+                <p class="main-random-button">
                   ga naar een <br /> willekeurig kunstwerk
                 </p>
               </div>
             </Link>
           </div>
-          <div class="home_grid">
-            <article class="artile-artwork article_one">
+          <div class="main-uitgelicht">
+            <article class="main-uitgelicht-art art-one">
               <img
                 src="assets/img/judd.jpg"
                 alt="Dit is een kunstwerk met de naam judd."
                 width="400"
                 height="300"
-                class="black_white"
+                class="main-uitgelicht-art-img"
               />
-              <p class="article_artist artist_judd">judd</p>
-              <span class="article-captions captions_judd">12 captions</span>
+              <p class="main-uitgelicht-art art-artist-judd">judd</p>
+              <span class="article-captions art-captions-judd">12 captions</span>
             </article>
-            <article class="artile-artwork article_two">
+            <article class="main-uitgelicht-art art-two">
               <img
                 src="assets/img/shirley.jpg"
                 alt="Dit is een kunstwerk die noemt Shirley van de kunstenaar Dali."
                 width="340"
                 height="254.6"
-                class="black_white"
+                class="main-uitgelicht-art-img"
               />
-              <p class="article_artist artist_dali">dali</p>
-              <span class="article-captions captions_dali">23 captions</span>
-              <span class="background_uitspraken uitspraak_one">
+              <p class="main-uitgelicht-art art-artist-dali">dali</p>
+              <span class="article-captions art-captions-dali">23 captions</span>
+              <span class="main-backtext backtext-one">
                 f*cking <br /> ugly
               </span>
             </article>
-            <article class="artile-artwork article_three">
+            <article class="main-uitgelicht-art art-three">
               <img
                 src="assets/img/manhole.jpg"
                 alt="Dit is een kunstwerk die noemt Shirley van de kunstenaar Dali."
                 width="288"
                 height="360.1"
-                class="black_white"
+                class="main-uitgelicht-art-img"
               />
-              <p class="article_artist artist_cattelan">cattelan</p>
-              <span class="article-captions captions_cattelan">
+              <p class="main-uitgelicht-art art-artist-cattelan">cattelan</p>
+              <span class="article-captions art-captions-cattelan">
                 14 captions
               </span>
             </article>
-            <article class="artile-artwork article_four">
+            <article class="main-uitgelicht-art art-four">
               <img
                 src="assets/img/manhole.jpg"
                 alt="Dit is een kunstwerk die noemt Shirley van de kunstenaar Dali."
                 width="288"
                 height="360.1"
-                class="black_white"
+                class="main-uitgelicht-art-img"
               />
-              <p class="article_artist artist_gogh">van gogh</p>
-              <span class="article-captions captions_gogh">11 captions</span>
-              <span class="background_uitspraken uitspraak_two">damn</span>
+              <p class="main-uitgelicht-art art-artist-gogh">van gogh</p>
+              <span class="article-captions art-captions-gogh">11 captions</span>
+              <span class="main-backtext backtext-two">damn</span>
             </article>
-            <Link to="/captions" class="captions_button">
+            <Link to="/captions" class="art-button art-captions-button">
               meer captions
             </Link>
-            <Link to="/werken" class="werken_button">
+            <Link to="/werken" class="art-button art-werken-button">
               meer werken
             </Link>
           </div>
-          <div class="box_sticker">
-            <h2 class="h2_sticker">&#35;boijmanscaptions</h2>
+          <div class="sticker">
+            <h2 class="sticker-title">&#35;boijmanscaptions</h2>
             <ol>
-              <li class="li-sticker">
+              <li class="sticker-item">
                 <p>
-                  find a <span class="span-sticker">ticker</span>
+                  find a <span class="sticker-span">ticker</span>
                 </p>
                 <p class="text-sticker">
                   Look around you! We put them everywhere, from beer mats to
                   instagram.
                 </p>
               </li>
-              <li class="li-sticker">
+              <li class="sticker-item">
                 <p>
-                  create <span class="span-sticker">art</span>
+                  create <span class="sticker-span">art</span>
                 </p>
                 <p class="text-sticker">
                   ... by sticking it on an object that fits the caption.
                 </p>
               </li>
-              <li class="li-sticker">
+              <li class="sticker-item">
                 <p>
-                  capture <span class="span-sticker">it</span>
+                  capture <span class="sticker-span">it</span>
                 </p>
                 <p class="text-sticker">
                   Take a picture when you found the perfect combination. Make
                   sure you can read the caption.
                 </p>
               </li>
-              <li class="li-sticker">
+              <li class="sticker-item">
                 <p>
-                  share <span class="span-sticker">with everyone</span>
+                  share <span class="sticker-span">with everyone</span>
                 </p>
                 <p class="text-sticker">
                   Share in person or digital with the hashtag #boijmanscaptions.
                 </p>
               </li>
-              <li class="li-sticker">
+              <li class="sticker-item">
                 <p>
-                  win <span class="span-sticker">cool prizes</span>
+                  win <span class="sticker-span">cool prizes</span>
                 </p>
                 <p class="text-sticker">
                   Impress our jury and get a chance to win a bunch of cool
@@ -294,11 +295,11 @@ class Home extends Component {
           </div>
         </main>
         <footer>
-          <ul class="footer_ul">
-            <li class="footer_left">
+          <ul class="footer-ul">
+            <li class="footer-left">
               different <br /> vision
             </li>
-            <li class="footer_right">
+            <li class="footer-right">
               presented by museum<br /> boijmans van beuningen
             </li>
           </ul>
