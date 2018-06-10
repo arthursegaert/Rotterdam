@@ -133,7 +133,52 @@ class Home extends Component {
         </div>
       </header>
        <main>
+       <div class="profile">
+          <svg
+            class="svg-pijl"
+            xmlns="http://www.w3.org/2000/svg"
+            width="54.2px"
+            height="54.3px"
+            viewBox="0 0 54.2 54.3">
+             <g
+                fill="#EE483C"
+                fill-rule="evenodd"
+              >
+              <polygon class="st0" points="8.1,2.7 42.6,2.6 43.9,2.6 51.6,2.6 51.6,10.2 51.6,11.5 51.7,46 54.2,46 54.1,0 8.1,0.1 "/>
+              <polygon class="st0" points="38.5,10.3 35,10.3 8.1,10.3 8.1,12.9 32.4,12.8 0,45.4 1.8,47.2 36,12.8 "/>
+              <polygon class="st0" points="43.9,15.6 41.4,18.2 7.2,52.5 9,54.3 41.4,21.8 41.4,46.1 44,46.1 43.9,19.2 "/>
+              <polygon class="st0" points="43.9,12 43.9,10.3 42.1,10.3 39.6,12.8 3.6,49 5.4,50.8 41.4,14.6 "/>
+              <polygon class="st0" points="49,10.5 49,7.7 49,5.1 46.5,5.1 43.6,5.1 40.1,5.1 8.1,5.2 8.1,7.8 37.5,7.7 41.1,7.7 44.7,7.7
+                46.5,7.7 46.5,9.5 46.5,13.1 46.5,16.6 46.6,46.1 49.1,46.1 49,14.1 "/>
+              </g>
+          </svg>
+          <p class="profile_name">timmy</p>
+          <span class="profile_captions">24 captions</span>
+        </div>
        <h2 class="h2_title">What do you see in artworks?</h2>
+       <div class="random">
+       <div class="random-color">
+          <svg
+            class="pijl-random"
+            xmlns="http://www.w3.org/2000/svg"
+            width="54.2px"
+            height="54.3px"
+            viewBox="0 0 54.2 54.3">
+             <g
+                fill="#EE483C"
+                fill-rule="evenodd"
+              >
+              <polygon class="st0" points="8.1,2.7 42.6,2.6 43.9,2.6 51.6,2.6 51.6,10.2 51.6,11.5 51.7,46 54.2,46 54.1,0 8.1,0.1 "/>
+              <polygon class="st0" points="38.5,10.3 35,10.3 8.1,10.3 8.1,12.9 32.4,12.8 0,45.4 1.8,47.2 36,12.8 "/>
+              <polygon class="st0" points="43.9,15.6 41.4,18.2 7.2,52.5 9,54.3 41.4,21.8 41.4,46.1 44,46.1 43.9,19.2 "/>
+              <polygon class="st0" points="43.9,12 43.9,10.3 42.1,10.3 39.6,12.8 3.6,49 5.4,50.8 41.4,14.6 "/>
+              <polygon class="st0" points="49,10.5 49,7.7 49,5.1 46.5,5.1 43.6,5.1 40.1,5.1 8.1,5.2 8.1,7.8 37.5,7.7 41.1,7.7 44.7,7.7
+                46.5,7.7 46.5,9.5 46.5,13.1 46.5,16.6 46.6,46.1 49.1,46.1 49,14.1 "/>
+              </g>
+          </svg>
+          <p class="button-random">ga naar een <br/> willekeurig kunstwerk</p>
+        </div>
+        </div> 
        <div class="home_grid">
          <article class="artile-artwork article_one">
            <img src="assets/img/judd.jpg" alt="Dit is een kunstwerk met de naam judd." width="400" height="300" class="black_white"/>
@@ -186,6 +231,12 @@ class Home extends Component {
            </ol>
          </div>
        </main>
+       <footer>
+         <ul class="footer_ul">
+           <li class="footer_left">different <br/> vision</li>
+           <li class="footer_right">presented by museum<br/> boijmans van beuningen</li>
+         </ul>
+       </footer>
        </body>
     );
   }

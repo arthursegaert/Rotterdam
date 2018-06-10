@@ -133,8 +133,8 @@ nav {
 }
 
 .box__title-inner[data-hover] {
-  -webkit-text-stroke: 2px black;
-  text-stroke: 2px black;
+  -webkit-text-stroke: 0.2rem black;
+  text-stroke: 0.2rem black;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   color: transparent;
@@ -196,6 +196,41 @@ nav {
   height: 100vh;
 }
 
+.profile { 
+  width: 50vw;
+  background-color: #283DD2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_name {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 8rem;
+  -webkit-text-stroke: 0.1rem black;
+  text-stroke: 0.1rem black;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
+  text-transform: uppercase;
+}
+
+.profile_captions {
+  color: white;
+  text-transform: uppercase;
+  font-size: 5rem;
+  margin-top: -6rem;
+}
+
+.svg-pijl {
+  align-self: flex-end;
+  margin-bottom: -6rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+
 /*HOME*/
 
 main {
@@ -206,13 +241,50 @@ main {
 
 .h2_title {
   font-family: 'Archivo Black', sans-serif;
-  -webkit-text-stroke: 2px white;
-  text-stroke: 2px white;
+  -webkit-text-stroke: 0.2rem white;
+  text-stroke: 0.2rem white;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   color: transparent;
   text-transform: uppercase;
-  font-size: 4.5rem;
+  font-size: 7rem;
+}
+
+.random {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.random-color {
+  width: 45vw;
+  background-image: linear-gradient(to left,#7333A8,  #7333A8,#EE483C, #EE483C);
+  display: flex;
+  flex-direction: column;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+}
+
+.pijl-random {
+  align-self: flex-end;
+  margin-bottom: -3rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.button-random {
+  text-align: right;
+  color: white;
+  text-transform: uppercase;
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+.random-color:hover {
+    background-position: 40% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 .black_white {
@@ -222,7 +294,7 @@ main {
 
 .black_white:hover {
 	-webkit-filter: grayscale(0%);
-  filter: grayscale(O%);
+  filter: grayscale(O);
 }
 
 .home_grid {
@@ -261,8 +333,8 @@ main {
 
 .article_artist{
 	font-family: 'Archivo Black', sans-serif;
-  -webkit-text-stroke: 2px white;
-  text-stroke: 2px white;
+  -webkit-text-stroke: 0.2rem white;
+  text-stroke: 0.2rem white;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   color: transparent;
@@ -322,8 +394,8 @@ main {
 
 .background_uitspraken {
 	font-family: 'Archivo Black', sans-serif;
-  -webkit-text-stroke: 2px white;
-  text-stroke: 2px white;
+  -webkit-text-stroke: 0.2rem white;
+  text-stroke: 0.2rem white;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   color: transparent;
@@ -416,11 +488,38 @@ main {
 
 .span-sticker{
 	font-family: 'Archivo Black', sans-serif;
-	-webkit-text-stroke: 1px white;
-	text-stroke: 1px white;
+	-webkit-text-stroke: 0.1rem white;
+	text-stroke: 0.1rem white;
 	-webkit-text-fill-color: transparent;
 	text-fill-color: transparent;
 	color: transparent;
 	text-transform: uppercase;
 }
 
+footer {
+  background-color: #7333A8;
+}
+
+.footer_ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer_left{
+  text-transform: uppercase;
+  font-size: 4.4rem;
+  color: white;
+  line-height: 5.4rem;
+}
+
+.footer_right{
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 4.4rem;
+  -webkit-text-stroke: 0.1rem white;
+  text-stroke: 0.1rem white;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
+  text-align: right;
+}
