@@ -26,8 +26,8 @@ html {
 
 body {
   font-size: var(--font-size-bodycopy);
-  font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
+  font-family: Circular, sans-serif;
 }
 
 .container {
@@ -111,13 +111,13 @@ h1 {
 .header-img {
   grid-row: 1 / 3;
   grid-column: 2 / 3;
-  background: linear-gradient(rgba(115,51,168,0) 70%,rgba(115,51,168,1)), url('../assets/img/reproduction.jpg') no-repeat center;
+  background: linear-gradient(rgba(115, 51, 168, 0) 70%, rgba(115, 51, 168, 1)), url('../assets/img/reproduction.jpg') no-repeat center;
   background-size: cover;
   width: 40vw;
   height: 120vh;
 }
 
-nav {
+.nav {
   grid-column: 3 / 4;
   grid-row: 1 / 2;
   background-color: #7333a8;
@@ -205,7 +205,7 @@ nav {
   height: 100vh;
 }
 
-.profile { 
+.profile {
   width: 50vw;
   background-color: #283DD2;
   display: flex;
@@ -239,13 +239,12 @@ nav {
   margin-right: 1rem;
 }
 
-
 /*HOME*/
 
 main {
-	background-color: black;
-	z-index: -6;
-	font-family: sans-serif;
+  background-color: black;
+  z-index: -6;
+  font-family: sans-serif;
 }
 
 .h2_title {
@@ -267,14 +266,14 @@ main {
 
 .random-color {
   width: 45vw;
-  background-image: linear-gradient(to left,#7333A8,  #7333A8,#EE483C, #EE483C);
+  background-image: linear-gradient(to left, #7333A8, #7333A8, #EE483C, #EE483C);
   display: flex;
   flex-direction: column;
   background-size: 200% 100%;
   background-position: 100% 0;
-	 -o-transition: all .4s ease-in-out;
-	 -webkit-transition: all .4s ease-in-out;
-   transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 .pijl-random {
@@ -293,58 +292,51 @@ main {
 }
 
 .random-color:hover {
-    background-position: 40% 0;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
+  background-position: 40% 0;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 .black_white {
-	-webkit-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
 
 .black_white:hover {
-	-webkit-filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
   filter: grayscale(O);
 }
 
 .home_grid {
-	display: grid;
-
-	grid-template-columns: 5% repeat(5, 18%) 5%;
-	grid-template-rows: 38rem 34rem 30rem 43rem 6rem;
-
-	grid-template-areas:
-    ". article_one article_one . . . ."
-		". . . . article_two article_two ."
-		". article_three article_three . . . ."
-		". . . . article_four article_four ."
-		". .  captions_button . werken_button  . ."
+  display: grid;
+  grid-template-columns: 5% repeat(5, 18%) 5%;
+  grid-template-rows: 38rem 34rem 30rem 43rem 6rem;
+  grid-template-areas: ". article_one article_one . . . ." ". . . . article_two article_two ." ". article_three article_three . . . ." ". . . . article_four article_four ." ". .  captions_button . werken_button  . ."
 }
 
 .article_one {
-	grid-area: article_one;
+  grid-area: article_one;
 }
 
 .article_two {
-	grid-area: article_two;
+  grid-area: article_two;
 }
 
 .article_three {
-	grid-area: article_three;
+  grid-area: article_three;
 }
 
 .article_four {
-	grid-area: article_four;
+  grid-area: article_four;
 }
 
-.artile-artwork{
-	position: relative;
+.artile-artwork {
+  position: relative;
 }
 
-.article_artist{
-	font-family: 'Archivo Black', sans-serif;
+.article_artist {
+  font-family: 'Archivo Black', sans-serif;
   -webkit-text-stroke: 0.2rem white;
   text-stroke: 0.2rem white;
   -webkit-text-fill-color: transparent;
@@ -352,9 +344,9 @@ main {
   color: transparent;
   text-transform: uppercase;
   font-size: 4rem;
-	transform: rotate(-90deg);
-	position: absolute;
-	z-index: 3;
+  transform: rotate(-90deg);
+  position: absolute;
+  z-index: 3;
 }
 
 .artist_judd {
@@ -362,28 +354,28 @@ main {
 }
 
 .artist_dali {
- top: -2.6rem;
- left: -5rem;
+  top: -2.6rem;
+  left: -5rem;
 }
 
 .artist_cattelan {
-	left: 12rem;
-	top: 26rem;
+  left: 12rem;
+  top: 26rem;
 }
 
 .artist_gogh {
-	left: -12rem;
-	top: 10rem;
+  left: -12rem;
+  top: 10rem;
 }
 
 .captions_judd {
-	top: 30rem;
-	left: 15rem;
+  top: 30rem;
+  left: 15rem;
 }
 
 .captions_dali {
-	left: 3rem;
-	top: -3rem;
+  left: 3rem;
+  top: -3rem;
 }
 
 .captions_cattelan {
@@ -396,16 +388,15 @@ main {
   top: 36rem;
 }
 
-
-.article-captions{
-	font-family: 'Archivo Black', sans-serif;
-	color: #EE483C;
-	position: absolute;
-	z-index: 3;
+.article-captions {
+  font-family: 'Archivo Black', sans-serif;
+  color: #EE483C;
+  position: absolute;
+  z-index: 3;
 }
 
 .background_uitspraken {
-	font-family: 'Archivo Black', sans-serif;
+  font-family: 'Archivo Black', sans-serif;
   -webkit-text-stroke: 0.2rem white;
   text-stroke: 0.2rem white;
   -webkit-text-fill-color: transparent;
@@ -413,106 +404,106 @@ main {
   color: transparent;
   text-transform: uppercase;
   font-size: 7rem;
-	position: absolute;
-	line-height: 7rem;
-	opacity: 0.3;
+  position: absolute;
+  line-height: 7rem;
+  opacity: 0.3;
 }
 
 .uitspraak_one {
-	left: -5rem;
-	bottom: 5.4rem;
+  left: -5rem;
+  bottom: 5.4rem;
 }
 
 .uitspraak_two {
-	left: -22.6rem;
-	bottom: 8rem;
+  left: -22.6rem;
+  bottom: 8rem;
 }
 
 .captions_button {
-	font-family: sans-serif;
-	text-transform: uppercase;
-	color: #EE483C;
-	grid-area: captions_button;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-image: linear-gradient(to right, #7333A8, #7333A8, white, white);
+  font-family: sans-serif;
+  text-transform: uppercase;
+  color: #EE483C;
+  grid-area: captions_button;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #7333A8, #7333A8, white, white);
   background-size: 200% 100%;
-	 -o-transition: all .4s ease-in-out;
-	 -webkit-transition: all .4s ease-in-out;
-   transition: all .4s ease-in-out;
-   font-size: 1.5rem;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  font-size: 1.5rem;
 }
 
 .captions_button:hover {
-	background-position: 100% 0;
-	-o-transition: all .4s ease-in-out;
-	-webkit-transition: all .4s ease-in-out;
-	transition: all .4s ease-in-out;
+  background-position: 100% 0;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 .werken_button {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: sans-serif;
-	text-transform: uppercase;
-	background-image: linear-gradient(to right, #EE483C, #EE483C, white, white);
-	grid-area: werken_button;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, #EE483C, #EE483C, white, white);
+  grid-area: werken_button;
   background-size: 200% 100%;
-	 -o-transition: all .4s ease-in-out;
-	 -webkit-transition: all .4s ease-in-out;
-   transition: all .4s ease-in-out;
-   border: none;
-   font-size: 1.5rem;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  border: none;
+  font-size: 1.5rem;
 }
 
 .werken_button:hover {
-		background-position: 100% 0;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
+  background-position: 100% 0;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 /*STICKER ACTION*/
 
 .box_sticker {
-	background-color: #EE483C;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+  background-color: #EE483C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin-top: 6rem;
 }
 
 .h2_sticker {
-	color: white;
-	font-size: 4rem;
+  color: white;
+  font-size: 4rem;
 }
 
 .li-sticker {
-	color: white;
-	text-transform: uppercase;
+  color: white;
+  text-transform: uppercase;
   margin-bottom: 2rem;
   list-style-type: decimal;
   font-size: 3rem;
 }
 
-.text-sticker{
-	color: black;
+.text-sticker {
+  color: black;
   text-transform: lowercase;
   margin-left: -2rem;
   font-size: 2rem;
 }
 
-.span-sticker{
-	font-family: 'Archivo Black', sans-serif;
-	-webkit-text-stroke: 0.1rem white;
-	text-stroke: 0.1rem white;
-	-webkit-text-fill-color: transparent;
-	text-fill-color: transparent;
-	color: transparent;
-	text-transform: uppercase;
+.span-sticker {
+  font-family: 'Archivo Black', sans-serif;
+  -webkit-text-stroke: 0.1rem white;
+  text-stroke: 0.1rem white;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
+  text-transform: uppercase;
 }
 
 footer {
@@ -525,14 +516,14 @@ footer {
   align-items: center;
 }
 
-.footer_left{
+.footer_left {
   text-transform: uppercase;
   font-size: 4.4rem;
   color: white;
   line-height: 5.4rem;
 }
 
-.footer_right{
+.footer_right {
   font-family: 'Archivo Black', sans-serif;
   font-size: 4.4rem;
   -webkit-text-stroke: 0.1rem white;
