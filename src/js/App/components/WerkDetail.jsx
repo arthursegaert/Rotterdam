@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { base } from "../config/fire.js";
+import { app, base } from "../config/fire.js";
 import { StatusContext } from "../context/statusContext.js";
 
 class WerkDetail extends Component {
@@ -8,10 +8,16 @@ class WerkDetail extends Component {
     this.state = {
       match: false,
       kunstwerken: [],
+      captions: [],
       loading: true
     };
   }
   componentDidMount() {
+    base.syncState(`captions`, {
+      context: this,
+      state: "captions",
+      asArray: true
+    });
     base.syncState(`kunstwerken`, {
       context: this,
       state: "kunstwerken",
@@ -34,6 +40,42 @@ class WerkDetail extends Component {
       });
   }
 
+  handleNewCaptionSubmit = e => {
+    e.preventDefault();
+    const caption = this.captionInput.value;
+    const user = app.auth().currentUser.displayName;
+    const userid = app.auth().currentUser.uid;
+    const kunstwerkId = parseInt(this.props.match.params.id, 10);
+
+    if (caption.trim().length !== 0) {
+      base
+        .push(`kunstwerken/${kunstwerkId}/captions`, {
+          data: {
+            caption: caption,
+            userName: user,
+            userid: userid,
+            kunstwerkId: kunstwerkId
+          }
+        })
+        .then(() => {
+          base.push(`captions/${userid}`, {
+            data: {
+              caption: caption,
+              userName: user,
+              userid: userid,
+              kunstwerkId: kunstwerkId
+            }
+          });
+        })
+        .then(() => {
+          this.captionForm.reset();
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
+  };
+
   render() {
     if (this.state.loading) {
       return <p>Loading...</p>;
@@ -54,9 +96,23 @@ class WerkDetail extends Component {
                 <p>{result.date}</p>
                 <p>{result.desc}</p>
                 <p>{result.img}</p>
+                <ul>
+                  {this.state.captions.map(captions =>
+                    Object.entries(captions).map(
+                      c =>
+                        c[1].caption !== undefined ? (
+                          <li>
+                            {c[1].caption} - Posted by {c[1].userName}
+                          </li>
+                        ) : (
+                          ""
+                        )
+                    )
+                  )}
+                </ul>
                 {authenticated ? (
                   <div>
-                    <p>Schrijf hier jouw caption toe:</p>
+                    <p>Schrijf hier jouw caption:</p>
                     <form
                       ref={form => {
                         this.captionForm = form;
