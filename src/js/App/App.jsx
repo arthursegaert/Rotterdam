@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { app } from "./config/fire.js";
-import { Route, Link, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import Logout from "./pages/Logout.jsx";
