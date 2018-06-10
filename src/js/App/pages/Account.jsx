@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { app, base } from "../config/fire.js";
 import { StatusContext } from "../context/statusContext.js";
-import Nav from "./Nav.jsx";
+import Nav from "../components/Nav.jsx";
 
 class Account extends Component {
   constructor(props) {
@@ -29,8 +29,8 @@ class Account extends Component {
       <StatusContext.Consumer>
         {({ authenticated }) => (
           <div>
-            <h1>Account</h1>
             <Nav />
+            <h2>Account</h2>
             {authenticated ? (
               <div>
                 <h2>Jouw captions</h2>

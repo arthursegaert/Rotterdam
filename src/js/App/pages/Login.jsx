@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { app, facebookProvider } from "../config/fire.js";
 import { Link, Redirect } from "react-router-dom";
 import "../css/Login.css";
-import Nav from "./Nav.jsx";
+import Nav from "../components/Nav.jsx";
 
 class Login extends Component {
   constructor(props) {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { base } from "../config/fire.js";
-import Nav from "./Nav.jsx";
+import Nav from "../components/Nav.jsx";
 
 class Captions extends Component {
   constructor() {

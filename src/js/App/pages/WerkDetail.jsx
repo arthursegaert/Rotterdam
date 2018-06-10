@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { app, base } from "../config/fire.js";
 import { StatusContext } from "../context/statusContext.js";
-import Nav from "./Nav.jsx";
+import Nav from "../components/Nav.jsx";
 
 class WerkDetail extends Component {
   constructor(props) {

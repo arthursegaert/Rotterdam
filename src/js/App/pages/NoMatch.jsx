@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "./Nav.jsx";
+import Nav from "../components/Nav.jsx";
 
 const NoMatch = () => (
   <div>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { base } from "../config/fire.js";
 import { Link } from "react-router-dom";
-import Nav from "./Nav.jsx";
+import Nav from "../components/Nav.jsx";
 
 class Werken extends Component {
   constructor(props) {

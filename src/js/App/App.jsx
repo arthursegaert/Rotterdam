@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { app } from "./config/fire.js";
 import { Route, Link, Switch } from "react-router-dom";
-import Login from "./components/Login.jsx";
-import Register from "./components/Register.jsx";
-import Logout from "./components/Logout.jsx";
-import Home from "./components/Home.jsx";
-import Werken from "./components/Werken.jsx";
-import WerkDetail from "./components/WerkDetail.jsx";
-import Account from "./components/Account.jsx";
-import Captions from "./components/Captions.jsx";
-import NoMatch from "./components/NoMatch.jsx";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
+import Logout from "./pages/Logout.jsx";
+import Home from "./pages/Home.jsx";
+import Werken from "./pages/Werken.jsx";
+import WerkDetail from "./pages/WerkDetail.jsx";
+import Account from "./pages/Account.jsx";
+import Captions from "./pages/Captions.jsx";
+import NoMatch from "./pages/NoMatch.jsx";
 import { StatusContext } from "./context/statusContext.js";
 
 class App extends Component {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../css/Home.css";
-import Nav from "./Nav.jsx";
+import Nav from "../components/Nav.jsx";
 
 class Home extends Component {
   constructor(props) {

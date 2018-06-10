@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { app, facebookProvider } from "../config/fire.js";
-import Nav from "./Nav.jsx";
+import Nav from "../components/Nav.jsx";
 
 class Register extends Component {
   constructor(props) {
