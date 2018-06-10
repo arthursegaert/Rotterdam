@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { app, facebookProvider } from "../config/fire.js";
+import Nav from "./Nav.jsx";
 
 class Register extends Component {
   constructor(props) {
@@ -77,6 +78,7 @@ class Register extends Component {
     } else {
       return (
         <div>
+          <Nav />
           <button onClick={() => this.authWithFacebook()}>
             Register with Facebook
           </button>

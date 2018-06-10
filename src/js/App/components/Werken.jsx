@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { base } from "../config/fire.js";
 import { Link } from "react-router-dom";
+import Nav from "./Nav.jsx";
 
 class Werken extends Component {
   constructor(props) {
@@ -19,6 +20,7 @@ class Werken extends Component {
   render() {
     return (
       <div>
+        <Nav />
         {this.state.kunstwerken.map(kunstwerk => {
           return (
             <div key={kunstwerk.id} className="kunstwerk">

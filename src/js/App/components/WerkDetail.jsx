@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { app, base } from "../config/fire.js";
 import { StatusContext } from "../context/statusContext.js";
+import Nav from "./Nav.jsx";
 
 class WerkDetail extends Component {
   constructor(props) {
@@ -98,6 +99,7 @@ class WerkDetail extends Component {
           <StatusContext.Consumer>
             {({ authenticated }) => (
               <div>
+                <Nav />
                 <h1>{result.title}</h1>
                 <p>{result.author}</p>
                 <p>{result.date}</p>

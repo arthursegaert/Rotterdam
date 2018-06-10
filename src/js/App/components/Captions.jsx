@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { base } from "../config/fire.js";
+import Nav from "./Nav.jsx";
 
 class Captions extends Component {
   constructor() {
@@ -19,20 +20,23 @@ class Captions extends Component {
 
   render() {
     return (
-      <ul>
-        {this.state.captions.map(captions =>
-          Object.entries(captions).map(
-            c =>
-              c[1].caption !== undefined ? (
-                <li>
-                  {c[1].caption} - Posted by {c[1].userName}
-                </li>
-              ) : (
-                ""
-              )
-          )
-        )}
-      </ul>
+      <div>
+        <Nav />
+        <ul>
+          {this.state.captions.map(captions =>
+            Object.entries(captions).map(
+              c =>
+                c[1].caption !== undefined ? (
+                  <li>
+                    {c[1].caption} - Posted by {c[1].userName}
+                  </li>
+                ) : (
+                  ""
+                )
+            )
+          )}
+        </ul>
+      </div>
     );
   }
 }

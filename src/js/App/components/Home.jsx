@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../css/Home.css";
+import Nav from "./Nav.jsx";
 
 class Home extends Component {
   constructor(props) {
@@ -17,46 +18,7 @@ class Home extends Component {
               boijmans<br />van beuningen
             </span>
             <div class="header-img" />
-            <nav class="nav">
-              <ul class="nav-list">
-                <li class="nav-list-item">
-                  <Link class="nav-list-item-link" to="/">
-                    <span class="nav-list-item-link-title">
-                      <span class="nav-list-item-link-title-inner" data-hover="Home">
-                        Home
-                      </span>
-                    </span>
-                  </Link>
-                </li>
-                <li class="nav-list-item">
-                  <Link to="/captions" class="nav-list-item-link">
-                    <span class="nav-list-item-link-title">
-                      <span class="nav-list-item-link-title-inner" data-hover="Captions">
-                        Captions
-                      </span>
-                    </span>
-                  </Link>
-                </li>
-                <li class="nav-list-item">
-                  <Link class="nav-list-item-link" to="/werken">
-                    <span class="nav-list-item-link-title">
-                      <span class="nav-list-item-link-title-inner" data-hover="Werken">
-                        Werken
-                      </span>
-                    </span>
-                  </Link>
-                </li>
-                <li class="nav-list-item">
-                  <Link class="nav-list-item-link" to="/account">
-                    <span class="nav-list-item-link-title">
-                      <span class="nav-list-item-link-title-inner" data-hover="Account">
-                        Account
-                      </span>
-                    </span>
-                  </Link>
-                </li>
-              </ul>
-            </nav>
+            <Nav />
             <div class="header-cta">
               <Link class="header-cta-link" to="/sticker">
                 Sticker action
@@ -197,7 +159,9 @@ class Home extends Component {
                 class="main-uitgelicht-art-img"
               />
               <p class="main-uitgelicht-art art-artist-judd">judd</p>
-              <span class="article-captions art-captions-judd">12 captions</span>
+              <span class="article-captions art-captions-judd">
+                12 captions
+              </span>
             </article>
             <article class="main-uitgelicht-art art-two">
               <img
@@ -208,7 +172,9 @@ class Home extends Component {
                 class="main-uitgelicht-art-img"
               />
               <p class="main-uitgelicht-art art-artist-dali">dali</p>
-              <span class="article-captions art-captions-dali">23 captions</span>
+              <span class="article-captions art-captions-dali">
+                23 captions
+              </span>
               <span class="main-backtext backtext-one">
                 f*cking <br /> ugly
               </span>
@@ -235,7 +201,9 @@ class Home extends Component {
                 class="main-uitgelicht-art-img"
               />
               <p class="main-uitgelicht-art art-artist-gogh">van gogh</p>
-              <span class="article-captions art-captions-gogh">11 captions</span>
+              <span class="article-captions art-captions-gogh">
+                11 captions
+              </span>
               <span class="main-backtext backtext-two">damn</span>
             </article>
             <Link to="/captions" class="art-button art-captions-button">

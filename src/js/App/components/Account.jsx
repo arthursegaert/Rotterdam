@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { app, base } from "../config/fire.js";
 import { StatusContext } from "../context/statusContext.js";
+import Nav from "./Nav.jsx";
 
 class Account extends Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class Account extends Component {
         {({ authenticated }) => (
           <div>
             <h1>Account</h1>
+            <Nav />
             {authenticated ? (
               <div>
                 <h2>Jouw captions</h2>

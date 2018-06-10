@@ -40,25 +40,12 @@ class App extends Component {
   };
 
   render() {
-    const { authenticated, username } = this.state;
     if (this.state.loading) {
       return <p>Loading...</p>;
     }
     return (
       <StatusContext.Provider value={this.state}>
         <div className="App">
-          <Link to="/">Home</Link>
-          {authenticated ? (
-            <div>
-              <p>Ingelogd, welkom: {username}</p>
-              <Link to="/logout">Logout</Link>
-            </div>
-          ) : (
-            <div>
-              <Link to="/login">Login</Link>
-              <Link to="/register">Register</Link>
-            </div>
-          )}
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
