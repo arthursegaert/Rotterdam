@@ -82,7 +82,7 @@ class Login extends Component {
                 }}
                 placeholder="email"
               />
-              <label>Password</label>
+              <label className="label">Password</label>
               <input
                 name="password"
                 type="password"

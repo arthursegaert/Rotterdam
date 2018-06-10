@@ -12,12 +12,14 @@ html {
 }
 
 .wf-active {
+
   & body {
     visibility: visible;
   }
 }
 
 .wf-inactive {
+
   & body {
     visibility: visible;
     font-family: Helvetica, Arial, sans-serif;
@@ -256,7 +258,7 @@ main {
   color: transparent;
   text-transform: uppercase;
   font-size: 7rem;
-  /*animation: 10s linear 0s infinite reverse running bounce;*/
+  animation: 10s linear 0s infinite reverse running banner;
 }
 
 .random {
