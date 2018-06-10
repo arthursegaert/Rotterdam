@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { app, facebookProvider } from "../config/fire.js";
 import { Link, Redirect } from "react-router-dom";
-import "./Login.css";
+import "../css/Login.css";
 
 class Login extends Component {
   constructor(props) {
