@@ -12,35 +12,8 @@ class Home extends Component {
       <header class="header">
         <div class="header-wrap">
           <h1 class="title">Different Vision</h1>
-          <svg
-            class="subtitle"
-            xmlns="http://www.w3.org/2000/svg"
-            width="549"
-            height="33"
-            viewbox="0 0 549 33"
-          >
-            <text
-              fill="#FFF"
-              fill-opacity="0"
-              fill-rule="evenodd"
-              stroke="#FFF"
-              font-family="ArchivoBlack-Regular, Archivo Black"
-              font-size="44"
-              font-weight="700"
-              transform="translate(-89 -430)"
-            >
-              <tspan x="87" y="462">
-                BOIJMANS PRESENTS:
-              </tspan>
-            </text>
-          </svg>
-          <img
-            class="header-img"
-            src="assets/img/reproduction.jpg"
-            alt="reproduction"
-            width="2880"
-            height="3621"
-          />
+          <span class="subtitle">boijmans<br/>van beuningen</span>
+          <div class="header-img"></div>
           <nav>
             <ul class="navigation">
               <li class="nav-item">
@@ -133,6 +106,7 @@ class Home extends Component {
         </div>
       </header>
        <main>
+       <Link to="/account">
        <div class="profile">
           <svg
             class="svg-pijl"
@@ -155,8 +129,10 @@ class Home extends Component {
           <p class="profile_name">timmy</p>
           <span class="profile_captions">24 captions</span>
         </div>
+        </Link>
        <h2 class="h2_title">What do you see in artworks?</h2>
        <div class="random">
+       <Link to="/werkdetail/:id">
        <div class="random-color">
           <svg
             class="pijl-random"
@@ -178,6 +154,7 @@ class Home extends Component {
           </svg>
           <p class="button-random">ga naar een <br/> willekeurig kunstwerk</p>
         </div>
+        </Link>
         </div> 
        <div class="home_grid">
          <article class="artile-artwork article_one">
@@ -202,8 +179,8 @@ class Home extends Component {
            <span class="article-captions captions_gogh">11 captions</span>
            <span class="background_uitspraken uitspraak_two">damn</span>
          </article>
-         <p class="captions_button">meer captions</p>
-         <p class="werken_button">meer werken</p>
+         <Link to="/captions" class="captions_button">meer captions</Link>
+         <Link to="/werken" class="werken_button">meer werken</Link>
        </div>
        <div class="box_sticker">
          <h2 class="h2_sticker">&#35;boijmanscaptions</h2>
