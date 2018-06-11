@@ -82,7 +82,6 @@ class Login extends Component {
                 ref={input => {
                   this.emailInput = input;
                 }}
-                placeholder="email"
                 className="section-left-input"
               />
               <label className="section-left-label">Wachtwoord</label>
@@ -92,17 +91,16 @@ class Login extends Component {
                 ref={input => {
                   this.passwordInput = input;
                 }}
-                placeholder="wachtwoord"
                 className="section-left-input"
               />
-              <input type="submit" value="Log in" />
+              <input className="section-left-form-submit" type="submit" value="Log in" />
+              <button className="section-left-form-fb" type="button" onClick={() => this.authWithFacebook()}>
+                Login with Facebook
+              </button>
             </form>
-            <button onClick={() => this.authWithFacebook()}>
-              Login with Facebook
-            </button>
-            <p>
+            <p className="section-left-button">
               Nog geen account?
-              <Link to="/register">Register</Link>
+              <Link className="section-left-button-link" to="/register">Registreer!</Link>
             </p>
           </section>
           <section className="section-right">
