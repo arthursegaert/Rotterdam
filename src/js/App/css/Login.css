@@ -6,10 +6,32 @@
   height: 100vh;
   width: 40vw;
   margin: 0 auto;
-  background-color: black;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(2, 1fr);
   grid-template-areas: 'title title' 'form form' 'link link';
+  position: relative;
+  z-index: 10;
+}
+
+.section-left::after {
+  position: absolute;
+  z-index: -10;
+  content: 'Entering peoples fantasy';
+  top: 20vh;
+  left: -4vw;
+  display: block;
+  max-width: 50%;
+  text-align: center;
+  font-style: italic;
+  font-family: 'Integral CF', sans-serif;
+  color: white;
+  font-size: 18.2rem;
+  opacity: .1;
+  line-height: 1.05;
+  -webkit-text-stroke: .3rem white;/* stylelint-disable-line */
+  text-stroke: .3rem white; /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent;/* stylelint-disable-line */
+  text-fill-color: transparent; /* stylelint-disable-line */
 }
 
 .section-right {
@@ -18,6 +40,7 @@
   background-image: url(../../../assets/img/koningen.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: 10;
 }
 
 .section-left-title {
@@ -84,7 +107,7 @@
 }
 
 .section-left-form-fb {
-background-color:#283dd2;
+  background-color: #283dd2;
 }
 
 .section-left-button {
@@ -99,3 +122,4 @@ background-color:#283dd2;
   text-decoration: underline;
   padding-left: 1rem;
 }
+
