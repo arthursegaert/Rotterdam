@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { app, facebookProvider } from "../config/fire.js";
+import "../css/Register.css";
 import Nav from "../components/Nav.jsx";
+import KunstwerkCTA from "../components/KunstwerkCTA.jsx";
 
 class Register extends Component {
   constructor(props) {
@@ -41,11 +43,13 @@ class Register extends Component {
             .auth()
             .createUserWithEmailAndPassword(email, password)
             .then(() => {
-
               user = app.auth().currentUser;
               console.log("current user", user);
-              if(user){
-                console.log("onAuthStateChanged currentUser displayName", user.displayName);
+              if (user) {
+                console.log(
+                  "onAuthStateChanged currentUser displayName",
+                  user.displayName
+                );
               }
             })
             .then(() => {
@@ -53,9 +57,12 @@ class Register extends Component {
                 displayName: username
               });
 
-              console.log("display name",user);
-              if(user){
-                console.log("onAuthStateChanged updateProfile displayName", user.displayName);
+              console.log("display name", user);
+              if (user) {
+                console.log(
+                  "onAuthStateChanged updateProfile displayName",
+                  user.displayName
+                );
               }
             })
             .then(() => {
@@ -87,53 +94,77 @@ class Register extends Component {
       return <Redirect to="/" />;
     } else {
       return (
-        <div>
-          <Nav />
-          <button onClick={() => this.authWithFacebook()}>
-            Register with Facebook
-          </button>
-          <p>If you have an account already:</p>
-          <Link to="/login">Log in</Link>
-          <form
-            onSubmit={e => {
-              this.authWithEmailPassword(e);
-            }}
-            ref={form => {
-              this.loginForm = form;
-            }}
-          >
-            <label>Email</label>
-            <input
-              required
-              name="email"
-              type="email"
-              ref={input => {
-                this.emailInput = input;
+        <main className="two-sec-page">
+          <div className="white-circle registreer-circle" />
+          <div className="white-circle registreer-circle" />
+          <div className="white-circle registreer-circle" />
+          <div className="white-circle registreer-circle" />
+          <div className="white-circle registreer-circle" />
+          <section className="section-left section-left-register">
+            <h1 className="section-left-title">Registreer</h1>
+            <form
+              onSubmit={e => {
+                this.authWithEmailPassword(e);
               }}
-              placeholder="email"
-            />
-            <label>Username</label>
-            <input
-              required
-              name="username"
-              type="text"
-              ref={input => {
-                this.usernameInput = input;
+              ref={form => {
+                this.loginForm = form;
               }}
-              placeholder="username"
-            />
-            <label>Password</label>
-            <input
-              name="password"
-              type="password"
-              ref={input => {
-                this.passwordInput = input;
-              }}
-              placeholder="password"
-            />
-            <input type="submit" value="Register" />
-          </form>
-        </div>
+              className="section-left-form-register"
+            >
+              <label className="section-left-label">E-mail</label>
+              <input
+                required
+                name="email"
+                type="email"
+                ref={input => {
+                  this.emailInput = input;
+                }}
+                className="section-left-input"
+              />
+              <label className="section-left-label">Gebruikersnaam</label>
+              <input
+                required
+                name="username"
+                type="text"
+                ref={input => {
+                  this.usernameInput = input;
+                }}
+                className="section-left-input"
+              />
+              <label className="section-left-label">Wachtwoord</label>
+              <input
+                name="password"
+                type="password"
+                ref={input => {
+                  this.passwordInput = input;
+                }}
+                className="section-left-input"
+              />
+              <input
+                className="section-left-form-submit"
+                type="submit"
+                value="Registreer"
+              />
+              <button
+                type="button"
+                className="section-left-form-fb"
+                onClick={() => this.authWithFacebook()}
+              >
+                Registreer via Facebook
+              </button>
+            </form>
+            <p className="section-left-button">
+              Al een account?
+              <Link className="section-left-button-link" to="/login">
+                Log in!
+              </Link>
+            </p>
+          </section>
+          <section className="section-right section-right-register">
+            <Nav />
+            <KunstwerkCTA kunstwerkId="1" />
+          </section>
+        </main>
       );
     }
   }

@@ -1,0 +1,102 @@
+.section-right-register {
+  background-image: url(../../../assets/img/man.jpg)
+}
+
+.section-left-form-register {
+  grid-area: form;
+  display: grid;
+  grid-template: repeat(6, 1fr) 1fr / repeat(2, 1fr);
+  grid-template-areas: 'label1 label1' 'input1 input1' 'label2 label2' 'input2 input2' 'label3 label3' 'input3 input3' 'button1 button2';
+  grid-column-gap: 6vmax;
+  width: 32vw;
+  margin-left: 6rem;
+}
+
+.section-left-form-register .section-left-input:nth-of-type(3) {
+  grid-area: input3;
+}
+
+.section-left-form-register .section-left-form-submit {
+  grid-area: button1;
+}
+
+.section-left-form-register .section-left-form-fb {
+  grid-area: button2;
+}
+
+/* circles */
+
+.registreer-circle:nth-of-type(1)::after {
+  position: fixed;
+  content: '';
+  border-radius: 50%;
+  width: 8.7rem;
+  height: 8.7rem;
+  background-color: white;
+  z-index: 20;
+  right: 96vw;
+  bottom: 40rem;
+}
+
+.registreer-circle:nth-of-type(2)::after {
+  position: fixed;
+  content: '';
+  border-radius: 50%;
+  width: 15.5rem;
+  height: 15.5rem;
+  background-color: white;
+  z-index: 20;
+  top: -8vh;
+  left: 15vw;
+}
+
+.registreer-circle:nth-of-type(3) {
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+}
+
+.registreer-circle:nth-of-type(3)::after {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  width: 17.1rem;
+  height: 17.1rem;
+  background-color: white;
+  z-index: 20;
+  bottom: -8vh;
+  left: 6vw;
+}
+
+.registreer-circle:nth-of-type(4) {
+  grid-row: 2 / 3;
+  grid-column: 2 / 4;
+}
+
+.registreer-circle:nth-of-type(4)::after {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  width: 12.9rem;
+  height: 12.9rem;
+  background-color: white;
+  z-index: 20;
+  right: 19vw;
+  top: 13vh;
+}
+
+.registreer-circle:nth-of-type(5) {
+  grid-row: 1 / 2;
+  grid-column: 3 / 5;
+}
+
+.registreer-circle:nth-of-type(5)::after {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  width: 18.6rem;
+  height: 18.6rem;
+  background-color: white;
+  z-index: 20;
+  right: 18vw;
+  top: -12vh;
+}
