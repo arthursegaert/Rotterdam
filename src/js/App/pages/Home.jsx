@@ -108,7 +108,9 @@ class Home extends Component {
               <span className="main-profile-captions">24 captions</span>
             </div>
           </Link>
-          <p className="main-uitleg">What do you see in artworks?</p>
+          <div className="banner">
+            <p className="banner-text">What do you see in artworks?</p>
+          </div>
           <div className="main-random">
             <Link to="/werkdetail/:id">
               <div className="main-random-color">

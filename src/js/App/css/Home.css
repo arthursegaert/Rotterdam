@@ -142,7 +142,12 @@ main {
   font-family: sans-serif;
 }
 
-.main-uitleg {
+.banner {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.banner-text {
   font-family: 'Archivo Black', sans-serif;
   -webkit-text-stroke: .2rem white;/* stylelint-disable-line */
   text-stroke: .2rem white;/* stylelint-disable-line */
