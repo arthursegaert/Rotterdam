@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { app, base } from "../config/fire.js";
 import { StatusContext } from "../context/statusContext.js";
 import Nav from "../components/Nav.jsx";
+import { Link } from "react-router-dom";
 
 class Account extends Component {
   constructor(props) {
@@ -41,7 +42,11 @@ class Account extends Component {
                 </ol>
               </div>
             ) : (
-              <p>Niet ingelogd</p>
+              <div>
+                <p>Niet ingelogd</p>
+                <Link to="/login">Login</Link>
+                <Link to="/register">Registreer</Link>
+              </div>
             )}
           </div>
         )}
