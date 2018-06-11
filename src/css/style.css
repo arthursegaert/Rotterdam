@@ -1,24 +1,26 @@
 @import 'reset';
 @import 'vars';
 @import 'animations';
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
   height: 100%;
 }
 
-*, *::before, *::after {
-  /* stylelint-disable-line */
+*, *::before, *::after { /* stylelint-disable-line */
   box-sizing: inherit;
 }
 
 .wf-active {
+
   & body {
     visibility: visible;
   }
 }
 
 .wf-inactive {
+
   & body {
     visibility: visible;
     font-family: Helvetica, Arial, sans-serif;
@@ -79,14 +81,10 @@ footer {
 .footer-right {
   font-family: 'Archivo Black', sans-serif;
   font-size: 4.4rem;
-  -webkit-text-stroke: .1rem white;
-  /* stylelint-disable-line */
-  text-stroke: .1rem white;
-  /* stylelint-disable-line */
-  -webkit-text-fill-color: transparent;
-  /* stylelint-disable-line */
-  text-fill-color: transparent;
-  /* stylelint-disable-line */
+  -webkit-text-stroke: .1rem white; /* stylelint-disable-line */
+  text-stroke: .1rem white; /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent; /* stylelint-disable-line */
+  text-fill-color: transparent; /* stylelint-disable-line */
   color: transparent;
   text-align: right;
 }
