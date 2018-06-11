@@ -1,30 +1,13 @@
 
 .werken-div-background {
-  background: repeating-linear-gradient(to right,black 5%,black 23%,#727272 23%,#727272 23.05%)
+  background: repeating-linear-gradient(to right, black 5%, black 23%, #727272 23%, #727272 23.05%);
 }
-
 
 .werken-grid {
   display: grid;
   grid-template-columns: 5% repeat(5, 18%) 5%;
-  grid-template-rows: 10rem 25rem 30rem 0rem 8rem 35rem 0rem 40rem 0rem 15rem repeat(6, 30rem);
-  grid-template-areas: 
-  '. kunstwerk_nine . . . .'
-  '. . . . kunstwerk_two .'
-  '. . kunstwerk_eleven . . .'
-  '. kunstwerk_eight . . . .'
-  '. . . kunstwerk_seven . .'
-  '. . . . . kunstwerk_twelve '
-  '. . kunstwerk_three . . .'
-  '. . . . kunstwerk_fourteen .'
-  '. kunstwerk_six . . . .'
-  '. . . kunstwerk_thirteen . .'
-  '. . . . . kunstwerk_four '
-  '. kunstwerk_one . . . .'
-  '. kunstwerk_five . . . .'
-  '. kunstwerk_null . . . .'
-  '. kunstwerk_ten . . . .'
-  '. kunstwerk_fifteen . . . .';
+  grid-template-rows: 10rem 25rem 30rem 0 8rem 35rem 0 40rem 0 15rem repeat(6, 30rem);
+  grid-template-areas: '. kunstwerk_nine . . . .''. . . . kunstwerk_two .''. . kunstwerk_eleven . . .''. kunstwerk_eight . . . .''. . . kunstwerk_seven . .''. . . . . kunstwerk_twelve ''. . kunstwerk_three . . .''. . . . kunstwerk_fourteen .''. kunstwerk_six . . . .''. . . kunstwerk_thirteen . .''. . . . . kunstwerk_four ''. kunstwerk_one . . . .''. kunstwerk_five . . . .''. kunstwerk_null . . . .''. kunstwerk_ten . . . .''. kunstwerk_fifteen . . . .';
 }
 
 .kunstwerk-author-p {
@@ -123,57 +106,57 @@
   grid-area: kunstwerk_fifteen;
 }
 
-.kunstwerk-img-2{
+.kunstwerk-img-2 {
   width: 24.8rem;
   height: 35.2rem;
 }
 
-.kunstwerk-img-3{
+.kunstwerk-img-3 {
   width: 24.7rem;
   height: 19.7rem;
 }
 
-.kunstwerk-img-4{
+.kunstwerk-img-4 {
   width: 24.7rem;
   height: 18.5rem;
 }
 
-.kunstwerk-img-6{
+.kunstwerk-img-6 {
   width: 24.8rem;
   height: 31.6rem;
 }
 
-.kunstwerk-img-7{
+.kunstwerk-img-7 {
   width: 24.7rem;
   height: 23.7rem;
 }
 
-.kunstwerk-img-8{
+.kunstwerk-img-8 {
   width: 24.7rem;
   height: 30.8rem;
 }
 
-.kunstwerk-img-9{
+.kunstwerk-img-9 {
   width: 24.7rem;
   height: 18.6rem;
 }
 
-.kunstwerk-img-11{
+.kunstwerk-img-11 {
   width: 24.7rem;
   height: 15.4rem;
 }
 
-.kunstwerk-img-12{
+.kunstwerk-img-12 {
   width: 24.7rem;
   height: 17.2rem;
 }
 
-.kunstwerk-img-13{
+.kunstwerk-img-13 {
   width: 24.8rem;
   height: 18.6rem;
 }
 
-.kunstwerk-img-14{
+.kunstwerk-img-14 {
   width: 24.7rem;
   height: 28.8rem;
 }
