@@ -38,6 +38,48 @@
   transform: rotate(90deg);
 }
 
+.kunstwerk-author-p-8 {
+  top: 28rem;
+}
+
+.kunstwerk-author-p-7 {
+  top: 5rem;
+  left: 14rem;
+  transform: rotate(-90deg);
+}
+
+.kunstwerk-author-p-12 {
+  top: -3rem;
+  left: -4rem;
+}
+
+.kunstwerk-author-p-3 {
+  top: -3rem;
+  left: 20rem;
+}
+
+.kunstwerk-author-p-14 {
+  top: 17rem;
+  left: 10rem;
+  transform: rotate(90deg);
+}
+
+.kunstwerk-author-p-6 {
+  top: 25rem;
+  left: 7rem;
+  transform: rotate(-90deg);
+}
+
+.kunstwerk-author-p-13 {
+  top: 16rem;
+  left: 5rem;
+}
+
+.kunstwerk-author-p-4 {
+  left: -5rem;
+  transform: rotate(-90deg);
+}
+
 .werken-kunstwerk {
   position: relative;
 }
@@ -107,57 +149,57 @@
 }
 
 .kunstwerk-img-2 {
-  width: 24.8rem;
-  height: 35.2rem;
+  width: 25.7rem;
+  height: 36.5rem;
 }
 
 .kunstwerk-img-3 {
-  width: 24.7rem;
-  height: 19.7rem;
+  width: 25.7rem;
+  height: 20.5rem;
 }
 
 .kunstwerk-img-4 {
-  width: 24.7rem;
-  height: 18.5rem;
+  width: 25.7rem;
+  height: 20rem;
 }
 
 .kunstwerk-img-6 {
-  width: 24.8rem;
-  height: 31.6rem;
+  width: 25.8rem;
+  height: 32.7rem;
 }
 
 .kunstwerk-img-7 {
-  width: 24.7rem;
-  height: 23.7rem;
+  width: 25.7rem;
+  height: 24.7rem;
 }
 
 .kunstwerk-img-8 {
-  width: 24.7rem;
-  height: 30.8rem;
+  width: 25.7rem;
+  height: 32rem;
 }
 
 .kunstwerk-img-9 {
-  width: 24.7rem;
-  height: 18.6rem;
+  width: 25.7rem;
+  height: 19.4rem;
 }
 
 .kunstwerk-img-11 {
-  width: 24.7rem;
-  height: 15.4rem;
+  width: 25.7rem;
+  height: 16rem;
 }
 
 .kunstwerk-img-12 {
-  width: 24.7rem;
-  height: 17.2rem;
+  width: 25.7rem;
+  height: 17.9rem;
 }
 
 .kunstwerk-img-13 {
-  width: 24.8rem;
-  height: 18.6rem;
+  width: 25.7rem;
+  height: 19.3rem;
 }
 
 .kunstwerk-img-14 {
   width: 24.7rem;
-  height: 28.8rem;
+  height: 30rem;
 }
 
