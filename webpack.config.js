@@ -25,6 +25,7 @@ const commonConfig = merge([
       filename: `js/script.[hash].js`,
       publicPath: "/"
     },
+    mode: "development", //temp fix loading problem
     module: {
       rules: [
         {

@@ -273,7 +273,7 @@ main {
 .article-captions {
   font-family: 'Archivo Black', sans-serif;
   color: #ee483c;
-  position: absolute;
+  position: relative;
   z-index: 3;
 }
 
