@@ -29,7 +29,7 @@ class Home extends Component {
   render() {
     return (
       <StatusContext.Consumer>
-        {({ username }) => (
+        {({ authenticated, username }) => (
           <div>
             <header className="header">
               <div className="header-wrap">
@@ -91,49 +91,55 @@ class Home extends Component {
               </div>
             </header>
             <main>
-              <Link to="/account">
-                <div className="main-profile">
-                  <svg
-                    className="svg-pijl"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="54.2px"
-                    height="54.3px"
-                    viewBox="0 0 54.2 54.3"
-                  >
-                    <g fill="#EE483C" fillRule="evenodd">
-                      <polygon
-                        className="st0"
-                        points="8.1,2.7 42.6,2.6 43.9,2.6 51.6,2.6 51.6,10.2 51.6,11.5 51.7,46 54.2,46 54.1,0 8.1,0.1 "
-                      />
-                      <polygon
-                        className="st0"
-                        points="38.5,10.3 35,10.3 8.1,10.3 8.1,12.9 32.4,12.8 0,45.4 1.8,47.2 36,12.8 "
-                      />
-                      <polygon
-                        className="st0"
-                        points="43.9,15.6 41.4,18.2 7.2,52.5 9,54.3 41.4,21.8 41.4,46.1 44,46.1 43.9,19.2 "
-                      />
-                      <polygon
-                        className="st0"
-                        points="43.9,12 43.9,10.3 42.1,10.3 39.6,12.8 3.6,49 5.4,50.8 41.4,14.6 "
-                      />
-                      <polygon
-                        className="st0"
-                        points="49,10.5 49,7.7 49,5.1 46.5,5.1 43.6,5.1 40.1,5.1 8.1,5.2 8.1,7.8 37.5,7.7 41.1,7.7 44.7,7.7
+              {authenticated ? (
+                <Link to="/account">
+                  <div className="main-profile">
+                    <svg
+                      className="svg-pijl"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="54.2px"
+                      height="54.3px"
+                      viewBox="0 0 54.2 54.3"
+                    >
+                      <g fill="#EE483C" fillRule="evenodd">
+                        <polygon
+                          className="st0"
+                          points="8.1,2.7 42.6,2.6 43.9,2.6 51.6,2.6 51.6,10.2 51.6,11.5 51.7,46 54.2,46 54.1,0 8.1,0.1 "
+                        />
+                        <polygon
+                          className="st0"
+                          points="38.5,10.3 35,10.3 8.1,10.3 8.1,12.9 32.4,12.8 0,45.4 1.8,47.2 36,12.8 "
+                        />
+                        <polygon
+                          className="st0"
+                          points="43.9,15.6 41.4,18.2 7.2,52.5 9,54.3 41.4,21.8 41.4,46.1 44,46.1 43.9,19.2 "
+                        />
+                        <polygon
+                          className="st0"
+                          points="43.9,12 43.9,10.3 42.1,10.3 39.6,12.8 3.6,49 5.4,50.8 41.4,14.6 "
+                        />
+                        <polygon
+                          className="st0"
+                          points="49,10.5 49,7.7 49,5.1 46.5,5.1 43.6,5.1 40.1,5.1 8.1,5.2 8.1,7.8 37.5,7.7 41.1,7.7 44.7,7.7
                 46.5,7.7 46.5,9.5 46.5,13.1 46.5,16.6 46.6,46.1 49.1,46.1 49,14.1 "
-                      />
-                    </g>
-                  </svg>
-                  {username ? (
-                    <p className="main-profile-name">
-                      {username.split(" ")[0]}
-                    </p>
-                  ) : (
-                    <p className="main-profile-name">Timmy</p>
-                  )}
-                  <span className="main-profile-captions">24 captions</span>
-                </div>
-              </Link>
+                        />
+                      </g>
+                    </svg>
+                    {username ? (
+                      <p className="main-profile-name">
+                        {username.split(" ")[0]}
+                      </p>
+                    ) : (
+                      <p className="main-profile-name">Timmy</p>
+                    )}
+                    <span className="main-profile-captions">
+                      {this.state.captions.length} captions
+                    </span>
+                  </div>
+                </Link>
+              ) : (
+                "inloggen aub"
+              )}
               <div className="banner">
                 <p className="banner-text">What do you see in artworks?</p>
               </div>
