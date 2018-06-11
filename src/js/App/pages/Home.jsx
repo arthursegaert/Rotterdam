@@ -3,14 +3,30 @@ import { Link } from "react-router-dom";
 import "../css/Home.css";
 import Nav from "../components/Nav.jsx";
 import { StatusContext } from "../context/statusContext.js";
+import { app, base } from "../config/fire.js";
 
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      captions: []
+    };
   }
+
+  componentDidMount = () => {
+    app.auth().onAuthStateChanged(user => {
+      if (user) {
+        const userid = app.auth().currentUser.uid;
+        base.syncState(`captions/${userid}`, {
+          context: this,
+          state: "captions",
+          asArray: true
+        });
+      }
+    });
+  };
+
   render() {
-    let gebruikersnaam;
     return (
       <StatusContext.Consumer>
         {({ username }) => (
@@ -110,7 +126,7 @@ class Home extends Component {
                   </svg>
                   {username ? (
                     <p className="main-profile-name">
-                      {(gebruikersnaam = username.split(" ")[0])}
+                      {username.split(" ")[0]}
                     </p>
                   ) : (
                     <p className="main-profile-name">Timmy</p>
