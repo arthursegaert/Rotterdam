@@ -63,7 +63,7 @@ class Login extends Component {
       return <Redirect to="/" />;
     } else {
       return (
-        <main class="two-sec-page">
+        <main className="two-sec-page">
           <section className="section-left">
             <h1 className="section-left-title">Login</h1>
             <form

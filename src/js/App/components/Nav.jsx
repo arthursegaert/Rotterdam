@@ -4,22 +4,22 @@ import "../css/Nav.css";
 
 const Nav = () => {
   return (
-    <nav class="nav">
-      <ul class="nav-list">
-        <li class="nav-list-item">
-          <Link class="nav-list-item-link" to="/">
-            <span class="nav-list-item-link-title">
-              <span class="nav-list-item-link-title-inner" data-hover="Home">
+    <nav className="nav">
+      <ul className="nav-list">
+        <li className="nav-list-item">
+          <Link className="nav-list-item-link" to="/">
+            <span className="nav-list-item-link-title">
+              <span className="nav-list-item-link-title-inner" data-hover="Home">
                 Home
               </span>
             </span>
           </Link>
         </li>
-        <li class="nav-list-item">
-          <Link to="/captions" class="nav-list-item-link">
-            <span class="nav-list-item-link-title">
+        <li className="nav-list-item">
+          <Link to="/captions" className="nav-list-item-link">
+            <span className="nav-list-item-link-title">
               <span
-                class="nav-list-item-link-title-inner"
+                className="nav-list-item-link-title-inner"
                 data-hover="Captions"
               >
                 Captions
@@ -27,19 +27,19 @@ const Nav = () => {
             </span>
           </Link>
         </li>
-        <li class="nav-list-item">
-          <Link class="nav-list-item-link" to="/werken">
-            <span class="nav-list-item-link-title">
-              <span class="nav-list-item-link-title-inner" data-hover="Werken">
+        <li className="nav-list-item">
+          <Link className="nav-list-item-link" to="/werken">
+            <span className="nav-list-item-link-title">
+              <span className="nav-list-item-link-title-inner" data-hover="Werken">
                 Werken
               </span>
             </span>
           </Link>
         </li>
-        <li class="nav-list-item">
-          <Link class="nav-list-item-link" to="/account">
-            <span class="nav-list-item-link-title">
-              <span class="nav-list-item-link-title-inner" data-hover="Account">
+        <li className="nav-list-item">
+          <Link className="nav-list-item-link" to="/account">
+            <span className="nav-list-item-link-title">
+              <span className="nav-list-item-link-title-inner" data-hover="Account">
                 Account
               </span>
             </span>
