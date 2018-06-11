@@ -64,6 +64,10 @@ class Login extends Component {
     } else {
       return (
         <main className="two-sec-page">
+          <div className="login-circle"></div>
+          <div className="login-circle"></div>
+          <div className="login-circle"></div>
+          <div className="login-circle"></div>
           <section className="section-left">
             <h1 className="section-left-title">Login</h1>
             <form
