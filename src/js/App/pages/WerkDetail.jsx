@@ -114,7 +114,7 @@ class WerkDetail extends Component {
                         c =>
                           //is de caption niet undefined?
                           c[1].caption !== undefined ? (
-                            <li>
+                            <li key={c[0]}>
                               <span>
                                 {c[1].caption} - Posted by {c[1].userName}
                               </span>

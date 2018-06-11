@@ -27,7 +27,7 @@ class Captions extends Component {
             Object.entries(captions).map(
               c =>
                 c[1].caption !== undefined ? (
-                  <li>
+                  <li key={c[0]}>
                     {c[1].caption} - Posted by {c[1].userName}
                   </li>
                 ) : (

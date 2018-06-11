@@ -10,7 +10,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <body>
+      <div>
         <header className="header">
           <div className="header-wrap">
             <h1 className="header-title">Different Vision</h1>
@@ -29,13 +29,13 @@ class Home extends Component {
               xmlns="http://www.w3.org/2000/svg"
               width="404"
               height="308"
-              viewbox="0 0 404 308"
+              viewBox="0 0 404 308"
             >
               <g
                 fill="none"
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 stroke="#742DAB"
-                stroke-width="2"
+                strokeWidth="2"
                 transform="rotate(-90 134.5 173.5)"
               >
                 <rect width="305" height="401" x="1" y="40" />
@@ -51,13 +51,13 @@ class Home extends Component {
               xmlns="http://www.w3.org/2000/svg"
               width="300"
               height="308"
-              viewbox="0 0 196 308"
+              viewBox="0 0 196 308"
             >
               <g
                 fill="none"
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 stroke="#F4442B"
-                stroke-width="2"
+                strokeWidth="2"
                 transform="rotate(-90 130.5 177.5)"
               >
                 <rect width="305" height="193" x="1" y="48" />
@@ -80,7 +80,7 @@ class Home extends Component {
                 height="54.3px"
                 viewBox="0 0 54.2 54.3"
               >
-                <g fill="#EE483C" fill-rule="evenodd">
+                <g fill="#EE483C" fillRule="evenodd">
                   <polygon
                     className="st0"
                     points="8.1,2.7 42.6,2.6 43.9,2.6 51.6,2.6 51.6,10.2 51.6,11.5 51.7,46 54.2,46 54.1,0 8.1,0.1 "
@@ -119,7 +119,7 @@ class Home extends Component {
                   height="54.3px"
                   viewBox="0 0 54.2 54.3"
                 >
-                  <g fill="#EE483C" fill-rule="evenodd">
+                  <g fill="#EE483C" fillRule="evenodd">
                     <polygon
                       className="st0"
                       points="8.1,2.7 42.6,2.6 43.9,2.6 51.6,2.6 51.6,10.2 51.6,11.5 51.7,46 54.2,46 54.1,0 8.1,0.1 "
@@ -274,7 +274,7 @@ class Home extends Component {
             </li>
           </ul>
         </footer>
-      </body>
+      </div>
     );
   }
 }
