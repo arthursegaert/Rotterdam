@@ -41,12 +41,22 @@ class Register extends Component {
             .auth()
             .createUserWithEmailAndPassword(email, password)
             .then(() => {
+
               user = app.auth().currentUser;
+              console.log("current user", user);
+              if(user){
+                console.log("onAuthStateChanged currentUser displayName", user.displayName);
+              }
             })
             .then(() => {
               user.updateProfile({
                 displayName: username
               });
+
+              console.log("display name",user);
+              if(user){
+                console.log("onAuthStateChanged updateProfile displayName", user.displayName);
+              }
             })
             .then(() => {
               this.loginForm.reset();

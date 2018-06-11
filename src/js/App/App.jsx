@@ -24,6 +24,10 @@ class App extends Component {
 
   componentDidMount = () => {
     app.auth().onAuthStateChanged(user => {
+      console.log("onAuthStateChanged", user);
+      if(user){
+        console.log("onAuthStateChanged displayname", user.displayName);
+      }
       if (user) {
         this.setState({
           authenticated: true,
@@ -35,6 +39,11 @@ class App extends Component {
           authenticated: false,
           loading: false
         });
+      }
+    });
+    app.auth().onIdTokenChanged(function(user) {
+      if (user) {
+        console.log("onIdTokenChanged displayname", user.displayName);
       }
     });
   };

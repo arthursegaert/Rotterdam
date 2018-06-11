@@ -15,7 +15,9 @@ class Home extends Component {
 
   componentDidMount = () => {
     app.auth().onAuthStateChanged(user => {
+      console.log("changed");
       if (user) {
+        console.log("changed - user");
         const userid = app.auth().currentUser.uid;
         base.syncState(`captions/${userid}`, {
           context: this,
@@ -27,6 +29,7 @@ class Home extends Component {
   };
 
   render() {
+    console.log("render");
     return (
       <StatusContext.Consumer>
         {({ authenticated, username }) => (
@@ -130,7 +133,7 @@ class Home extends Component {
                         {username.split(" ")[0]}
                       </p>
                     ) : (
-                      <p className="main-profile-name">Timmy</p>
+                      <p className="main-profile-name">You</p>
                     )}
                     <span className="main-profile-captions">
                       {this.state.captions.length} captions
