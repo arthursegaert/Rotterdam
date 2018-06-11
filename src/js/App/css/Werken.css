@@ -1,0 +1,180 @@
+
+.werken-div-background {
+  background: repeating-linear-gradient(to right,black 5%,black 23%,#727272 23%,#727272 23.05%)
+}
+
+
+.werken-grid {
+  display: grid;
+  grid-template-columns: 5% repeat(5, 18%) 5%;
+  grid-template-rows: 10rem 25rem 30rem 0rem 8rem 35rem 0rem 40rem 0rem 15rem repeat(6, 30rem);
+  grid-template-areas: 
+  '. kunstwerk_nine . . . .'
+  '. . . . kunstwerk_two .'
+  '. . kunstwerk_eleven . . .'
+  '. kunstwerk_eight . . . .'
+  '. . . kunstwerk_seven . .'
+  '. . . . . kunstwerk_twelve '
+  '. . kunstwerk_three . . .'
+  '. . . . kunstwerk_fourteen .'
+  '. kunstwerk_six . . . .'
+  '. . . kunstwerk_thirteen . .'
+  '. . . . . kunstwerk_four '
+  '. kunstwerk_one . . . .'
+  '. kunstwerk_five . . . .'
+  '. kunstwerk_null . . . .'
+  '. kunstwerk_ten . . . .'
+  '. kunstwerk_fifteen . . . .';
+}
+
+.kunstwerk-author-p {
+  font-family: 'Archivo Black', sans-serif;
+  -webkit-text-stroke: .1rem white;/* stylelint-disable-line */
+  text-stroke: .1rem white;/* stylelint-disable-line */
+  -webkit-text-fill-color: transparent;/* stylelint-disable-line */
+  text-fill-color: transparent;/* stylelint-disable-line */
+  color: transparent;
+  text-transform: uppercase;
+  font-size: 4rem;
+  position: absolute;
+}
+
+.kunstwerk-author-p-9 {
+  left: 10rem;
+  top: 17rem;
+}
+
+.kunstwerk-author-p-2 {
+  left: 10rem;
+  top: 34rem;
+}
+
+.kunstwerk-author-p-11 {
+  left: -7rem;
+  top: 14rem;
+  transform: rotate(90deg);
+}
+
+.werken-kunstwerk {
+  position: relative;
+}
+
+.werken-kunstwerk-0 {
+  grid-area: kunstwerk_null;
+}
+
+.werken-kunstwerk-1 {
+  grid-area: kunstwerk_one;
+}
+
+.werken-kunstwerk-2 {
+  grid-area: kunstwerk_two;
+}
+
+.werken-kunstwerk-3 {
+  grid-area: kunstwerk_three;
+}
+
+.werken-kunstwerk-4 {
+  grid-area: kunstwerk_four;
+}
+
+.werken-kunstwerk-5 {
+  grid-area: kunstwerk_five;
+}
+
+.werken-kunstwerk-6 {
+  grid-area: kunstwerk_six;
+}
+
+.werken-kunstwerk-7 {
+  grid-area: kunstwerk_seven;
+}
+
+.werken-kunstwerk-8 {
+  grid-area: kunstwerk_eight;
+}
+
+.werken-kunstwerk-9 {
+  grid-area: kunstwerk_nine;
+}
+
+.werken-kunstwerk-10 {
+  grid-area: kunstwerk_ten;
+}
+
+.werken-kunstwerk-11 {
+  grid-area: kunstwerk_eleven;
+}
+
+.werken-kunstwerk-12 {
+  grid-area: kunstwerk_twelve;
+}
+
+.werken-kunstwerk-13 {
+  grid-area: kunstwerk_thirteen;
+}
+
+.werken-kunstwerk-14 {
+  grid-area: kunstwerk_fourteen;
+}
+
+.werken-kunstwerk-15 {
+  grid-area: kunstwerk_fifteen;
+}
+
+.kunstwerk-img-2{
+  width: 24.8rem;
+  height: 35.2rem;
+}
+
+.kunstwerk-img-3{
+  width: 24.7rem;
+  height: 19.7rem;
+}
+
+.kunstwerk-img-4{
+  width: 24.7rem;
+  height: 18.5rem;
+}
+
+.kunstwerk-img-6{
+  width: 24.8rem;
+  height: 31.6rem;
+}
+
+.kunstwerk-img-7{
+  width: 24.7rem;
+  height: 23.7rem;
+}
+
+.kunstwerk-img-8{
+  width: 24.7rem;
+  height: 30.8rem;
+}
+
+.kunstwerk-img-9{
+  width: 24.7rem;
+  height: 18.6rem;
+}
+
+.kunstwerk-img-11{
+  width: 24.7rem;
+  height: 15.4rem;
+}
+
+.kunstwerk-img-12{
+  width: 24.7rem;
+  height: 17.2rem;
+}
+
+.kunstwerk-img-13{
+  width: 24.8rem;
+  height: 18.6rem;
+}
+
+.kunstwerk-img-14{
+  width: 24.7rem;
+  height: 28.8rem;
+}
+
