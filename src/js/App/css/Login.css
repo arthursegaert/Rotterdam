@@ -9,7 +9,7 @@
   background-color: black;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(2, 1fr);
-  grid-template-areas: 'title title' 'form form' 'link link'
+  grid-template-areas: 'title title' 'form form' 'link link';
 }
 
 .section-right {
@@ -84,7 +84,7 @@
 }
 
 .section-left-form-fb {
-background-color: #283dd2;
+background-color:#283dd2;
 }
 
 .section-left-button {
