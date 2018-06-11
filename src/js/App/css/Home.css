@@ -26,7 +26,9 @@
   grid-column: 1 / 2;
   color: white;
   text-transform: uppercase;
-  line-height: 1.1;
+  line-height: 9rem;
+  position: relative;
+  left:5rem;
 }
 
 .header-title::after {
@@ -46,6 +48,9 @@
   color: transparent;
   text-transform: uppercase;
   font-size: 4rem;
+  line-height: 4rem;
+  position: relative;
+  left:5rem;
 }
 
 .header-img {
@@ -63,16 +68,21 @@
   min-height: 15rem;
   font-size: 4rem;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-cta-link {
   color: black;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  line-height: 4rem;
 }
 
 .header-cta-link::before {
   content: '!';
+  line-height: 8rem;
   font-size: 8rem;
 }
 
