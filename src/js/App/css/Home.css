@@ -337,7 +337,6 @@ main {
 }
 
 .art-captions-button:hover {
-  background-position: 100% 0;
   -o-transition: all .4s ease-in-out;/* stylelint-disable-line */
   -webkit-transition: all .4s ease-in-out;/* stylelint-disable-line */
   transition: all .4s ease-in-out;
@@ -349,7 +348,7 @@ main {
 }
 
 .art-button:hover {
-  background-position: 100% 0;
+  background-position: 50% 0;
   -o-transition: all .4s ease-in-out;/* stylelint-disable-line */
   -webkit-transition: all .4s ease-in-out;/* stylelint-disable-line */
   transition: all .4s ease-in-out;
