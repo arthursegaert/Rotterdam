@@ -4,10 +4,11 @@
   background-color: #7333a8;
 }
 
-.nav-item-link {
+.nav-list-item-link {
   color: white;
   font-size: 5rem;
   text-transform: uppercase;
+  font-family: 'Integral CF', sans-serif;
 }
 
 .nav-list-item-link-title-inner {
