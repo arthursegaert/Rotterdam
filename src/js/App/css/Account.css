@@ -9,10 +9,6 @@
   grid-area: title;
 }
 
-.nav {
-  grid-area: nav-acc;
-}
-
 .section-left-account {
   grid-area: sec1;
 }
@@ -119,11 +115,6 @@
 .caption-author {
   color: #283dd2;
   text-transform: uppercase;
-}
-
-.nav {
-  align-self: flex-start;
-  justify-self: flex-end;
 }
 
 .page-title {
