@@ -80,13 +80,13 @@ class Account extends Component {
                 {this.state.captions.map(caption => (
                   <article className="caption">
                     <h3 className="caption-content">{caption.caption}</h3>
-                    <p className="caption-author">{caption.userName}</p>
-                    <a className="caption-link-sticker" href="#">
-                      maak de sticker
-                    </a>
-                    <a className="caption-link-share" href="#">
-                      deel
-                    </a>
+                      <p className="caption-author">{caption.userName}</p>
+                      <a className="caption-link-sticker" href="#">
+                        maak de sticker
+                      </a>
+                      <a className="caption-link-share" href="#">
+                        deel
+                      </a>
                   </article>
                 ))}
                 </div>

@@ -18,7 +18,7 @@
 }
 
 .section-left-account, .section-right-account {
-  width: 35vw;
+  width: 40vw;
   max-width: 50rem;
   height: auto;
 }
@@ -55,6 +55,11 @@
   font-style: italic;
 }
 
+.section-left-account {
+  display: flex;
+  flex-direction: column;
+}
+
 .section-right-account {
   display: grid;
   grid-template: repeat(3, min-content) / 1fr;
@@ -85,6 +90,10 @@
 .section-right-account-captions {
   grid-area: captions;
   align-self: flex-start;
+  display: grid;
+  grid-row-gap: 2vh;
+  height: 45vh;
+  overflow-y: scroll;
 }
 
 /* captions */
@@ -92,10 +101,19 @@
 .caption {
   border: .1rem solid #3f3f3f;
   width: 100%;
+  display: grid;
+  grid-template: 1.5fr 1fr / 1fr 1fr 1fr;
+  grid-template-areas:
+    'content content content'
+    'author link share';
 }
 
 .caption-content, .caption-link-sticker, .caption-link-share {
   color: white;
+}
+
+.caption-content {
+  grid-area: content;
 }
 
 .caption-author {
