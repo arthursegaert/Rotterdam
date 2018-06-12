@@ -8,6 +8,10 @@
   grid-template-areas: 'werkdetail-article nav ''werkdetail-article werkdetail-article-captions';
 }
 
+.werkdetail-nav {
+  grid-area: nav;
+}
+
 .werkdetail-result {
   width: 46vw;
   height: 90vh;
