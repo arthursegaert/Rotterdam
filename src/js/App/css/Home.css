@@ -141,7 +141,10 @@
 }
 
 .intro li {
+  content: '*';
   list-style: decimal;
+  list-style-type: upper-roman;
+  color: white;
 }
 
 .banner {
