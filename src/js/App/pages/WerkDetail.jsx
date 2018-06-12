@@ -118,10 +118,10 @@ class WerkDetail extends Component {
                       className="werkdetail-result"
                     />
                     <div className="werkdetail-werken-nav">
+                      <span className="werkdetail-werken-nav-span">2/16</span>
                       <p className="werkdetail-werken-nav-button werkendetail-nav-button-vorige">
                         vorige
                       </p>
-                      <span className="werkdetail-werken-nav-span">2/16</span>
                       <p className="werkdetail-werken-nav-button werkendetail-nav-button-volgende">
                         volgende
                       </p>
