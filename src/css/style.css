@@ -88,3 +88,7 @@ footer {
   color: transparent;
   text-align: right;
 }
+
+.javascript-error {
+  color: red;
+}
