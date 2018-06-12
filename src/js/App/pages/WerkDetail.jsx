@@ -104,7 +104,12 @@ class WerkDetail extends Component {
                 <p>{result.author}</p>
                 <p>{result.date}</p>
                 <p>{result.desc}</p>
-                <p>{result.img}</p>
+               <img
+                alt={result.desc}
+                src={["../", result.img].join('')}
+                width="300"
+                height="300"
+               />
                 <h2>Captions bij dit kunstwerk:</h2>
                 <ul>
                   {/*check of er captions zijn voor het kunstwerk*/}
