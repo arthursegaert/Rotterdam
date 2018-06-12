@@ -34,30 +34,26 @@ class Captions extends Component {
               bekijk meer op <span className="captions-nadruk">instagram</span>
             </a>
           </div>
-          <div className="captions-div-instagram-img">
+          <div className="captions-div-instagram-images">
             <img
               src="../assets/img/social-one.jpg"
               alt="Dit is een geshared foto van de stickeractie via sociale media."
-              width="280"
-              height="280"
+              className="captions-div-instagram-img"
             />
             <img
               src="../assets/img/social-two.jpg"
               alt="Dit is een geshared foto van de stickeractie via sociale media."
-              width="280"
-              height="280"
+              className="captions-div-instagram-img"
             />
             <img
               src="../assets/img/judd.jpg"
               alt="Dit is een geshared foto van de stickeractie via sociale media."
-              width="280"
-              height="280"
+              className="captions-div-instagram-img"
             />
             <img
               src="../assets/img/judd.jpg"
               alt="Dit is een geshared foto van de stickeractie via sociale media."
-              width="280"
-              height="280"
+              className="captions-div-instagram-img"
             />
           </div>
         </section>
