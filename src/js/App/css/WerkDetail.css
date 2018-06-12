@@ -88,3 +88,36 @@
   text-transform: uppercase;
   color: #7333a8;
 }
+
+.werkdetail-article-info {
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  background: #f4442b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.werkdetail-article-info-a {
+  font-family: 'Archivo Black', sans-serif;
+  color: white;
+  font-size: 1.4rem;
+  position: absolute;
+}
+
+.werkdetail-article-info-span {
+  -webkit-text-stroke: 0.1rem white;/* stylelint-disable-line */
+  text-stroke: .1rem  white;/* stylelint-disable-line */
+  -webkit-text-fill-color: transparent;/* stylelint-disable-line */
+  text-fill-color: transparent;/* stylelint-disable-line */
+  color: transparent;
+  font-size: 11rem;
+  position: absolute;
+  opacity: .7;
+}
+
+.werkdetail-article-info-p {
+  text-transform: uppercase;
+}
