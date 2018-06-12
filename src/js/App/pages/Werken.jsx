@@ -37,7 +37,6 @@ class Werken extends Component {
                 alt={kunstwerk.desc}
                 className= {["kunstwerk-img", kunstwerk.id].join('-')}
                 src={kunstwerk.img}
-
               />
               </Link>
             </div>
