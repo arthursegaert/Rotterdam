@@ -159,18 +159,6 @@
   height: 15rem;
 }
 
-.section-right-link:hover .link-svg-text {
-  transform-origin: center;
-  animation: rotator 6s linear running infinite forwards;
-}
-
-@keyframes rotator {
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /* circles */
 
 .white-circle {
