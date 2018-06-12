@@ -62,28 +62,15 @@
   height: 120vh;
 }
 
-.header-cta {
+.header-profile {
   grid-area: cta;
   background-color: #f4442b;
   min-height: 15rem;
-  font-size: 4rem;
+  font-size: 1rem;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.header-cta-link {
-  color: black;
-  display: flex;
-  flex-direction: row;
-  line-height: 4rem;
-}
-
-.header-cta-link::before {
-  content: '!';
-  line-height: 8rem;
-  font-size: 8rem;
 }
 
 .svg1 {
@@ -100,31 +87,13 @@
 
 /*----- MAIN -----*/
 
-.main-profile {
+.main-werken {
   width: 50vw;
   background-color: #283dd2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.main-profile-name {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 8rem;
-  -webkit-text-stroke: .1rem black;/* stylelint-disable-line */
-  text-stroke: .1rem black;/* stylelint-disable-line */
-  -webkit-text-fill-color: transparent;/* stylelint-disable-line */
-  text-fill-color: transparent;/* stylelint-disable-line */
-  color: transparent;
-  text-transform: uppercase;
-}
-
-.main-profile-captions {
-  color: white;
-  text-transform: uppercase;
-  font-size: 5rem;
-  margin-top: -6rem;
 }
 
 .svg-pijl {

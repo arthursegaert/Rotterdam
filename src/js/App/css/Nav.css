@@ -1,7 +1,6 @@
 .nav {
   grid-column: 3 / 4;
   grid-row: 1 / 2;
-  background-color: #7333a8;
   padding: 1.5rem;
 }
 
