@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../css/Home.css";
 import Nav from "../components/Nav.jsx";
+import Caption from "../components/Caption.jsx";
 import { StatusContext } from "../context/statusContext.js";
 import { app, base } from "../config/fire.js";
 
@@ -200,15 +201,16 @@ class Home extends Component {
                     <img src="assets/img/merry.jpg" alt="" width="746" height="520" />
                   </li>
                   <li className="intro-list-item2">
+                    <div className="intro-container">
                     <h3>Write down what you see</h3>
                     <div className="intro-list-item2-form">
-                      <form action="">
-                        <input type="text" />
-                      </form>
-                      <div className="item2-form-bottom">
-                        <a>Caption this</a>
-                        <p>500 characters over</p>
-                      </div>
+                        <form action="">
+                          <input type="text" />
+                        </form>
+                        <div className="item2-form-bottom">
+                          <a>Caption this</a>
+                          <p>500 characters over</p>
+                        </div>
                     </div>
                     <div className="intro-list-item2-buttons">
                       <div className="main-random main-button">
@@ -292,10 +294,19 @@ class Home extends Component {
                           </Link>
                         </div>
                     </div>
+                    </div>
                   </li>
                   <li className="intro-list-item3">
                     <h3>Open up for new visions by reading other captions</h3>
-                    <div />
+                    <div>
+                    {this.state.captions.map(caption => (
+                      <Caption
+                        caption={caption.caption}
+                        userName={caption.userName}
+                      />
+                    ))}
+                    </div>
+                    <a href="" className="main-button"></a>
                   </li>
                   <li className="intro-list-item4">
                     <h3>Get your caption on a sticker!</h3>
