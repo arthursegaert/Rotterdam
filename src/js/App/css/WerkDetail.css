@@ -1,0 +1,14 @@
+.werkdetail-div {
+  background-color: black;
+  color: white;
+}
+
+.werkdetail-section {
+  display: flex;
+}
+
+.werkdetail-result {
+  width: 46vw;
+  height: 90vh;
+  object-fit: cover;
+}

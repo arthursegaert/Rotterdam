@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { app, base } from "../config/fire.js";
 import { StatusContext } from "../context/statusContext.js";
 import Nav from "../components/Nav.jsx";
+import "../css/WerkDetail.css";
 
 class WerkDetail extends Component {
   constructor(props) {
@@ -98,18 +99,15 @@ class WerkDetail extends Component {
         return (
           <StatusContext.Consumer>
             {({ authenticated }) => (
-              <div>
+              <div className="werkdetail-div">
                 <Nav />
-                <h1>{result.title}</h1>
-                <p>{result.author}</p>
-                <p>{result.date}</p>
-                <p>{result.desc}</p>
+                <section className="werkdetail-section">
                <img
                 alt={result.desc}
                 src={["../", result.img].join('')}
-                width="300"
-                height="300"
+                className= "werkdetail-result"
                />
+               <div>
                 <h2>Captions bij dit kunstwerk:</h2>
                 <ul>
                   {/*check of er captions zijn voor het kunstwerk*/}
@@ -178,6 +176,8 @@ class WerkDetail extends Component {
                   //als de gebruiker niet is ingelogd
                   <p>Je moet ingelogd zijn om een caption te schrijven</p>
                 )}
+                </div>
+                </section>
               </div>
             )}
           </StatusContext.Consumer>
