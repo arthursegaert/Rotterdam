@@ -162,7 +162,7 @@ class Register extends Component {
           </section>
           <section className="section-right section-right-register">
             <Nav />
-            <KunstwerkCTA kunstwerkId="1" />
+            <KunstwerkCTA kunstwerkId="1" color="#7333a8" />
           </section>
         </main>
       );
