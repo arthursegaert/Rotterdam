@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/Caption.css";
 
 const Caption = ({ caption, userName }) => {
   return (
