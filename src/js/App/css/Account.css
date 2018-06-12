@@ -1,0 +1,66 @@
+.two-sec-page-account {
+  display: grid;
+  grid-template: 1fr 3fr / 1fr 1fr;
+  grid-template-areas: 'title nav' 'sec1 sec2';
+}
+
+.page-title-account {
+  grid-area: title;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.section-left-account {
+  grid-area: sec1;
+}
+
+.section-right-account {
+  grid-area: sec2;
+}
+
+.page-subtitle {
+  grid-area: title;
+  font-size: 4rem;
+  color: white;
+  font-family: 'Integral CF', sans-serif;
+  color: white;
+  -webkit-text-stroke: .2rem #f4442b;
+  text-stroke: .2rem #f4442b;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  font-style: italic;
+}
+
+.section-right-account-numbercaptions {
+  color: white;
+  font-family: 'Integral CF', sans-serif;
+}
+
+.section-right-account-numberupvotes {
+  font-size: 3.5rem;
+  color: white;
+  font-family: 'Integral CF', sans-serif;
+  color: white;
+  -webkit-text-stroke: .1rem #742dab;
+  text-stroke: .1rem #742dab;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+/* captions */
+
+.caption {
+  border: .1rem solid #3f3f3f;
+  width: 100%;
+}
+
+.caption-content, .caption-link-sticker, .caption-link-share {
+  color: white;
+}
+
+.caption-author {
+  color: #283dd2;
+  text-transform: uppercase;
+}

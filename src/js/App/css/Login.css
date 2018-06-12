@@ -33,22 +33,29 @@
   font-size: 18.2rem;
   opacity: .1;
   line-height: 1.05;
-  -webkit-text-stroke: .3rem white; /* stylelint-disable-line */
-  text-stroke: .3rem white; /* stylelint-disable-line */
-  -webkit-text-fill-color: transparent; /* stylelint-disable-line */
-  text-fill-color: transparent; /* stylelint-disable-line */
+  -webkit-text-stroke: .3rem white;
+  /* stylelint-disable-line */
+  text-stroke: .3rem white;
+  /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent;
+  /* stylelint-disable-line */
+  text-fill-color: transparent;
+  /* stylelint-disable-line */
 }
 
 .section-right-login {
   background-image: url(../../../assets/img/koningen.jpg);
 }
 
-.section-left-title {
-  grid-area: title;
-  align-self: center;
+.page-title {
   font-size: 5rem;
   color: white;
   font-family: 'Integral CF', sans-serif;
+}
+
+.section-left-title {
+  grid-area: title;
+  align-self: center;
 }
 
 .section-left-form-login {
@@ -160,11 +167,9 @@
 }
 
 @keyframes rotator {
-
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }

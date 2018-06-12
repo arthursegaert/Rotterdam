@@ -3,6 +3,7 @@ import { app, base } from "../config/fire.js";
 import { StatusContext } from "../context/statusContext.js";
 import Nav from "../components/Nav.jsx";
 import { Link } from "react-router-dom";
+import "../css/Account.css";
 
 class Account extends Component {
   constructor(props) {
@@ -28,28 +29,90 @@ class Account extends Component {
   render() {
     return (
       <StatusContext.Consumer>
-        {({ authenticated }) => (
-          <div>
-            <Nav />
-            <h2>Account</h2>
-            {authenticated ? (
-              <div>
-                <h2>Jouw captions</h2>
-                <ol>
-                  {this.state.captions.map(caption => (
-                    <li>{caption.caption}</li>
-                  ))}
-                </ol>
-              </div>
-            ) : (
-              <div>
-                <p>Niet ingelogd</p>
-                <Link to="/login">Login</Link>
-                <Link to="/register">Registreer</Link>
-              </div>
-            )}
-          </div>
-        )}
+        {({ authenticated }) =>
+          authenticated ? (
+            <main className="two-sec-page-account">
+              <h1 className="page-title page-title-account">Mijn Account</h1>
+              <Nav className="account-nav" />
+              <section className="section-left section-left-account">
+                <h2 className="page-subtitle section-left-subtitle">
+                  Mijn informatie
+                </h2>
+                <form className="section-left-form-register">
+                  <label className="section-left-label">E-mail</label>
+                  <input
+                    required
+                    name="email"
+                    type="email"
+                    className="section-left-input"
+                  />
+                  <label className="section-left-label">Gebruikersnaam</label>
+                  <input
+                    required
+                    name="username"
+                    type="text"
+                    className="section-left-input"
+                  />
+                  <label className="section-left-label">Wachtwoord</label>
+                  <input
+                    name="password"
+                    type="password"
+                    className="section-left-input"
+                  />
+                  <input
+                    className="section-left-form-submit"
+                    type="submit"
+                    value="Save changes"
+                  />
+                </form>
+              </section>
+              <section className="section-right section-right-account">
+                <h2 className="page-subtitle section-right-subtitle">
+                  Mijn captions
+                </h2>
+                <p className="section-right-account-numbercaptions">
+                  24 captions
+                </p>
+                <p className="section-right-account-numberupvotes">
+                  58 upvotes
+                </p>
+                {this.state.captions.map(caption => (
+                  <article className="caption">
+                    <h3 className="caption-content">{caption.caption}</h3>
+                    <p className="caption-author">{caption.userName}</p>
+                    <a className="caption-link-sticker" href="#">
+                      maak de sticker
+                    </a>
+                    <a className="caption-link-share" href="#">
+                      deel
+                    </a>
+                  </article>
+                ))}
+              </section>
+            </main>
+          ) : (
+            <main className="two-sec-page">
+              <h1 className="page-title">Mijn Account</h1>
+              <section className="section-left section-left-account">
+                <Link
+                  className="page-subtitle section-left-subtitle"
+                  to="/login"
+                >
+                  Login
+                </Link>
+              </section>
+              <section className="section-right section-right-account">
+                <Nav />
+                <Link
+                  className="page-subtitle section-left-subtitle"
+                  to="/register"
+                >
+                  Registreer
+                </Link>
+              </section>
+            </main>
+          )
+        }
       </StatusContext.Consumer>
     );
   }

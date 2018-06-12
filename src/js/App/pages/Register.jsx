@@ -101,7 +101,7 @@ class Register extends Component {
           <div className="white-circle registreer-circle" />
           <div className="white-circle registreer-circle" />
           <section className="section-left section-left-register">
-            <h1 className="section-left-title">Registreer</h1>
+            <h1 className="page-title section-left-title">Registreer</h1>
             <form
               onSubmit={e => {
                 this.authWithEmailPassword(e);
