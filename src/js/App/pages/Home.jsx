@@ -37,9 +37,7 @@ class Home extends Component {
             <header className="header">
               <div className="header-wrap">
                 <h1 className="header-title">Different Vision</h1>
-                <span className="header-subtitle">
-                  boijmans<br />van beuningen
-                </span>
+                <a className="header-subtitle" href="https://www.boijmans.nl"><img data-src="https://static.boijmans.nl/build/images/boijmans-logo-invert.svg" alt="logo boijmans" src="https://static.boijmans.nl/build/images/boijmans-logo-invert.svg"/></a>
                 <div className="header-img" />
                 <Nav />
                 <div className="header-account">
@@ -313,7 +311,7 @@ class Home extends Component {
                   different <br /> vision
                 </li>
                 <li className="footer-right">
-                  presented by museum<br /> boijmans van beuningen
+                  <a className="footer-logo" href="https://www.boijmans.nl"><img data-src="https://static.boijmans.nl/build/images/boijmans-logo-invert.svg" alt="logo boijmans" src="https://static.boijmans.nl/build/images/boijmans-logo-invert.svg"/></a>
                 </li>
               </ul>
             </footer>
