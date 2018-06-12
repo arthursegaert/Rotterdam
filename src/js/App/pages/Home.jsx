@@ -187,33 +187,35 @@ class Home extends Component {
               </div>
             </header>
             <main className="intro">
-              <div className="banner">
-                <p className="banner-text">What do you see in artworks?</p>
-              </div>
               <article>
                 <span className="hide">
                   <h2>How it works</h2>
                 </span>
-                <ol>
-                  <li>
+                <div className="banner">
+                      <p className="banner-text">What do you see in artworks? Fantasise about the story in the picture but also behind the picture.</p>
+                </div>
+                <ol className="intro-list">
+                  <li className="intro-list-item1">
                     <h3>Look at the artwork and fantasise …</h3>
-                    <img src="" alt="" />
+                    <img src="assets/img/merry.jpg" alt="" width="746" height="520" />
                   </li>
-                  <li>
+                  <li className="intro-list-item2">
                     <h3>Write down what you see</h3>
-                    <div>
+                    <div className="intro-list-item2-form">
                       <form action="">
                         <input type="text" />
-                        <button>Caption it</button>
                       </form>
-                      <p>500 characters over</p>
+                      <div className="item2-form-bottom">
+                        <a>Caption this</a>
+                        <p>500 characters over</p>
+                      </div>
                     </div>
-                    <div>
-                      <div className="main-random">
+                    <div className="intro-list-item2-buttons">
+                      <div className="main-random main-button">
                         <Link to="/werkdetail/:id">
-                          <div className="main-random-color">
+                          <div className="main-random-color main-button-color">
                             <svg
-                              className="main-random-pijl"
+                              className="main-button-pijl"
                               xmlns="http://www.w3.org/2000/svg"
                               width="54.2px"
                               height="54.3px"
@@ -248,11 +250,12 @@ class Home extends Component {
                             </p>
                           </div>
                         </Link>
-                        <div className="main-werken">
+                      </div>
+                      <div className="main-werken main-button">
                           <Link to="/werken">
-                            <div className="main-werken-color">
+                            <div className="main-werken-color main-button-color">
                               <svg
-                                className="main-werken-pijl"
+                                className="main-button-pijl"
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="54.2px"
                                 height="54.3px"
@@ -288,32 +291,31 @@ class Home extends Component {
                             </div>
                           </Link>
                         </div>
-                      </div>
                     </div>
                   </li>
-                  <li>
+                  <li className="intro-list-item3">
                     <h3>Open up for new visions by reading other captions</h3>
                     <div />
                   </li>
-                  <li>
+                  <li className="intro-list-item4">
                     <h3>Get your caption on a sticker!</h3>
                     <div />
                   </li>
-                  <li>
+                  <li className="intro-list-item5">
                     <h3>
                       Make art yourself by sticking the caption on a fitting
                       item
                     </h3>
                     <div />
                   </li>
-                  <li>
+                  <li className="intro-list-item6">
                     <h3>
                       Take a picture of your artwork and share it on the
                       hashtag:
                     </h3>
                     <p>#boijmanscaptions</p>
                   </li>
-                  <li>
+                  <li className="intro-list-item7">
                     <h3>
                       Get a chance to win a place for your photo at the newely
                       renovated museum boijmans van beuningen

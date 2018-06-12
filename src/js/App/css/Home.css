@@ -108,15 +108,6 @@
 
 /*----- MAIN -----*/
 
-.main-werken {
-  width: 50vw;
-  background-color: #283dd2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .svg-pijl {
   align-self: flex-end;
   margin-bottom: -6rem;
@@ -127,7 +118,6 @@
 /*-----main-----*/
 
 .intro {
-  padding-top: 10rem;
   background-color: black;
   z-index: -6;
   font-family: sans-serif;
@@ -136,20 +126,126 @@
 
 .intro h3 {
   font-size: 3rem;
+  line-height: 3rem;
   color: white;
   font-family: 'Integral CF', sans-serif;
 }
 
-.intro li {
-  content: '*';
-  list-style: decimal;
-  list-style-type: upper-roman;
+.intro-list {
+  counter-reset: counter1;
+  display: grid;
+  grid-template: 80rem 50rem 50rem 50rem 50rem 50rem/ 50vw 50vw;
+  grid-gap: 5rem;
+  grid-template-areas: 'item1 item1' 'item2 item2' 'item3 item3' 'item4 item4' 'item5 item5' 'item6 item6' 'item7 item7';
+}
+
+.intro-list li::before {
+  content: counter(counter1);
+  counter-increment: counter1;
+  position: relative;
+  top: 10rem;
+  left: -4rem;
+  font-family: 'Integral CF', sans-serif;
+  font-size: 9.5rem;
+  -webkit-text-stroke: .1rem white;/* stylelint-disable-line */
+  text-stroke: .1rem white;/* stylelint-disable-line */
+  -webkit-text-fill-color: transparent;/* stylelint-disable-line */
+  text-fill-color: transparent;/* stylelint-disable-line */
+}
+
+.intro-list h3 {
   color: white;
+  max-width: 50rem;
+  text-align: left;
+}
+
+.intro-list-item1 {
+  grid-area: item1;
+  padding: 10rem;
+}
+
+.intro-list-item2 {
+  grid-area: item2;
+  display: grid;
+  width: 100vw;
+  height: 90rem;
+  padding: 10rem;
+  grid-template: 5rem 28rem 20rem / 40% 60%;
+  grid-gap: 5rem;
+  grid-template-areas: 'title form' 'buttons form' 'buttons . ';
+}
+
+.intro-list-item2-buttons {
+  grid-area: buttons;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.intro-list-item2 h3 {
+  grid-area: title;
+}
+
+.intro-list-item2 form {
+  background-color: #f4442b;
+}
+
+.intro-list-item2-form {
+  width: 100%;
+  padding: 2rem;
+  background-color: #f4442b;
+  grid-area: form;
+}
+
+.intro-list-item2-form input {
+  width: 100%;
+  height: 27.5rem;
+  background-color: #f4442b;
+  border: black solid .1rem;
+}
+
+.intro-list-item2-form a {
+  background-color: black;
+  text-align: center;
+  width: 30%;
+  color: white;
+  border: none;
+  height: 4rem;
+  padding-top: .5rem;
+  font-family: 'Integral CF', sans-serif;
+  font-weight: bold;
+}
+
+.item2-form-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.intro-list-item3 {
+  grid-area: item3;
+}
+
+.intro-list-item4 {
+  grid-area: item4;
+}
+
+.intro-list-item5 {
+  grid-area: item5;
+}
+
+.intro-list-item6 {
+  grid-area: item6;
+}
+
+.intro-list-item7 {
+  grid-area: item7;
 }
 
 .banner {
-  width: 100vw;
   overflow: hidden;
+  width: 100vw;
 }
 
 .banner-text {
@@ -164,14 +260,23 @@
   animation: 10s linear 0s infinite reverse running banner;
 }
 
-.main-random {
+.main-button {
   display: flex;
-  justify-content: flex-end;
+  width: 48rem;
+  height: 17rem;
+  font-family: 'Integral CF', sans-serif;
+  line-height: 3rem;
 }
 
-.main-random-color {
-  width: 45vw;
-  background-image: linear-gradient(to left, #7333a8, #7333a8, #ee483c, #ee483c);
+.main-button p {
+  text-align: right;
+  color: white;
+  text-transform: uppercase;
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+.main-button-color {
   display: flex;
   flex-direction: column;
   background-size: 200% 100%;
@@ -181,22 +286,22 @@
   transition: all .4s ease-in-out;
 }
 
-.main-random-pijl {
+.main-random-color {
+  background-image: linear-gradient(to left, #7333a8, #7333a8, #ee483c, #ee483c);
+}
+
+.main-werken-color {
+  background-image: linear-gradient(to left, #283dd2, #283dd2, #ee483c, #ee483c);
+}
+
+.main-button-pijl {
   align-self: flex-end;
   margin-bottom: -3rem;
   margin-top: 1rem;
   margin-right: 1rem;
 }
 
-.main-random-button {
-  text-align: right;
-  color: white;
-  text-transform: uppercase;
-  font-size: 3rem;
-  padding: 2rem;
-}
-
-.main-random-color:hover {
+.main-button-color:hover {
   background-position: 40% 0;
   -o-transition: all .4s ease-in-out;/* stylelint-disable-line */
   -webkit-transition: all .4s ease-in-out;/* stylelint-disable-line */
