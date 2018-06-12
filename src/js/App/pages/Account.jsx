@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { app, base } from "../config/fire.js";
 import { StatusContext } from "../context/statusContext.js";
 import Nav from "../components/Nav.jsx";
+import Caption from "../components/Caption.jsx";
 import { Link } from "react-router-dom";
 import "../css/Account.css";
 
@@ -33,7 +34,7 @@ class Account extends Component {
           authenticated ? (
             <main className="two-sec-page-account">
               <h1 className="page-title page-title-account">Mijn Account</h1>
-              <Nav className="account-nav" />
+              <Nav classname="account-nav" />
               <section className="section-left section-left-account">
                 <h2 className="page-subtitle section-left-subtitle">
                   Mijn informatie
@@ -71,24 +72,18 @@ class Account extends Component {
                   Mijn captions
                 </h2>
                 <p className="section-right-account-numberupvotes">
-                58 upvotes
-              </p>
+                  58 upvotes
+                </p>
                 <p className="section-right-account-numbercaptions">
                   {this.state.captions.length} captions
                 </p>
                 <div className="section-right-account-captions">
-                {this.state.captions.map(caption => (
-                  <article className="caption">
-                    <h3 className="caption-content">{caption.caption}</h3>
-                    <p className="caption-author">{caption.userName}</p>
-                    <a className="caption-link-sticker" href="#b">
-                      maak de sticker
-                    </a>
-                    <a className="caption-link-share" href="#b">
-                      deel
-                    </a>
-                  </article>
-                ))}
+                  {this.state.captions.map(caption => (
+                    <Caption
+                      caption={caption.caption}
+                      userName={caption.userName}
+                    />
+                  ))}
                 </div>
               </section>
             </main>

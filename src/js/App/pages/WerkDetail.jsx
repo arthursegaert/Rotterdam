@@ -98,9 +98,10 @@ class WerkDetail extends Component {
       if (this.state.match) {
         return (
           <main className="werkdetail-main">
-          <StatusContext.Consumer>
-            {({ authenticated }) => (
+            <StatusContext.Consumer>
+              {({ authenticated }) => (
                 <section className="werkdetail-section">
+<<<<<<< HEAD
                 <Nav />
                 <article className="werkdetail-article">
                   <a href={result.link} target="_blank" className="werkdetail-article-info-a">
@@ -145,59 +146,114 @@ class WerkDetail extends Component {
                                     </button>
                                      </div>
                                 </div>
+=======
+                  <Nav />
+                  <article className="werkdetail-article">
+                    <img
+                      alt={result.desc}
+                      src={["../", result.img].join("")}
+                      className="werkdetail-result"
+                    />
+                    <p>{result.link}Hier moet de link komen</p>
+                    <div className="werkdetail-werken-nav">
+                      <p className="werkdetail-werken-nav-button werkendetail-nav-button-vorige">
+                        vorige
+                      </p>
+                      <span className="werkdetail-werken-nav-span">2/16</span>
+                      <p className="werkdetail-werken-nav-button werkendetail-nav-button-volgende">
+                        volgende
+                      </p>
+                    </div>
+                  </article>
+                  <article className="werkdetail-article-captions">
+                    <h2 className="werkdetail-article-captions-h2">Captions</h2>
+                    <ul>
+                      {/*check of er captions zijn voor het kunstwerk*/}
+                      {result.captions ? (
+                        Object.entries(result.captions).map(captions =>
+                          Object.entries(captions).map(
+                            c =>
+                              //is de caption niet undefined?
+                              c[1].caption !== undefined ? (
+                                <li
+                                  key={c[0]}
+                                  className="werkdetail-article-captions-li"
+                                >
+                                  <span>{c[1].caption}</span>
+                                  {/*check of het werk likes heeft*/}
+                                  {c[1].likes >= 0 ? (
+                                    <div className="werkdetail-article-captions-li-div">
+                                      <span>{c[1].userName}</span>
+                                      <span>{c[1].likes} likes</span>
+                                      <div>
+                                        <button
+                                          onClick={() =>
+                                            this.handleClickLike(c[1])
+                                          }
+                                        >
+                                          like this!
+                                        </button>
+                                      </div>
+                                    </div>
+                                  ) : (
+                                    //als het werk geen likes heeft
+                                    <div className="werkdetail-article-captions-li-div">
+                                      <span className="werkdetail-article-captions-li-div-user">
+                                        {c[1].userName}
+                                      </span>
+                                      <div>
+                                        <span>0 likes - wees de eerste!</span>
+                                        <button
+                                          onClick={() =>
+                                            this.handleClickLike(c[1])
+                                          }
+                                        >
+                                          like this!
+                                        </button>
+                                      </div>
+                                    </div>
+                                  )}
+                                </li>
+>>>>>>> 3ef2a220c844d8fb7b8ea8a72242b146562fa18d
                               ) : (
-                                //als het werk geen likes heeft
-                                <div className="werkdetail-article-captions-li-div">
-                                  <span className="werkdetail-article-captions-li-div-user">{c[1].userName}</span>
-                                  <div>
-                                  <span>0 likes - wees de eerste!</span>
-                                  <button
-                                    onClick={() => this.handleClickLike(c[1])}
-                                  >
-                                    like this!
-                                  </button>
-                                  </div>
-                                </div>
-                              )}
-                            </li>
-                          ) : (
-                            //as het undefined is, toon niks:
-                            ""
+                                //as het undefined is, toon niks:
+                                ""
+                              )
                           )
-                      )
-                    )
-                  ) : (
-                    //als er nog geen captions zijn:
-                    <p>Dit werk heeft nog geen captions</p>
-                  )}
-                </ul>
-                {/* is de gebruiker ingelogt?*/}
-                {authenticated ? (
-                  <div>
-                    <p>Schrijf hier jouw caption:</p>
-                    <form
-                      ref={form => {
-                        this.captionForm = form;
-                      }}
-                      onSubmit={this.handleNewCaptionSubmit}
-                    >
-                      <input
-                        ref={input => {
-                          this.captionInput = input;
-                        }}
-                      />
-                      <input type="submit" value="voeg jouw caption toe" />
-                    </form>
-                  </div>
-                ) : (
-                  //als de gebruiker niet is ingelogd
-                  <p>Je moet ingelogd zijn om een caption te schrijven</p>
-                )}
-                </article>
+                        )
+                      ) : (
+                        //als er nog geen captions zijn:
+                        <p>Dit werk heeft nog geen captions</p>
+                      )}
+                    </ul>
+                    {/* is de gebruiker ingelogt?*/}
+                    {authenticated ? (
+                      <div>
+                        <p>Schrijf hier jouw caption:</p>
+                        <form
+                          ref={form => {
+                            this.captionForm = form;
+                          }}
+                          onSubmit={this.handleNewCaptionSubmit}
+                        >
+                          <input
+                            ref={input => {
+                              this.captionInput = input;
+                            }}
+                          />
+                          <input type="submit" value="voeg jouw caption toe" />
+                        </form>
+                      </div>
+                    ) : (
+                      //als de gebruiker niet is ingelogd
+                      <p>Je moet ingelogd zijn om een caption te schrijven</p>
+                    )}
+                  </article>
                 </section>
-            )}
-          </StatusContext.Consumer>
-        </main>);
+              )}
+            </StatusContext.Consumer>
+          </main>
+        );
       }
       return (
         <div>

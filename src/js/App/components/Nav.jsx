@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Nav.css";
 
-const Nav = () => {
+const Nav = ({classname}) => {
   return (
-    <nav className="nav nav-werken">
+    <nav className={`nav ${classname}`}>
       <ul className="nav-list">
         <li className="nav-list-item">
           <Link

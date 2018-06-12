@@ -3,14 +3,15 @@
   grid-template: 1fr 4fr / 1fr 1fr;
   grid-template-areas: 'title nav-acc' 'sec1 sec2';
   height: 100vh;
+  background-color: black;
+}
+
+.account-nav {
+  grid-area: nav-acc;
 }
 
 .page-title-account {
   grid-area: title;
-}
-
-.section-left-account {
-  grid-area: sec1;
 }
 
 .section-left-account, .section-right-account {
@@ -25,6 +26,7 @@
   grid-template: repeat(6, 1fr) 1fr / repeat(2, 1fr);
   grid-template-areas: 'label1 label1' 'input1 input1' 'label2 label2' 'input2 input2' 'label3 label3' 'input3 input3' 'button1 .';
   grid-column-gap: 6vmax;
+  grid-row-gap: 2vh;
   width: 32vw;
 }
 
@@ -34,10 +36,6 @@
 
 .section-left-form-account .section-left-form-submit {
   grid-area: button1;
-}
-
-.section-right-account {
-  grid-area: sec2;
 }
 
 .page-subtitle {
@@ -54,16 +52,18 @@
 .section-left-account {
   display: flex;
   flex-direction: column;
+  grid-area: sec1;
 }
 
 .section-right-account {
+  grid-area: sec2;
   display: grid;
   grid-template: repeat(3, min-content) / 1fr;
   grid-row-gap: 5vh;
   grid-template-areas:
     'title'
     'text'
-    'captions'
+    'captions';
 }
 
 .section-right-account-numbercaptions {
@@ -90,31 +90,6 @@
   grid-row-gap: 2vh;
   height: 45vh;
   overflow-y: scroll;
-}
-
-/* captions */
-
-.caption {
-  border: .1rem solid #3f3f3f;
-  width: 100%;
-  display: grid;
-  grid-template: 1.5fr 1fr / 1fr 1fr 1fr;
-  grid-template-areas:
-    'content content content'
-    'author link share';
-}
-
-.caption-content, .caption-link-sticker, .caption-link-share {
-  color: white;
-}
-
-.caption-content {
-  grid-area: content;
-}
-
-.caption-author {
-  color: #283dd2;
-  text-transform: uppercase;
 }
 
 .page-title {

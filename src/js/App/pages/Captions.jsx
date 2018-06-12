@@ -26,51 +26,76 @@ class Captions extends Component {
         <section className="captions-section-instagram">
           <h1 className="captions-h1">Captions</h1>
           <div className="captions-div-instagram">
-          <h2 className="captions-h2">#boijmanscaptions</h2>
-          <a href="https://www.instagram.com/?hl=nl" target="_blank" className="captions-a-instagram">bekijk meer op <span className="captions-nadruk">instagram</span></a>
+            <h2 className="captions-h2">#boijmanscaptions</h2>
+            <a
+              href="https://www.instagram.com/?hl=nl"
+              className="captions-a-instagram"
+            >
+              bekijk meer op <span className="captions-nadruk">instagram</span>
+            </a>
           </div>
           <div className="captions-div-instagram-img">
-            <img src="../assets/img/social-one.jpg" alt="Dit is een geshared foto van de stickeractie via sociale media." width="280" height="280"/>
-            <img src="../assets/img/social-two.jpg" alt="Dit is een geshared foto van de stickeractie via sociale media." width="280" height="280"/>
-            <img src="../assets/img/judd.jpg" alt="Dit is een geshared foto van de stickeractie via sociale media." width="280" height="280"/>
-            <img src="../assets/img/judd.jpg" alt="Dit is een geshared foto van de stickeractie via sociale media." width="280" height="280"/>
+            <img
+              src="../assets/img/social-one.jpg"
+              alt="Dit is een geshared foto van de stickeractie via sociale media."
+              width="280"
+              height="280"
+            />
+            <img
+              src="../assets/img/social-two.jpg"
+              alt="Dit is een geshared foto van de stickeractie via sociale media."
+              width="280"
+              height="280"
+            />
+            <img
+              src="../assets/img/judd.jpg"
+              alt="Dit is een geshared foto van de stickeractie via sociale media."
+              width="280"
+              height="280"
+            />
+            <img
+              src="../assets/img/judd.jpg"
+              alt="Dit is een geshared foto van de stickeractie via sociale media."
+              width="280"
+              height="280"
+            />
           </div>
         </section>
         <div className="captions-div">
-        <section className="captions-section">
-        <h2 className="captions-h2">Populair deze week</h2>
-        <ul>
-          {this.state.captions.map(captions =>
-            Object.entries(captions).map(
-              c =>
-                c[1].caption !== undefined ? (
-                  <li key={c[0]}>
-                    {c[1].caption} - Posted by {c[1].userName}
-                  </li>
-                ) : (
-                  ""
+          <section className="captions-section">
+            <h2 className="captions-h2">Populair deze week</h2>
+            <ul>
+              {this.state.captions.map(captions =>
+                Object.entries(captions).map(
+                  c =>
+                    c[1].caption !== undefined ? (
+                      <li key={c[0]}>
+                        {c[1].caption} - Posted by {c[1].userName}
+                      </li>
+                    ) : (
+                      ""
+                    )
                 )
-            )
-          )}
-        </ul>
-        </section>
-        <section className="captions-section">
-          <h2 className="captions-h2">Boijmans keuze</h2>
-          <ul>
-          {this.state.captions.map(captions =>
-            Object.entries(captions).map(
-              c =>
-                c[1].caption !== undefined ? (
-                  <li key={c[0]}>
-                    {c[1].caption} - Posted by {c[1].userName}
-                  </li>
-                ) : (
-                  ""
+              )}
+            </ul>
+          </section>
+          <section className="captions-section">
+            <h2 className="captions-h2">Boijmans keuze</h2>
+            <ul>
+              {this.state.captions.map(captions =>
+                Object.entries(captions).map(
+                  c =>
+                    c[1].caption !== undefined ? (
+                      <li key={c[0]}>
+                        {c[1].caption} - Posted by {c[1].userName}
+                      </li>
+                    ) : (
+                      ""
+                    )
                 )
-            )
-          )}
-        </ul>
-        </section>
+              )}
+            </ul>
+          </section>
         </div>
       </div>
     );

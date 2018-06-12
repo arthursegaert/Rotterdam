@@ -1,6 +1,7 @@
 .two-sec-page {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+  background-color: black;
 }
 
 .page-title {
@@ -157,18 +158,6 @@
 .section-right-link-svg {
   width: 15rem;
   height: 15rem;
-}
-
-.section-right-link:hover .link-svg-text {
-  transform-origin: center;
-  animation: rotator 6s linear running infinite forwards;
-}
-
-@keyframes rotator {
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /* circles */

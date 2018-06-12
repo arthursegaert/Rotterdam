@@ -121,7 +121,11 @@ class Login extends Component {
           </section>
           <section className="section-right section-right-login">
             <Nav />
-            <KunstwerkCTA kunstwerkId="1" color="#7333a8" classname="section-right-link"/>
+            <KunstwerkCTA
+              kunstwerkId="1"
+              color="#7333a8"
+              classname="section-right-link"
+            />
           </section>
         </main>
       );

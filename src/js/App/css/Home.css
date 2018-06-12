@@ -124,12 +124,27 @@
   margin-right: 1rem;
 }
 
-/*HOME*/
+/*-----main-----*/
 
-main {
+.intro {
+  padding-top: 10rem;
   background-color: black;
   z-index: -6;
   font-family: sans-serif;
+  height: 600rem;
+}
+
+.intro h3 {
+  font-size: 3rem;
+  color: white;
+  font-family: 'Integral CF', sans-serif;
+}
+
+.intro li {
+  content: '*';
+  list-style: decimal;
+  list-style-type: upper-roman;
+  color: white;
 }
 
 .banner {
