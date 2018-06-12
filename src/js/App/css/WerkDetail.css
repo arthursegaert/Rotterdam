@@ -132,7 +132,7 @@
 .werkdetail-article-zoom {
   position: absolute;
   left: 10rem;
-  background: black;
+  background: rgb(10, 3, 3);
   width: 5rem;
   height: 5rem;
 }
@@ -181,5 +181,5 @@
   background-color: white;
   z-index: 20;
   right: 60vw;
-  bottom: 7vh;
+  bottom: 12.5vh;
 }
