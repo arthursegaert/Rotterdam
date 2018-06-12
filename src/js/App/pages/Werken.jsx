@@ -61,7 +61,7 @@ class Werken extends Component {
                 className= {["kunstwerk-img", kunstwerk.id].join('-')}
                 src={kunstwerk.img}
               />
-              <p className="kunstwerk-captions-amount">{[aantalCaptions, aantalCaptions === 1 ? 'caption' : 'captions']}</p>
+              <p className="kunstwerk-captions-amount">{[aantalCaptions, aantalCaptions === 1 ? ' caption' : ' captions']}</p>
               {kunstwerkId === 8 ? <KunstwerkCTA kunstwerkId="1" color="#f4442b" classname="werken-grid-cta"/> : ''}
               </Link>
             </div>
