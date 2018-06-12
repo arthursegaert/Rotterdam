@@ -103,12 +103,17 @@ class WerkDetail extends Component {
                 <section className="werkdetail-section">
                   <Nav />
                   <article className="werkdetail-article">
+                  <a href={result.link} target="_blank" className="werkdetail-article-info-a">
+                    <div className="werkdetail-article-info">
+                      <span className="werkdetail-article-info-span">i</span>
+                      <p className="werkdetail-article-info-p">meer over het werk</p>
+                  </div>
+                  </a>
                     <img
                       alt={result.desc}
                       src={["../", result.img].join("")}
                       className="werkdetail-result"
                     />
-                    <p>{result.link}Hier moet de link komen</p>
                     <div className="werkdetail-werken-nav">
                       <p className="werkdetail-werken-nav-button werkendetail-nav-button-vorige">
                         vorige
