@@ -35,14 +35,14 @@ class Caption extends Component {
     const { caption, userName, likes, captionId, kunstwerkId } = this.props;
     return (
       <article className={`caption`}>
-        <h3 className="caption-content">{caption.caption}</h3>
+        <h3 className="caption-content">{caption}</h3>
         <p className="caption-author">{userName}</p>
         <a className="caption-link-sticker" href="#b">
           maak de sticker
         </a>
         <a
           onClick={e => this.handleClickLike(captionId, likes, kunstwerkId)}
-          className="caption-link-share"
+          className="caption-link-like"
         >
           <svg className="heart-icon" viewBox="0 0 159.1 145.8">
             <defs />
@@ -64,7 +64,9 @@ class Caption extends Component {
               />
             </g>
           </svg>
-          <span>{likes} likes</span>
+          <span className="amount-of-likes">
+            {likes} {likes === 1 ? "like" : "likes"}
+          </span>
         </a>
       </article>
     );

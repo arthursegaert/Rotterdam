@@ -7,10 +7,10 @@
   display: grid;
   grid-row-gap: 1rem;
   grid-template: 1.5fr 1fr / 1fr 1fr 1fr;
-  grid-template-areas: 'content content content' 'author link share';
+  grid-template-areas: 'content content content' 'author link like';
 }
 
-.caption-content, .caption-link-sticker, .caption-link-share {
+.caption-content, .caption-link-sticker, .caption-link-like {
   color: white;
 }
 
@@ -29,9 +29,11 @@
   justify-self: flex-end;
 }
 
-.caption-link-share {
-  grid-area: share;
+.caption-link-like {
+  grid-area: like;
   justify-self: center;
+  display: flex;
+  align-items: center;
 }
 
 .heart-icon {
@@ -44,4 +46,8 @@
 
 .heart-icon:hover {
   cursor: pointer;
+}
+
+.amount-of-likes {
+  padding-left: .5rem;
 }

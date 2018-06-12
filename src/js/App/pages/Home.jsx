@@ -16,9 +16,7 @@ class Home extends Component {
 
   componentDidMount = () => {
     app.auth().onAuthStateChanged(user => {
-      console.log("changed");
       if (user) {
-        console.log("changed - user");
         const userid = app.auth().currentUser.uid;
         base.syncState(`captions/${userid}`, {
           context: this,
@@ -30,7 +28,6 @@ class Home extends Component {
   };
 
   render() {
-    console.log("render");
     return (
       <StatusContext.Consumer>
         {({ authenticated, username }) => (
@@ -193,17 +190,25 @@ class Home extends Component {
                   <h2>How it works</h2>
                 </span>
                 <div className="banner">
-                      <p className="banner-text">What do you see in artworks? Fantasise about the story in the picture but also behind the picture.</p>
+                  <p className="banner-text">
+                    What do you see in artworks? Fantasise about the story in
+                    the picture but also behind the picture.
+                  </p>
                 </div>
                 <ol className="intro-list">
                   <li className="intro-list-item1">
                     <h3>Look at the artwork and fantasise …</h3>
-                    <img src="assets/img/merry.jpg" alt="" width="746" height="520" />
+                    <img
+                      src="assets/img/merry.jpg"
+                      alt=""
+                      width="746"
+                      height="520"
+                    />
                   </li>
                   <li className="intro-list-item2">
                     <div className="intro-container">
-                    <h3>Write down what you see</h3>
-                    <div className="intro-list-item2-form">
+                      <h3>Write down what you see</h3>
+                      <div className="intro-list-item2-form">
                         <form action="">
                           <input type="text" />
                         </form>
@@ -211,49 +216,49 @@ class Home extends Component {
                           <a>Caption this</a>
                           <p>500 characters over</p>
                         </div>
-                    </div>
-                    <div className="intro-list-item2-buttons">
-                      <div className="main-random main-button">
-                        <Link to="/werkdetail/:id">
-                          <div className="main-random-color main-button-color">
-                            <svg
-                              className="main-button-pijl"
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="54.2px"
-                              height="54.3px"
-                              viewBox="0 0 54.2 54.3"
-                            >
-                              <g fill="#EE483C" fillRule="evenodd">
-                                <polygon
-                                  className="st0"
-                                  points="8.1,2.7 42.6,2.6 43.9,2.6 51.6,2.6 51.6,10.2 51.6,11.5 51.7,46 54.2,46 54.1,0 8.1,0.1 "
-                                />
-                                <polygon
-                                  className="st0"
-                                  points="38.5,10.3 35,10.3 8.1,10.3 8.1,12.9 32.4,12.8 0,45.4 1.8,47.2 36,12.8 "
-                                />
-                                <polygon
-                                  className="st0"
-                                  points="43.9,15.6 41.4,18.2 7.2,52.5 9,54.3 41.4,21.8 41.4,46.1 44,46.1 43.9,19.2 "
-                                />
-                                <polygon
-                                  className="st0"
-                                  points="43.9,12 43.9,10.3 42.1,10.3 39.6,12.8 3.6,49 5.4,50.8 41.4,14.6 "
-                                />
-                                <polygon
-                                  className="st0"
-                                  points="49,10.5 49,7.7 49,5.1 46.5,5.1 43.6,5.1 40.1,5.1 8.1,5.2 8.1,7.8 37.5,7.7 41.1,7.7 44.7,7.7
-                      46.5,7.7 46.5,9.5 46.5,13.1 46.5,16.6 46.6,46.1 49.1,46.1 49,14.1 "
-                                />
-                              </g>
-                            </svg>
-                            <p className="main-random-button">
-                              ga naar een <br /> willekeurig kunstwerk
-                            </p>
-                          </div>
-                        </Link>
                       </div>
-                      <div className="main-werken main-button">
+                      <div className="intro-list-item2-buttons">
+                        <div className="main-random main-button">
+                          <Link to="/werkdetail/:id">
+                            <div className="main-random-color main-button-color">
+                              <svg
+                                className="main-button-pijl"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="54.2px"
+                                height="54.3px"
+                                viewBox="0 0 54.2 54.3"
+                              >
+                                <g fill="#EE483C" fillRule="evenodd">
+                                  <polygon
+                                    className="st0"
+                                    points="8.1,2.7 42.6,2.6 43.9,2.6 51.6,2.6 51.6,10.2 51.6,11.5 51.7,46 54.2,46 54.1,0 8.1,0.1 "
+                                  />
+                                  <polygon
+                                    className="st0"
+                                    points="38.5,10.3 35,10.3 8.1,10.3 8.1,12.9 32.4,12.8 0,45.4 1.8,47.2 36,12.8 "
+                                  />
+                                  <polygon
+                                    className="st0"
+                                    points="43.9,15.6 41.4,18.2 7.2,52.5 9,54.3 41.4,21.8 41.4,46.1 44,46.1 43.9,19.2 "
+                                  />
+                                  <polygon
+                                    className="st0"
+                                    points="43.9,12 43.9,10.3 42.1,10.3 39.6,12.8 3.6,49 5.4,50.8 41.4,14.6 "
+                                  />
+                                  <polygon
+                                    className="st0"
+                                    points="49,10.5 49,7.7 49,5.1 46.5,5.1 43.6,5.1 40.1,5.1 8.1,5.2 8.1,7.8 37.5,7.7 41.1,7.7 44.7,7.7
+                      46.5,7.7 46.5,9.5 46.5,13.1 46.5,16.6 46.6,46.1 49.1,46.1 49,14.1 "
+                                  />
+                                </g>
+                              </svg>
+                              <p className="main-random-button">
+                                ga naar een <br /> willekeurig kunstwerk
+                              </p>
+                            </div>
+                          </Link>
+                        </div>
+                        <div className="main-werken main-button">
                           <Link to="/werken">
                             <div className="main-werken-color main-button-color">
                               <svg
@@ -293,20 +298,20 @@ class Home extends Component {
                             </div>
                           </Link>
                         </div>
-                    </div>
+                      </div>
                     </div>
                   </li>
                   <li className="intro-list-item3">
                     <h3>Open up for new visions by reading other captions</h3>
                     <div>
-                    {this.state.captions.map(caption => (
-                      <Caption
-                        caption={caption.caption}
-                        userName={caption.userName}
-                      />
-                    ))}
+                      {this.state.captions.map(caption => (
+                        <Caption
+                          caption={caption.caption}
+                          userName={caption.userName}
+                        />
+                      ))}
                     </div>
-                    <a href="" className="main-button"></a>
+                    <a href="#m" className="main-button" />
                   </li>
                   <li className="intro-list-item4">
                     <h3>Get your caption on a sticker!</h3>

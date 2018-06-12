@@ -11,6 +11,7 @@ import Account from "./pages/Account.jsx";
 import Captions from "./pages/Captions.jsx";
 import NoMatch from "./pages/NoMatch.jsx";
 import { StatusContext } from "./context/statusContext.js";
+import Loading from "./components/Loading.jsx";
 
 class App extends Component {
   constructor() {
@@ -24,10 +25,6 @@ class App extends Component {
 
   componentDidMount = () => {
     app.auth().onAuthStateChanged(user => {
-      console.log("onAuthStateChanged", user);
-      if(user){
-        console.log("onAuthStateChanged displayname", user.displayName);
-      }
       if (user) {
         this.setState({
           authenticated: true,
@@ -41,16 +38,11 @@ class App extends Component {
         });
       }
     });
-    app.auth().onIdTokenChanged(function(user) {
-      if (user) {
-        console.log("onIdTokenChanged displayname", user.displayName);
-      }
-    });
   };
 
   render() {
     if (this.state.loading) {
-      return <p>Loading...</p>;
+      return <Loading />;
     }
     return (
       <StatusContext.Provider value={this.state}>

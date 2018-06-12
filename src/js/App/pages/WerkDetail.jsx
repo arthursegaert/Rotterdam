@@ -3,6 +3,7 @@ import { app, base } from "../config/fire.js";
 import { StatusContext } from "../context/statusContext.js";
 import Nav from "../components/Nav.jsx";
 import Caption from "../components/Caption.jsx";
+import Loading from "../components/Loading.jsx";
 import "../css/WerkDetail.css";
 import { Link } from "react-router-dom";
 
@@ -44,13 +45,6 @@ class WerkDetail extends Component {
       });
   }
 
-  handleClickLike = c => {
-    const kunstwerkId = c.kunstwerkId;
-    const caption = c.caption;
-    const userName = c.userName;
-    console.log(kunstwerkId, caption, userName);
-  };
-
   handleNewCaptionSubmit = e => {
     e.preventDefault();
     const caption = this.captionInput.value;
@@ -89,7 +83,7 @@ class WerkDetail extends Component {
 
   render() {
     if (this.state.loading) {
-      return <p>Loading...</p>;
+      return <Loading />;
     } else {
       const kunstwerkId = parseInt(this.props.match.params.id, 10);
       const result = this.state.kunstwerken.filter(
@@ -194,7 +188,7 @@ class WerkDetail extends Component {
                               //is de caption niet undefined?
                               c[1].caption !== undefined ? (
                                 <Caption
-                                  caption={c[1]}
+                                  caption={c[1].caption}
                                   captionId={captionId}
                                   key={c[0]}
                                   userName={c[1].userName}
