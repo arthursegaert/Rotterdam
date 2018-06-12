@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { base } from "../config/fire.js";
 import Nav from "../components/Nav.jsx";
+import "../css/Captions.css";
 
 class Captions extends Component {
   constructor() {
@@ -20,14 +21,22 @@ class Captions extends Component {
 
   render() {
     return (
-      <div className="captions">
-        <h1>Captions</h1>
+      <div className="captions-background">
         <Nav />
+        <h1 className="captions-h1">Captions</h1>
         <section>
-          <h2>#boijmanscaptions</h2>
+          <h2 className="captions-h2">#boijmanscaptions</h2>
+          <span>bekijk meer op <span className="captions-nadruk">instagram</span></span>
+          <div>
+            <img src="../assets/img/judd.jpg" alt="Dit is een geshared foto van de stickeractie via sociale media." width="280" height="280"/>
+            <img src="../assets/img/judd.jpg" alt="Dit is een geshared foto van de stickeractie via sociale media." width="280" height="280"/>
+            <img src="../assets/img/judd.jpg" alt="Dit is een geshared foto van de stickeractie via sociale media." width="280" height="280"/>
+            <img src="../assets/img/judd.jpg" alt="Dit is een geshared foto van de stickeractie via sociale media." width="280" height="280"/>
+          </div>
         </section>
-        <section>
-        <h2>Populair deze week</h2>
+        <div className="captions-div">
+        <section className="captions-section">
+        <h2 className="captions-h2">Populair deze week</h2>
         <ul>
           {this.state.captions.map(captions =>
             Object.entries(captions).map(
@@ -43,8 +52,8 @@ class Captions extends Component {
           )}
         </ul>
         </section>
-        <section>
-          <h2>Boijmans keuze</h2>
+        <section className="captions-section">
+          <h2 className="captions-h2">Boijmans keuze</h2>
           <ul>
           {this.state.captions.map(captions =>
             Object.entries(captions).map(
@@ -60,6 +69,7 @@ class Captions extends Component {
           )}
         </ul>
         </section>
+        </div>
       </div>
     );
   }
