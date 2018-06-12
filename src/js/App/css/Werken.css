@@ -409,18 +409,18 @@
 }
 
 .werken-grid .werken-circle:nth-of-type(6) {
-  grid-row: 8 / 10;
-  grid-column: 1 / 4;
+  grid-row: 8 / 11;
+  grid-column: 6 / 8;
 }
 
 .werken-grid .werken-circle:nth-of-type(6)::after {
   position: absolute;
   content: '';
   border-radius: 50%;
-  width: 23rem;
-  height: 23rem;
+  width: 13rem;
+  height: 13rem;
   background-color: white;
   z-index: 20;
-  top: 10vh;
+  top: 35vh;
   left: 5vw;
 }

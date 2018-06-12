@@ -33,15 +33,26 @@ class Werken extends Component {
         <div className="white-circle werken-circle" />
         <div className="white-circle werken-circle" />
         {this.state.kunstwerken.map(kunstwerk => {
+          const kunstenaarVoornaam = kunstwerk.author.split(" ").pop();
           return (
             <div key={kunstwerk.id} className= {["werken-kunstwerk",["werken-kunstwerk", kunstwerk.id].join('-')].join(' ')}>
-              <p className= {["kunstwerk-author-p",["kunstwerk-author-p", kunstwerk.id].join('-')].join(' ')}>{kunstwerk.author.split(" ").pop()}</p>
               <Link
                 to={{
                   pathname: `/werkdetail/${kunstwerk.id}`,
                   kunstwerk
                 }}
               >
+                <div className="nav-list-item-link">
+                  <span className="nav-list-item-link-title">
+                    <p ></p>
+                    <span
+                      className= {["kunstwerk-author-p", "nav-list-item-link-title-inner",["kunstwerk-author-p", kunstwerk.id].join('-')].join(' ')}
+                      data-hover={kunstenaarVoornaam}
+                    >
+                      {kunstenaarVoornaam}
+                    </span>
+                  </span>
+                </div>
                 <img
                 alt={kunstwerk.author}
                 className= {["kunstwerk-img", kunstwerk.id].join('-')}
