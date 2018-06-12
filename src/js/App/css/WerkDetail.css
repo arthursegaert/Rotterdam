@@ -129,6 +129,19 @@
   text-transform: uppercase;
 }
 
+.werkdetail-article-zoom {
+  position: absolute;
+  left: 10rem;
+  background: black;
+  width: 5rem;
+  height: 5rem;
+}
+
+.svg-zoom {
+  fill: white;
+  padding: .5rem;
+}
+
 /* circles */
 
 .werkdetail-circle {
