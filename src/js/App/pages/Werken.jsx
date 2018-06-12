@@ -93,8 +93,8 @@ class Werken extends Component {
             );
           })}
           <div className="werken-nav">
-            <p className="werken-nav-button werken-nav-button-vorige">Vorige</p>
             <span className="werken-nav-span">1/4</span>
+            <p className="werken-nav-button werken-nav-button-vorige">Vorige</p>
             <p className="werken-nav-button werken-nav-button-volgende">
               Volgende
             </p>

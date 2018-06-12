@@ -267,9 +267,12 @@
 /* tijdelijk END */
 
 .werken-nav {
-  display: flex;
-  justify-content: center;
   grid-area: werken-nav;
+  display: grid;
+  grid-template-columns: repeat(3, 16%);
+  grid-template-rows: 2rem;
+  grid-template-areas: 'werken-nav-button-vorige werken-nav-span werken-nav-button-volgende';
+  justify-content: center;
 }
 
 .werken-nav-button {
@@ -278,8 +281,6 @@
   font-size: 4rem;
   margin-top: 6rem;
   text-transform: uppercase;
-  position: absolute;
-  z-index: 4;
 }
 
 .werken-nav-span {
@@ -291,15 +292,15 @@
   color: transparent;
   text-transform: uppercase;
   font-size: 10rem;
-  position: absolute;
+  grid-area: werken-nav-span;
 }
 
 .werken-nav-button-vorige {
-  margin-left: -14rem;
+  grid-area: werken-nav-button-vorige;
 }
 
 .werken-nav-button-volgende {
-  margin-left: 17rem;
+  grid-area: werken-nav-button-volgende;
 }
 
 /* circles */
