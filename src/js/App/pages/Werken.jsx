@@ -70,7 +70,7 @@ class Werken extends Component {
                   </div>
                   <img
                     alt={kunstwerk.author}
-                    className={["kunstwerk-img", kunstwerk.id].join("-")}
+                    className={"kunstwerk-img"}
                     src={kunstwerk.img}
                   />
                   <p className="kunstwerk-captions-amount">
