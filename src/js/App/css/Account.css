@@ -1,7 +1,8 @@
 .two-sec-page-account {
   display: grid;
-  grid-template: 1fr 3fr / 1fr 1fr;
-  grid-template-areas: 'title nav' 'sec1 sec2';
+  grid-template: 1fr 4fr / 1fr 1fr;
+  grid-template-areas: 'title nav-acc' 'sec1 sec2';
+  height: 100vh;
 }
 
 .page-title-account {
@@ -9,11 +10,34 @@
 }
 
 .nav {
-  grid-area: nav;
+  grid-area: nav-acc;
 }
 
 .section-left-account {
   grid-area: sec1;
+}
+
+.section-left-account, .section-right-account {
+  width: 35vw;
+  max-width: 50rem;
+  height: auto;
+}
+
+.section-left-form-account {
+  grid-area: form;
+  display: grid;
+  grid-template: repeat(6, 1fr) 1fr / repeat(2, 1fr);
+  grid-template-areas: 'label1 label1' 'input1 input1' 'label2 label2' 'input2 input2' 'label3 label3' 'input3 input3' 'button1 .';
+  grid-column-gap: 6vmax;
+  width: 32vw;
+}
+
+.section-left-form-account .section-left-input:nth-of-type(3) {
+  grid-area: input3;
+}
+
+.section-left-form-account .section-left-form-submit {
+  grid-area: button1;
 }
 
 .section-right-account {
@@ -21,23 +45,34 @@
 }
 
 .page-subtitle {
-  grid-area: title;
-  font-size: 4rem;
+  font-size: 4.5rem;
   color: white;
   font-family: 'Integral CF', sans-serif;
-  -webkit-text-stroke: .2rem #f4442b; /* stylelint-disable-line */
-  text-stroke: .2rem #f4442b; /* stylelint-disable-line */
+  -webkit-text-stroke: .1rem #f4442b; /* stylelint-disable-line */
+  text-stroke: .1rem #f4442b; /* stylelint-disable-line */
   -webkit-text-fill-color: transparent; /* stylelint-disable-line */
   text-fill-color: transparent; /* stylelint-disable-line */
   font-style: italic;
 }
 
+.section-right-account {
+  display: grid;
+  grid-template: repeat(3, min-content) / 1fr;
+  grid-row-gap: 5vh;
+  grid-template-areas:
+    'title'
+    'text'
+    'captions'
+}
+
 .section-right-account-numbercaptions {
+  grid-area: text;
   color: white;
   font-family: 'Integral CF', sans-serif;
 }
 
 .section-right-account-numberupvotes {
+  grid-area: text;
   font-size: 3.5rem;
   color: white;
   font-family: 'Integral CF', sans-serif;
@@ -45,6 +80,11 @@
   text-stroke: .1rem #742dab; /* stylelint-disable-line */
   -webkit-text-fill-color: transparent; /* stylelint-disable-line */
   text-fill-color: transparent; /* stylelint-disable-line */
+}
+
+.section-right-account-captions {
+  grid-area: captions;
+  align-self: flex-start;
 }
 
 /* captions */
@@ -61,4 +101,14 @@
 .caption-author {
   color: #283dd2;
   text-transform: uppercase;
+}
+
+.nav {
+  align-self: flex-start;
+  justify-self: flex-end;
+}
+
+.page-title {
+  align-self: center;
+  justify-self: center;
 }

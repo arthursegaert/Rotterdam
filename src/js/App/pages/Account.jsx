@@ -38,7 +38,7 @@ class Account extends Component {
                 <h2 className="page-subtitle section-left-subtitle">
                   Mijn informatie
                 </h2>
-                <form className="section-left-form-register">
+                <form className="section-left-form-account">
                   <label className="section-left-label">E-mail</label>
                   <input
                     required
@@ -70,12 +70,13 @@ class Account extends Component {
                 <h2 className="page-subtitle section-right-subtitle">
                   Mijn captions
                 </h2>
-                <p className="section-right-account-numbercaptions">
-                  24 captions
-                </p>
                 <p className="section-right-account-numberupvotes">
-                  58 upvotes
+                58 upvotes
+              </p>
+                <p className="section-right-account-numbercaptions">
+                  {this.state.captions.length} captions
                 </p>
+                <div className="section-right-account-captions">
                 {this.state.captions.map(caption => (
                   <article className="caption">
                     <h3 className="caption-content">{caption.caption}</h3>
@@ -88,12 +89,14 @@ class Account extends Component {
                     </a>
                   </article>
                 ))}
+                </div>
               </section>
             </main>
           ) : (
-            <main className="two-sec-page">
+            <main className="two-sec-page-account">
               <h1 className="page-title">Mijn Account</h1>
-              <section className="section-left section-left-account">
+              <Nav />
+              <section className="section-left section-left-account section-left-account-not-signed-in">
                 <Link
                   className="page-subtitle section-left-subtitle"
                   to="/login"
@@ -101,8 +104,7 @@ class Account extends Component {
                   Login
                 </Link>
               </section>
-              <section className="section-right section-right-account">
-                <Nav />
+              <section className="section-right section-right-account section-right-account-not-signed-in">
                 <Link
                   className="page-subtitle section-left-subtitle"
                   to="/register"

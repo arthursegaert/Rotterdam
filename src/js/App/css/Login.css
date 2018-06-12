@@ -1,6 +1,12 @@
 .two-sec-page {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+  grid-template-areas:
+}
+
+.page-title {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
 }
 
 /* linker sectie */
@@ -47,11 +53,6 @@
   font-size: 5rem;
   color: white;
   font-family: 'Integral CF', sans-serif;
-}
-
-.section-left-title {
-  grid-area: title;
-  align-self: center;
 }
 
 .section-left-form-login {

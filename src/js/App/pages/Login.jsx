@@ -65,13 +65,13 @@ class Login extends Component {
     } else {
       return (
         <main className="two-sec-page">
+          <h1 className="page-title">Login</h1>
           <div className="white-circle login-circle" />
           <div className="white-circle login-circle" />
           <div className="white-circle login-circle" />
           <div className="white-circle login-circle" />
           <div className="white-circle login-circle" />
           <section className="section-left section-left-login">
-            <h1 className="page-title section-left-title">Login</h1>
             <form
               onSubmit={e => {
                 this.authWithEmailPassword(e);
