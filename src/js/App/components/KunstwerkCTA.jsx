@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const KunstwerkCTA = ({ kunstwerkId, color }) => {
+const KunstwerkCTA = ({ kunstwerkId, color, classname }) => {
   return (
-    <Link className="section-right-link" to={`/werkdetail/${kunstwerkId}`}>
+    <Link className={classname} to={`/werkdetail/${kunstwerkId}`}>
       <svg className="section-right-link-svg" viewBox="0 0 212.1 212.1">
         <g className="link-svg-text">
           <circle cx="106" cy="106.04" r="100" fill="#fff" />

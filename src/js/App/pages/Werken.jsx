@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { base } from "../config/fire.js";
 import { Link } from "react-router-dom";
 import Nav from "../components/Nav.jsx";
+import KunstwerkCTA from "../components/KunstwerkCTA.jsx";
 import "../css/Werken.css";
 
 class Werken extends Component {
@@ -61,6 +62,7 @@ class Werken extends Component {
                 src={kunstwerk.img}
               />
               <p className="kunstwerk-captions-amount">{[aantalCaptions, aantalCaptions === 1 ? 'caption' : 'captions']}</p>
+              {kunstwerkId === 8 ? <KunstwerkCTA kunstwerkId="1" color="#f4442b" classname="werken-grid-cta"/> : ''}
               </Link>
             </div>
           );
