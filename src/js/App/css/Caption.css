@@ -33,3 +33,15 @@
   grid-area: share;
   justify-self: center;
 }
+
+.heart-icon {
+  height: 2rem;
+}
+
+.heart-icon:hover .inner-heart {
+  fill: #f14634;
+}
+
+.heart-icon:hover {
+  cursor: pointer;
+}

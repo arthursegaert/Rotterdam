@@ -35,7 +35,6 @@
 
 .werkdetail-werken-nav {
   background-color: #7333a8;
-  height: 15vh;
   display: grid;
   grid-template-columns: repeat(3, 16%);
   grid-template-rows: 2rem;
@@ -48,6 +47,7 @@
   left: 0;
   right: 0;
   top: 85vh;
+  padding-right: 9rem;
 }
 
 .werkdetail-werken-nav-button {
@@ -71,14 +71,20 @@
   text-transform: uppercase;
   font-size: 8rem;
   grid-area: werkendetail-nav-span;
+  justify-self: center;
+  padding-left: 1.5rem;
 }
 
 .werkendetail-nav-button-vorige {
   grid-area: werkendetail-nav-button-vorige;
+  align-self: flex-start;
+  justify-self: flex-end;
 }
 
 .werkendetail-nav-button-volgende {
   grid-area: werkendetail-nav-button-volgende;
+  align-self: flex-start;
+  justify-self: flex-start;
 }
 
 .werkdetail-captions {
