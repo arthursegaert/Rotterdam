@@ -21,9 +21,12 @@ class Werken extends Component {
   render() {
     return (
       <div className="werken-div-background">
+      <div className="white-circle werken-circle" />
       <h1 className="page-title page-title-werken">Werken</h1>
         <Nav />
         <div className="werken-grid">
+        <div className="white-circle werken-circle" />
+        <div className="white-circle werken-circle" />
         {this.state.kunstwerken.map(kunstwerk => {
           return (
             <div key={kunstwerk.id} className= {["werken-kunstwerk",["werken-kunstwerk", kunstwerk.id].join('-')].join(' ')}>
