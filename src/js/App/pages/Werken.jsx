@@ -8,7 +8,8 @@ class Werken extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      kunstwerken: []
+      kunstwerken: [],
+      captions: []
     };
   }
 
@@ -34,6 +35,8 @@ class Werken extends Component {
         <div className="white-circle werken-circle" />
         {this.state.kunstwerken.map(kunstwerk => {
           const kunstenaarVoornaam = kunstwerk.author.split(" ").pop();
+          const kunstwerkId = parseInt(kunstwerk.id, 10);
+          const aantalCaptions = Object.keys(this.state.kunstwerken[kunstwerkId].captions).length;
           return (
             <div key={kunstwerk.id} className= {["werken-kunstwerk",["werken-kunstwerk", kunstwerk.id].join('-')].join(' ')}>
               <Link
@@ -44,7 +47,6 @@ class Werken extends Component {
               >
                 <div className="nav-list-item-link">
                   <span className="nav-list-item-link-title">
-                    <p ></p>
                     <span
                       className= {["kunstwerk-author-p", "nav-list-item-link-title-inner",["kunstwerk-author-p", kunstwerk.id].join('-')].join(' ')}
                       data-hover={kunstenaarVoornaam}
@@ -58,6 +60,7 @@ class Werken extends Component {
                 className= {["kunstwerk-img", kunstwerk.id].join('-')}
                 src={kunstwerk.img}
               />
+              <p className="kunstwerk-captions-amount">{[aantalCaptions, aantalCaptions === 1 ? 'caption' : 'captions']}</p>
               </Link>
             </div>
           );

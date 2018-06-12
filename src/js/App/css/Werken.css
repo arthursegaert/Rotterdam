@@ -250,6 +250,11 @@
   height: 30rem;
 }
 
+.kunstwerk-captions-amount {
+  font-size: 3rem;
+  color: #f4442b;
+}
+
 /* tijdelijk END */
 
 .werken-nav {
