@@ -75,4 +75,16 @@
 .werkdetail-article-captions-li {
   border: .1rem solid white;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.werkdetail-article-captions-li-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.werkdetail-article-captions-li-div-user {
+  text-transform: uppercase;
+  color: #7333a8;
 }

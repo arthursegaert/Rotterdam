@@ -108,6 +108,7 @@ class WerkDetail extends Component {
                 src={["../", result.img].join('')}
                 className= "werkdetail-result"
                />
+               <p>{result.link}Hier moet de link komen</p>
                <div className= "werkdetail-werken-nav">
                 <p className= "werkdetail-werken-nav-button werkendetail-nav-button-vorige">vorige</p>
                 <span className="werkdetail-werken-nav-span">2/16</span>
@@ -125,28 +126,32 @@ class WerkDetail extends Component {
                           //is de caption niet undefined?
                           c[1].caption !== undefined ? (
                             <li key={c[0]} className="werkdetail-article-captions-li">
-                              <span>
-                                {c[1].caption} - Posted by {c[1].userName}
-                              </span>
+                              <span>{c[1].caption}</span>
                               {/*check of het werk likes heeft*/}
                               {c[1].likes >= 0 ? (
-                                <div>
+                                <div className="werkdetail-article-captions-li-div">
+                                  <span>{c[1].userName}</span>
                                   <span>{c[1].likes} likes</span>
+                                  <div>
                                   <button
                                     onClick={() => this.handleClickLike(c[1])}
                                   >
                                     like this!
                                   </button>
+                                  </div>
                                 </div>
                               ) : (
                                 //als het werk geen likes heeft
-                                <div>
+                                <div className="werkdetail-article-captions-li-div">
+                                  <span className="werkdetail-article-captions-li-div-user">{c[1].userName}</span>
+                                  <div>
                                   <span>0 likes - wees de eerste!</span>
                                   <button
                                     onClick={() => this.handleClickLike(c[1])}
                                   >
                                     like this!
                                   </button>
+                                  </div>
                                 </div>
                               )}
                             </li>
