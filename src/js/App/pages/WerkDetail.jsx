@@ -4,6 +4,7 @@ import { StatusContext } from "../context/statusContext.js";
 import Nav from "../components/Nav.jsx";
 import Caption from "../components/Caption.jsx";
 import "../css/WerkDetail.css";
+import { Link } from "react-router-dom";
 
 class WerkDetail extends Component {
   constructor(props) {
@@ -91,7 +92,6 @@ class WerkDetail extends Component {
       return <p>Loading...</p>;
     } else {
       const kunstwerkId = parseInt(this.props.match.params.id, 10);
-
       const result = this.state.kunstwerken.filter(
         kunstwerk => kunstwerk.id === kunstwerkId
       )[0];
@@ -165,13 +165,21 @@ class WerkDetail extends Component {
                       className="werkdetail-result"
                     />
                     <div className="werkdetail-werken-nav">
-                      <span className="werkdetail-werken-nav-span">2/16</span>
-                      <p className="werkdetail-werken-nav-button werkendetail-nav-button-vorige">
+                      <span className="werkdetail-werken-nav-span">
+                        {kunstwerkId + 1}/16
+                      </span>
+                      <Link
+                        className="werkdetail-werken-nav-button werkendetail-nav-button-vorige"
+                        to={kunstwerkId > 0 ? `${kunstwerkId - 1}` : `${0}`}
+                      >
                         vorige
-                      </p>
-                      <p className="werkdetail-werken-nav-button werkendetail-nav-button-volgende">
+                      </Link>
+                      <Link
+                        className="werkdetail-werken-nav-button werkendetail-nav-button-volgende"
+                        to={kunstwerkId >= 15 ? `${15}` : `${kunstwerkId + 1}`}
+                      >
                         volgende
-                      </p>
+                      </Link>
                     </div>
                   </article>
                   <article className="werkdetail-article-captions">
