@@ -101,6 +101,9 @@ class WerkDetail extends Component {
             <StatusContext.Consumer>
               {({ authenticated }) => (
                 <section className="werkdetail-section">
+                  <div className="white-circle werkdetail-circle" />
+                  <div className="white-circle werkdetail-circle" />
+                  <div className="white-circle werkdetail-circle" />
                   <Nav classname="werkdetail-nav" />
                   <article className="werkdetail-article">
                   <a href={result.link} className="werkdetail-article-info-a">

@@ -125,3 +125,45 @@
 .werkdetail-article-info-p {
   text-transform: uppercase;
 }
+
+/* circles */
+
+.werkdetail-circle {
+  grid-area: werkdetail-article;
+}
+
+.werkdetail-circle:nth-of-type(1)::after {
+  position: fixed;
+  content: '';
+  border-radius: 50%;
+  width: 13rem;
+  height: 13rem;
+  background-color: white;
+  z-index: 20;
+  right: 73vw;
+  top: 8vh;
+}
+
+.werkdetail-circle:nth-of-type(2)::after {
+  position: fixed;
+  content: '';
+  border-radius: 50%;
+  width: 20rem;
+  height: 20rem;
+  background-color: white;
+  z-index: 20;
+  right: 93vw;
+  top: 47vh;
+}
+
+.werkdetail-circle:nth-of-type(3)::after {
+  position: fixed;
+  content: '';
+  border-radius: 50%;
+  width: 23rem;
+  height: 23rem;
+  background-color: white;
+  z-index: 20;
+  right: 60vw;
+  bottom: 7vh;
+}
