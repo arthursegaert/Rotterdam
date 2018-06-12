@@ -176,7 +176,7 @@ class WerkDetail extends Component {
                   </article>
                   <article className="werkdetail-article-captions">
                     <h2 className="werkdetail-article-captions-h2">Captions</h2>
-                    <ul>
+                    <div className="werkdetail-captions">
                       {/*check of er captions zijn voor het kunstwerk*/}
                       {result.captions ? (
                         Object.entries(result.captions).map(captions =>
@@ -200,27 +200,29 @@ class WerkDetail extends Component {
                         //als er nog geen captions zijn:
                         <p>Dit werk heeft nog geen captions</p>
                       )}
-                    </ul>
+                    </div>
                     {/* is de gebruiker ingelogt?*/}
                     {authenticated ? (
-                      <div>
-                        <p>Schrijf hier jouw caption:</p>
-                        <form
-                          ref={form => {
-                            this.captionForm = form;
+                      <form
+                        ref={form => {
+                          this.captionForm = form;
+                        }}
+                        onSubmit={this.handleNewCaptionSubmit}
+                        className="caption-add-form"
+                      >
+                        <textarea
+                          className="work-detail-add-caption"
+                          ref={input => {
+                            this.captionInput = input;
                           }}
-                          onSubmit={this.handleNewCaptionSubmit}
-                        >
-                          <textarea
-                            className="work-detail-add-caption"
-                            ref={input => {
-                              this.captionInput = input;
-                            }}
-                            placeholder="wat zie je?"
-                          />
-                          <input type="submit" value="voeg jouw caption toe" />
-                        </form>
-                      </div>
+                          placeholder="wat zie je?"
+                        />
+                        <input
+                          className="section-left-form-submit caption-add-submit"
+                          type="submit"
+                          value="caption-it!"
+                        />
+                      </form>
                     ) : (
                       //als de gebruiker niet is ingelogd
                       <p>Je moet ingelogd zijn om een caption te schrijven</p>

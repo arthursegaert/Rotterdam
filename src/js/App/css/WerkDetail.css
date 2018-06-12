@@ -3,6 +3,7 @@
   color: white;
   display: grid;
   grid-template-columns: 5% 1fr 1fr 5%;
+  grid-template-rows: min-content 2fr;
   grid-template-areas: 'werkdetail-article werkdetail-article nav .' 'werkdetail-article werkdetail-article werkdetail-article-captions .';
   height: 100vh;
 }
@@ -28,6 +29,8 @@
   grid-area: werkdetail-article-captions;
   width: 40vw;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .werkdetail-werken-nav {
@@ -44,6 +47,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  top: 85vh;
 }
 
 .werkdetail-werken-nav-button {
@@ -75,6 +79,14 @@
 
 .werkendetail-nav-button-volgende {
   grid-area: werkendetail-nav-button-volgende;
+}
+
+.werkdetail-captions {
+  height: 45vh;
+  overflow-y: scroll;
+  display: grid;
+  grid-row-gap: 2vh;
+  margin-top: 1rem;
 }
 
 .werkdetail-article-captions-h2 {
@@ -176,6 +188,19 @@
   color: transparent;
   padding-left: 1rem;
   caret-color: white;
+  resize: none;
+}
+
+.caption-add-form {
+  position: relative;
+  padding-top: 5rem;
+}
+
+.caption-add-submit {
+  position: absolute;
+  bottom: 2vh;
+  right: 1vh;
+  height: 4rem;
 }
 
 /* circles */
