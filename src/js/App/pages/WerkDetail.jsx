@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { app, base } from "../config/fire.js";
 import { StatusContext } from "../context/statusContext.js";
 import Nav from "../components/Nav.jsx";
+import Caption from "../components/Caption.jsx";
 import "../css/WerkDetail.css";
 
 class WerkDetail extends Component {
@@ -183,45 +184,12 @@ class WerkDetail extends Component {
                             c =>
                               //is de caption niet undefined?
                               c[1].caption !== undefined ? (
-                                <li
+                                <Caption
+                                  caption={c[1].caption}
                                   key={c[0]}
-                                  className="werkdetail-article-captions-li"
-                                >
-                                  <span>{c[1].caption}</span>
-                                  {/*check of het werk likes heeft*/}
-                                  {c[1].likes >= 0 ? (
-                                    <div className="werkdetail-article-captions-li-div">
-                                      <span>{c[1].userName}</span>
-                                      <span>{c[1].likes} likes</span>
-                                      <div>
-                                        <button
-                                          onClick={() =>
-                                            this.handleClickLike(c[1])
-                                          }
-                                        >
-                                          like this!
-                                        </button>
-                                      </div>
-                                    </div>
-                                  ) : (
-                                    //als het werk geen likes heeft
-                                    <div className="werkdetail-article-captions-li-div">
-                                      <span className="werkdetail-article-captions-li-div-user">
-                                        {c[1].userName}
-                                      </span>
-                                      <div>
-                                        <span>0 likes - wees de eerste!</span>
-                                        <button
-                                          onClick={() =>
-                                            this.handleClickLike(c[1])
-                                          }
-                                        >
-                                          like this!
-                                        </button>
-                                      </div>
-                                    </div>
-                                  )}
-                                </li>
+                                  userName={c[1].userName}
+                                  likes={c[1].likes >= 0 ? c[1].likes : "0"}
+                                />
                               ) : (
                                 //as het undefined is, toon niks:
                                 ""
@@ -243,10 +211,12 @@ class WerkDetail extends Component {
                           }}
                           onSubmit={this.handleNewCaptionSubmit}
                         >
-                          <input
+                          <textarea
+                            className="work-detail-add-caption"
                             ref={input => {
                               this.captionInput = input;
                             }}
+                            placeholder="wat zie je?"
                           />
                           <input type="submit" value="voeg jouw caption toe" />
                         </form>

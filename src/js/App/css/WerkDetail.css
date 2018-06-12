@@ -2,10 +2,9 @@
   background-color: black;
   color: white;
   display: grid;
-  grid-area: werkdetail-section;
-  grid-template-columns: 46vw 54vw;
-  grid-template-rows: 30vh 70vh;
-  grid-template-areas: 'werkdetail-article nav ''werkdetail-article werkdetail-article-captions';
+  grid-template-columns: 5% 1fr 1fr 5%;
+  grid-template-areas: 'werkdetail-article werkdetail-article nav .' 'werkdetail-article werkdetail-article werkdetail-article-captions .';
+  height: 100vh;
 }
 
 .werkdetail-nav {
@@ -13,13 +12,14 @@
 }
 
 .werkdetail-result {
-  width: 46vw;
+  width: 100%;
   height: 85vh;
   object-fit: cover;
 }
 
 .werkdetail-article {
   grid-area: werkdetail-article;
+  position: relative;
 }
 
 .werkdetail-article-captions {
@@ -40,7 +40,10 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  margin-top: -2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .werkdetail-werken-nav-button {
@@ -52,10 +55,14 @@
 
 .werkdetail-werken-nav-span {
   font-family: 'Integral CF', sans-serif;
-  -webkit-text-stroke: 0.3rem black;/* stylelint-disable-line */
-  text-stroke: .3rem  black;/* stylelint-disable-line */
-  -webkit-text-fill-color: transparent;/* stylelint-disable-line */
-  text-fill-color: transparent;/* stylelint-disable-line */
+  -webkit-text-stroke: 0.3rem black;
+  /* stylelint-disable-line */
+  text-stroke: .3rem black;
+  /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent;
+  /* stylelint-disable-line */
+  text-fill-color: transparent;
+  /* stylelint-disable-line */
   color: transparent;
   text-transform: uppercase;
   font-size: 8rem;
@@ -73,10 +80,14 @@
 .werkdetail-article-captions-h2 {
   font-size: 4.5rem;
   font-family: 'Integral CF', sans-serif;
-  -webkit-text-stroke: .1rem #f4442b; /* stylelint-disable-line */
-  text-stroke: .1rem #f4442b; /* stylelint-disable-line */
-  -webkit-text-fill-color: transparent; /* stylelint-disable-line */
-  text-fill-color: transparent; /* stylelint-disable-line */
+  -webkit-text-stroke: .1rem #f4442b;
+  /* stylelint-disable-line */
+  text-stroke: .1rem #f4442b;
+  /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent;
+  /* stylelint-disable-line */
+  text-fill-color: transparent;
+  /* stylelint-disable-line */
 }
 
 .werkdetail-article-captions-li {
@@ -115,10 +126,14 @@
 }
 
 .werkdetail-article-info-span {
-  -webkit-text-stroke: 0.1rem white;/* stylelint-disable-line */
-  text-stroke: .1rem  white;/* stylelint-disable-line */
-  -webkit-text-fill-color: transparent;/* stylelint-disable-line */
-  text-fill-color: transparent;/* stylelint-disable-line */
+  -webkit-text-stroke: 0.1rem white;
+  /* stylelint-disable-line */
+  text-stroke: .1rem white;
+  /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent;
+  /* stylelint-disable-line */
+  text-fill-color: transparent;
+  /* stylelint-disable-line */
   color: transparent;
   font-size: 11rem;
   position: absolute;
@@ -140,6 +155,27 @@
 .svg-zoom {
   fill: white;
   padding: .5rem;
+}
+
+.work-detail-add-caption {
+  width: 100%;
+  height: 15rem;
+  background: transparent;
+  border: 1px solid #7232a4;
+  color: white;
+  font-size: 3rem;
+  font-family: integral cf, sans-serif;
+  -webkit-text-stroke: 0.1rem #f4442b;
+  /* stylelint-disable-line */
+  text-stroke: .1rem #f4442b;
+  /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent;
+  /* stylelint-disable-line */
+  text-fill-color: transparent;
+  /* stylelint-disable-line */
+  color: transparent;
+  padding-left: 1rem;
+  caret-color: white;
 }
 
 /* circles */
