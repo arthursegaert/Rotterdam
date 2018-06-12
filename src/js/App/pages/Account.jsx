@@ -81,10 +81,10 @@ class Account extends Component {
                   <article className="caption">
                     <h3 className="caption-content">{caption.caption}</h3>
                     <p className="caption-author">{caption.userName}</p>
-                    <a className="caption-link-sticker" href="#">
+                    <a className="caption-link-sticker" href="#b">
                       maak de sticker
                     </a>
-                    <a className="caption-link-share" href="#">
+                    <a className="caption-link-share" href="#b">
                       deel
                     </a>
                   </article>
