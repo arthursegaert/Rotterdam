@@ -1,6 +1,7 @@
 .two-sec-page {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+  background-color: black;
 }
 
 .page-title {

@@ -3,6 +3,7 @@
   grid-template: 1fr 4fr / 1fr 1fr;
   grid-template-areas: 'title nav-acc' 'sec1 sec2';
   height: 100vh;
+  background-color: black;
 }
 
 .page-title-account {
