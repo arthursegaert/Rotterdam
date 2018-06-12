@@ -122,11 +122,14 @@ class Home extends Component {
                       />
                     </g>
                   </svg>
-                  <Link to="/login" className="header-profile-name">
-                    Inloggen
-                  </Link>
-                  <Link to="/register" className="header-profile-captions">
-                    Registreren
+                  <div className="header-profile-line1">
+                    <Link to="/login" className="header-profile-login">
+                      Login
+                    </Link>
+                    <span className="header-profile-of"><p>of</p></span>
+                  </div>
+                  <Link to="/register" className="header-profile-register">
+                    Registreer
                   </Link>
                 </div>
               )}
