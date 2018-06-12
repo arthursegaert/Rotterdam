@@ -29,5 +29,28 @@
 }
 
 .captions-section {
-  width: 50rem;
+  width: 35vw;
+}
+
+.captions-section-instagram {
+  width: 85vw;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.captions-a-instagram {
+  color: white;
+  text-decoration: none;
+}
+
+.captions-div-instagram {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.captions-div-instagram-img {
+  display: flex;
+  justify-content: space-around;
 }

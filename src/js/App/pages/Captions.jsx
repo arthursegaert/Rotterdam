@@ -23,13 +23,15 @@ class Captions extends Component {
     return (
       <div className="captions-background">
         <Nav />
-        <h1 className="captions-h1">Captions</h1>
-        <section>
+        <section className="captions-section-instagram">
+          <h1 className="captions-h1">Captions</h1>
+          <div className="captions-div-instagram">
           <h2 className="captions-h2">#boijmanscaptions</h2>
-          <span>bekijk meer op <span className="captions-nadruk">instagram</span></span>
-          <div>
-            <img src="../assets/img/judd.jpg" alt="Dit is een geshared foto van de stickeractie via sociale media." width="280" height="280"/>
-            <img src="../assets/img/judd.jpg" alt="Dit is een geshared foto van de stickeractie via sociale media." width="280" height="280"/>
+          <a href="https://www.instagram.com/?hl=nl" target="_blank" className="captions-a-instagram">bekijk meer op <span className="captions-nadruk">instagram</span></a>
+          </div>
+          <div className="captions-div-instagram-img">
+            <img src="../assets/img/social-one.jpg" alt="Dit is een geshared foto van de stickeractie via sociale media." width="280" height="280"/>
+            <img src="../assets/img/social-two.jpg" alt="Dit is een geshared foto van de stickeractie via sociale media." width="280" height="280"/>
             <img src="../assets/img/judd.jpg" alt="Dit is een geshared foto van de stickeractie via sociale media." width="280" height="280"/>
             <img src="../assets/img/judd.jpg" alt="Dit is een geshared foto van de stickeractie via sociale media." width="280" height="280"/>
           </div>
