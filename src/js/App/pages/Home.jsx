@@ -186,7 +186,7 @@ class Home extends Component {
                 </svg>
               </div>
             </header>
-            <main>
+            <main className="intro">
               <div className="banner">
                 <p className="banner-text">What do you see in artworks?</p>
               </div>
