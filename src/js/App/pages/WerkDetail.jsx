@@ -101,52 +101,6 @@ class WerkDetail extends Component {
             <StatusContext.Consumer>
               {({ authenticated }) => (
                 <section className="werkdetail-section">
-<<<<<<< HEAD
-                <Nav />
-                <article className="werkdetail-article">
-                  <a href={result.link} target="_blank" className="werkdetail-article-info-a">
-                    <div className="werkdetail-article-info">
-                      <span className="werkdetail-article-info-span">i</span>
-                      <p className="werkdetail-article-info-p">meer over het werk</p>
-                  </div>
-                  </a>
-                  <img
-                   alt={result.desc}
-                   src={["../", result.img].join('')}
-                   className= "werkdetail-result"
-                  />
-                  <div className= "werkdetail-werken-nav">
-                     <p className= "werkdetail-werken-nav-button werkendetail-nav-button-vorige">vorige</p>
-                     <span className="werkdetail-werken-nav-span">2/16</span>
-                     <p className= "werkdetail-werken-nav-button werkendetail-nav-button-volgende">volgende</p>
-                  </div>
-                </article>
-                <article className="werkdetail-article-captions">
-                  <h2 className="werkdetail-article-captions-h2">Captions</h2>
-                  <ul>
-                    {/*check of er captions zijn voor het kunstwerk*/}
-                    {result.captions ? (
-                      Object.entries(result.captions).map(captions =>
-                        Object.entries(captions).map(
-                          c =>
-                            //is de caption niet undefined?
-                            c[1].caption !== undefined ? (
-                              <li key={c[0]} className="werkdetail-article-captions-li">
-                                <span>{c[1].caption}</span>
-                                 {/*check of het werk likes heeft*/}
-                                 {c[1].likes >= 0 ? (
-                                  <div className="werkdetail-article-captions-li-div">
-                                    <span>{c[1].userName}</span>
-                                    <span>{c[1].likes} likes</span>
-                                    <div>
-                                     <button
-                                      onClick={() => this.handleClickLike(c[1])}
-                                     >
-                                     like this!
-                                    </button>
-                                     </div>
-                                </div>
-=======
                   <Nav />
                   <article className="werkdetail-article">
                     <img
@@ -214,7 +168,6 @@ class WerkDetail extends Component {
                                     </div>
                                   )}
                                 </li>
->>>>>>> 3ef2a220c844d8fb7b8ea8a72242b146562fa18d
                               ) : (
                                 //as het undefined is, toon niks:
                                 ""
