@@ -9,6 +9,10 @@
     '. grid grid grid grid grid .';
 }
 
+.werken-div-nav {
+  grid-area: nav;
+}
+
 .werken-grid {
   grid-area: grid;
   display: grid;

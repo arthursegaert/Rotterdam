@@ -4,7 +4,7 @@ import "../css/Nav.css";
 
 const Nav = ({classname}) => {
   return (
-    <nav className={`nav nav-werken ${classname}`}>
+    <nav className={`nav ${classname}`}>
       <ul className="nav-list">
         <li className="nav-list-item">
           <Link
