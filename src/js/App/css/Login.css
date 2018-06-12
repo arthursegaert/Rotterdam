@@ -33,14 +33,10 @@
   font-size: 18.2rem;
   opacity: .1;
   line-height: 1.05;
-  -webkit-text-stroke: .3rem white;
-  /* stylelint-disable-line */
-  text-stroke: .3rem white;
-  /* stylelint-disable-line */
-  -webkit-text-fill-color: transparent;
-  /* stylelint-disable-line */
-  text-fill-color: transparent;
-  /* stylelint-disable-line */
+  -webkit-text-stroke: .3rem white; /* stylelint-disable-line */
+  text-stroke: .3rem white; /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent; /* stylelint-disable-line */
+  text-fill-color: transparent; /* stylelint-disable-line */
 }
 
 .section-right-login {
@@ -249,7 +245,7 @@
 }
 
 .login-circle:nth-of-type(5) {
-  grid-row: 2 / 3;
+  grid-row: 2 / 4;
   grid-column: 3 / 5;
 }
 

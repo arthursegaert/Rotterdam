@@ -25,11 +25,10 @@
   font-size: 4rem;
   color: white;
   font-family: 'Integral CF', sans-serif;
-  color: white;
-  -webkit-text-stroke: .2rem #f4442b;
-  text-stroke: .2rem #f4442b;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
+  -webkit-text-stroke: .2rem #f4442b; /* stylelint-disable-line */
+  text-stroke: .2rem #f4442b; /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent; /* stylelint-disable-line */
+  text-fill-color: transparent; /* stylelint-disable-line */
   font-style: italic;
 }
 
@@ -42,11 +41,10 @@
   font-size: 3.5rem;
   color: white;
   font-family: 'Integral CF', sans-serif;
-  color: white;
-  -webkit-text-stroke: .1rem #742dab;
-  text-stroke: .1rem #742dab;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
+  -webkit-text-stroke: .1rem #742dab; /* stylelint-disable-line */
+  text-stroke: .1rem #742dab; /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent; /* stylelint-disable-line */
+  text-fill-color: transparent; /* stylelint-disable-line */
 }
 
 /* captions */
