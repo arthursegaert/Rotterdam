@@ -1,5 +1,5 @@
 .captions-background {
-  background-color: black;
+  background-image: linear-gradient(to top right, black 80%, #f4442b 95%);
   color: white;
 }
 
