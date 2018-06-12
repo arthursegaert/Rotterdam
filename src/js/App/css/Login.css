@@ -149,23 +149,23 @@
   padding-bottom: 2rem;
 }
 
+.link-svg-text {
+  transform-origin: center;
+  animation: rotator 6s linear paused infinite forwards;
+}
+
 .section-right-link-svg {
   width: 15rem;
   height: 15rem;
 }
 
-.link-svg-text:hover {
+.section-right-link:hover .link-svg-text {
   transform-origin: center;
-  animation-name: rotator;
-  animation-duration: 6s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation: rotator 6s linear running infinite forwards;
 }
 
 @keyframes rotator {
-  0% {
-    transform: rotate(0deg);
-  }
+
   100% {
     transform: rotate(360deg);
   }
