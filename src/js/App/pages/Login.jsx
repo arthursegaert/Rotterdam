@@ -65,7 +65,7 @@ class Login extends Component {
     } else {
       return (
         <main className="two-sec-page">
-          <h1 className="page-title">Login</h1>
+          <h1 className="page-title page-title-login">Login</h1>
           <div className="white-circle login-circle" />
           <div className="white-circle login-circle" />
           <div className="white-circle login-circle" />

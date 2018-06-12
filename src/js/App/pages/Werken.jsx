@@ -21,6 +21,7 @@ class Werken extends Component {
   render() {
     return (
       <div className="werken-div-background">
+      <h1 className="page-title page-title-werken">Werken</h1>
         <Nav />
         <div className="werken-grid">
         {this.state.kunstwerken.map(kunstwerk => {
