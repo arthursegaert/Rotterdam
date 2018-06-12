@@ -6,6 +6,10 @@
   background-color: black;
 }
 
+.account-nav {
+  grid-area: nav-acc;
+}
+
 .page-title-account {
   grid-area: title;
 }
@@ -22,6 +26,7 @@
   grid-template: repeat(6, 1fr) 1fr / repeat(2, 1fr);
   grid-template-areas: 'label1 label1' 'input1 input1' 'label2 label2' 'input2 input2' 'label3 label3' 'input3 input3' 'button1 .';
   grid-column-gap: 6vmax;
+  grid-row-gap: 2vh;
   width: 32vw;
 }
 

@@ -34,7 +34,7 @@ class Account extends Component {
           authenticated ? (
             <main className="two-sec-page-account">
               <h1 className="page-title page-title-account">Mijn Account</h1>
-              <Nav className="account-nav" />
+              <Nav classname="account-nav" />
               <section className="section-left section-left-account">
                 <h2 className="page-subtitle section-left-subtitle">
                   Mijn informatie
