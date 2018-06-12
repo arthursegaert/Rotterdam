@@ -97,18 +97,25 @@ class WerkDetail extends Component {
 
       if (this.state.match) {
         return (
+          <main className="werkdetail-main">
           <StatusContext.Consumer>
             {({ authenticated }) => (
-              <div className="werkdetail-div">
-                <Nav />
                 <section className="werkdetail-section">
+                <Nav />
+                <article className="werkdetail-article">
                <img
                 alt={result.desc}
                 src={["../", result.img].join('')}
                 className= "werkdetail-result"
                />
-               <div>
-                <h2>Captions bij dit kunstwerk:</h2>
+               <div className= "werkdetail-werken-nav">
+                <p className= "werkdetail-werken-nav-button werkendetail-nav-button-vorige">vorige</p>
+                <span className="werkdetail-werken-nav-span">2/16</span>
+                <p className= "werkdetail-werken-nav-button werkendetail-nav-button-volgende">volgende</p>
+               </div>
+               </article>
+               <article className="werkdetail-article-captions">
+                <h2 className="werkdetail-article-captions-h2">Captions</h2>
                 <ul>
                   {/*check of er captions zijn voor het kunstwerk*/}
                   {result.captions ? (
@@ -117,7 +124,7 @@ class WerkDetail extends Component {
                         c =>
                           //is de caption niet undefined?
                           c[1].caption !== undefined ? (
-                            <li key={c[0]}>
+                            <li key={c[0]} className="werkdetail-article-captions-li">
                               <span>
                                 {c[1].caption} - Posted by {c[1].userName}
                               </span>
@@ -176,12 +183,11 @@ class WerkDetail extends Component {
                   //als de gebruiker niet is ingelogd
                   <p>Je moet ingelogd zijn om een caption te schrijven</p>
                 )}
-                </div>
+                </article>
                 </section>
-              </div>
             )}
           </StatusContext.Consumer>
-        );
+        </main>);
       }
       return (
         <div>
