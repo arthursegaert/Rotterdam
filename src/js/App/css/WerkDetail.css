@@ -87,6 +87,10 @@
   justify-self: flex-start;
 }
 
+.werkdetail-werken-nav-button:hover {
+  opacity: .8;
+}
+
 .werkdetail-captions {
   height: 45vh;
   overflow-y: scroll;
