@@ -1,13 +1,16 @@
 .two-sec-page {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(4, 1fr);
-  background-color: black;
 }
 
 .page-title {
   font-size: 5rem;
   color: white;
   font-family: 'Integral CF', sans-serif;
+}
+
+.two-sec-page-login {
+  background-image: linear-gradient(245deg, black 82%, #742DAB 110%);
 }
 
 .page-title-login {
