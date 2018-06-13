@@ -103,3 +103,20 @@
   }
 
 }
+
+@media only screen and (max-width: 670px) {
+
+  .captions-h1 {
+    font-size: 4rem;
+  }
+
+  .captions-h2 {
+    font-size: 2rem;
+  }
+
+  .captions-div-instagram {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
