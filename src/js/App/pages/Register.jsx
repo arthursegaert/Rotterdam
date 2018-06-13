@@ -95,13 +95,16 @@ class Register extends Component {
     } else {
       return (
         <main className="two-sec-page">
+          <h1 className="page-title section-left-title page-title-register">
+            Registreer
+          </h1>
+          <Nav classname="register-nav" />
           <div className="white-circle registreer-circle" />
           <div className="white-circle registreer-circle" />
           <div className="white-circle registreer-circle" />
           <div className="white-circle registreer-circle" />
           <div className="white-circle registreer-circle" />
           <section className="section-left section-left-register">
-            <h1 className="page-title section-left-title">Registreer</h1>
             <form
               onSubmit={e => {
                 this.authWithEmailPassword(e);
@@ -161,8 +164,11 @@ class Register extends Component {
             </p>
           </section>
           <section className="section-right section-right-register">
-            <Nav />
-            <KunstwerkCTA kunstwerkId="1" color="#7333a8" />
+            <KunstwerkCTA
+              kunstwerkId="1"
+              color="#7333a8"
+              classname="section-right-link"
+            />
           </section>
         </main>
       );

@@ -82,6 +82,7 @@ class Login extends Component {
     } else {
       return (
         <main className="two-sec-page">
+          <Nav classname="login-nav" />
           <h1 className="page-title page-title-login">Login</h1>
           <div className="white-circle login-circle" />
           <div className="white-circle login-circle" />
@@ -137,7 +138,6 @@ class Login extends Component {
             </p>
           </section>
           <section className="section-right section-right-login">
-            <Nav />
             <KunstwerkCTA
               kunstwerkId="7"
               color="#7333a8"

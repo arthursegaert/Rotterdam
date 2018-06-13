@@ -6,6 +6,7 @@ import Caption from "../components/Caption.jsx";
 import { StatusContext } from "../context/statusContext.js";
 import { app, base } from "../config/fire.js";
 import Flash from "../components/Flash.jsx";
+import KunstwerkCTA from "../components/KunstwerkCTA.jsx";
 
 class Home extends Component {
   constructor(props) {
@@ -118,6 +119,11 @@ class Home extends Component {
                   />
                 </a>
                 <div className="header-img" />
+                <KunstwerkCTA
+                            kunstwerkId="12"
+                            color="#f4442b"
+                            classname="header-grid-cta"
+                          />
                 <Nav />
                 <div className="header-account">
                   {authenticated ? (
@@ -272,7 +278,7 @@ class Home extends Component {
                 </div>
                 <ol className="intro-list">
                   <li className="intro-list-item1">
-                    <h3>Look at the artwork and fantasise …</h3>
+                    <h3 className="intro-list-titel">Look at the artwork and fantasise …</h3>
                     <div>
                       <img
                         src="assets/img/merry.jpg"
@@ -280,6 +286,11 @@ class Home extends Component {
                         width="746"
                         height="520"
                       />
+                         <KunstwerkCTA
+                            kunstwerkId="12"
+                            color="#f4442b"
+                            classname="item2-grid-cta"
+                          />
                       <svg
                         width="477px"
                         height="276px"
@@ -328,7 +339,7 @@ class Home extends Component {
                   </li>
                   <li className="intro-list-item2">
                     <div className="intro-container">
-                      <h3>Write down what you see</h3>
+                      <h3 className="intro-list-titel">Write down what you see</h3>
                       <div className="intro-list-item2-form">
                         <form
                           ref={form => {
@@ -440,7 +451,7 @@ class Home extends Component {
                     </div>
                   </li>
                   <li className="intro-list-item3">
-                    <h3>Open up for new visions by reading other captions</h3>
+                    <h3 className="intro-list-titel">Open up for new visions by reading other captions</h3>
                     <div className="item3-captions">
                       {this.state.kunstwerken[12] === undefined ? (
                         <p>Loading...</p>
@@ -502,28 +513,28 @@ class Home extends Component {
                     </div>
                   </li>
                   <li className="intro-list-item4">
-                    <h3>Get your caption on a sticker!</h3>
+                    <h3 className="intro-list-titel">Get your caption on a sticker!</h3>
                     <p className="intro-item4-preview">
                       tetsttetstfstf efesf fesfs
                     </p>
                     <div />
                   </li>
                   <li className="intro-list-item5">
-                    <h3>
+                    <h3 className="intro-list-titel">
                       Make art yourself by sticking the caption on a fitting
                       item
                     </h3>
                     <div />
                   </li>
                   <li className="intro-list-item6">
-                    <h3>
+                    <h3 className="intro-list-titel">
                       Take a picture of your artwork and share it on the
                       hashtag:
                     </h3>
                     <p>#boijmanscaptions</p>
                   </li>
                   <li className="intro-list-item7">
-                    <h3>
+                    <h3 className="intro-list-titel">
                       Get a chance to win a place for your photo at the newely
                       renovated museum boijmans van beuningen
                     </h3>

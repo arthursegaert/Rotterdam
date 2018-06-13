@@ -28,9 +28,9 @@
 }
 
 .home-circle:nth-of-type(1) {
-  width: 8rem;
-  height: 8rem;
-  left: 69vw;
+  width: 6rem;
+  height: 6rem;
+  left: 78vw;
   top: 7vh;
 }
 
@@ -49,10 +49,10 @@
 }
 
 .home-circle:nth-of-type(4) {
-  width: 8rem;
-  height: 8rem;
+  width: 10rem;
+  height: 10rem;
   left: 37vw;
-  bottom: 42.5vh;
+  bottom: 35.5vh;
 }
 
 .home-circle:nth-of-type(5) {
@@ -61,7 +61,6 @@
   left: 20vw;
   bottom: -30vh;
 }
-
 
 .header-wrap {
   height: 100vh;
@@ -190,9 +189,9 @@
   grid-template: 80rem 50rem 55rem 30rem 30rem 30rem/ 40vw 55vw;
   grid-gap: 5rem;
   grid-template-areas: 'item1 item1' 'item2 item2' 'item4 item3' 'item4 item3' 'item5 item5' 'item6 item6' 'item7 item7';
-  background-image: url(../../../assets/img/stickers/sticker1.png), url(../../../assets/img/stickers/sticker2.png), url(../../../assets/img/stickers/sticker3.png), url(../../../assets/img/stickers/sticker4.png), url(../../../assets/img/stickers/sticker5.png), url(../../../assets/img/stickers/sticker6.png), url(../../../assets/img/stickers/sticker7.png);
-  background-position: 5rem 240rem, -2rem 306rem, 83rem 266rem, 37rem 240rem, 50rem 310rem, 69rem 265rem, 103rem 306rem;
-  background-size: 20%, 19%, 19%, 15%, 10%, 16%, 14%;
+  background-image: url(../../../assets/img/stickers/sticker1.png), url(../../../assets/img/stickers/sticker2.png), url(../../../assets/img/stickers/sticker6.png), url(../../../assets/img/stickers/sticker4.png), url(../../../assets/img/stickers/sticker5.png), url(../../../assets/img/stickers/sticker3.png), url(../../../assets/img/stickers/sticker7.png);
+  background-position: -1rem 235rem, -2rem 306rem, 110rem 255rem, 37rem 217rem, 107rem 305rem, 95rem 265rem, 120rem 306rem;
+  background-size: 20%, 19%, 15%, 15%, 10%, 21%, 14%;
   background-repeat: no-repeat;
 }
 
@@ -245,11 +244,19 @@
   grid-area: item2;
   width: 100vw;
   height: 90rem;
-  padding: 0 10rem;
+}
+
+.intro-list-item2 h3 {
+  margin-left: 10rem;
+}
+
+.intro-list-item2::before {
+  margin-left: 10rem;
 }
 
 .intro-list-item3::before {
-  top: 0;
+  top: -1.2rem;
+  position: relative;
 }
 
 .intro-container {
@@ -267,7 +274,7 @@
   justify-content: space-around;
 }
 
-.intro-list-item2 h3 {
+.intro-list-titel {
   grid-area: title;
 }
 
@@ -276,7 +283,7 @@
 }
 
 .intro-list-item2-form {
-  width: 100%;
+  width: 78%;
   padding: 2rem;
   background-color: #f4442b;
   grid-area: form;
@@ -314,26 +321,63 @@
   margin-top: 2rem;
 }
 
+.item2-grid-cta {
+  grid-row: 6 / 8;
+  grid-column: 1 / 3;
+  z-index: 1;
+  position: absolute;
+  top: 110rem;
+  left: 5rem;
+}
+
+.header-grid-cta {
+  grid-row: 6 / 8;
+  grid-column: 1 / 3;
+  z-index: 1;
+  position: absolute;
+  top: 82rem;
+  left: 77vw;
+}
+
 .intro-list-item3 {
   grid-area: item3;
   border: #283dd2 solid;
   width: 85%;
-  margin-top: 12rem;
+  margin-top: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 2rem;
 }
 
-.intro-list-item3 h3 {
+.item3-captions {
+  height: 55rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
-  top: -10rem;
+  top: -8rem;
+}
+
+.main-meer div {
+  margin-top: -5rem;
+  height: 15rem;
+
+}
+
+.main-meer p {
+  margin-top: 0;
+}
+
+.intro-list-item3 .intro-list-titel {
+  position: relative;
+  top: -12rem;
   margin-left: 2rem;
 }
 
 .intro-list-item4 {
   grid-area: item4;
-  margin-top: 35rem;
+  margin-top: 12rem;
   margin-left: 10rem;
   width: 80%;
 }
@@ -420,12 +464,11 @@
 }
 
 .main-button p, .main-button a {
-  width: 48rem;
+  width: 100%;
   color: white;
   text-transform: uppercase;
   font-size: 2.5rem;
   padding: 2rem;
-  margin-top: 5rem;
 }
 
 .main-button-color {
@@ -454,10 +497,6 @@
 .main-meer {
   width: 100%;
   height: 20rem;
-}
-
-.item3-captions {
-  height: 39rem;
 }
 
 .main-button-pijl {
