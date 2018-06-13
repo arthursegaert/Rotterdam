@@ -365,17 +365,13 @@
 @media only screen and (max-width: 768px) {
 
   .werken-div-background {
-    background: repeating-linear-gradient(to right, black 5%, black 23%, #727272 23%, #727272 23.05%);
+    background: repeating-linear-gradient(to right, black, black 33%, #727272 33%, #727272 33.05%);
     display: grid;
     grid-template: 2fr 1fr max-content / repeat(3, 33%);
     grid-template-areas:
       'title . nav'
       'filter . .'
       'grid grid  grid';
-  }
-
-  .werken-div-background {
-    background: repeating-linear-gradient(to right, black, black 33%, #727272 33%, #727272 33.05%);
   }
 
   .werken-grid {
@@ -397,6 +393,40 @@
   .werken-kunstwerk-4, .werken-kunstwerk-3, .werken-kunstwerk-7 {
     display: flex;
     justify-content: center;
+  }
+
+}
+
+@media only screen and (max-width: 425px) {
+
+  .werken-div-background {
+    background: none;
+    background-color: black;
+    display: grid;
+    grid-template: 2fr 1fr max-content / repeat(3, 33%);
+    grid-template-areas:
+      'title . nav'
+      'filter . .'
+      'grid grid  grid';
+  }
+
+  .werken-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .kunstwerk-img {
+    width: 85vw;
+    height: auto;
+  }
+
+  .werken-kunstwerk {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section-right-link-svg {
+    display: none;
   }
 
 }
