@@ -1,5 +1,5 @@
 .captions-background {
-  background-image: linear-gradient(to top right, black 80%, #f4442b 95%);
+  background-image: linear-gradient(45deg, black 80%, #f4442b);
   color: white;
 }
 
@@ -102,6 +102,10 @@
     margin: 0 auto;
   }
 
+  .captions-background {
+    background-image: linear-gradient(45deg, black 90%, #f4442b);
+  }
+
 }
 
 @media only screen and (max-width: 670px) {
@@ -117,6 +121,10 @@
   .captions-div-instagram {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .captions-background {
+    background-image: linear-gradient(45deg, black 95%, #f4442b);
   }
 
 }
