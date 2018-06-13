@@ -81,7 +81,7 @@ class Login extends Component {
       );
     } else {
       return (
-        <main className="two-sec-page">
+        <main className="two-sec-page two-sec-page-login">
           <Nav classname="login-nav" />
           <h1 className="page-title page-title-login">Login</h1>
           <div className="white-circle login-circle" />
