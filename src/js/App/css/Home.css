@@ -139,8 +139,8 @@
   grid-gap: 5rem;
   grid-template-areas: 'item1 item1' 'item2 item2' 'item4 item3' 'item4 item3' 'item5 item5' 'item6 item6' 'item7 item7';
   background-image: url(../../../assets/img/stickers/sticker1.png), url(../../../assets/img/stickers/sticker2.png), url(../../../assets/img/stickers/sticker3.png), url(../../../assets/img/stickers/sticker4.png), url(../../../assets/img/stickers/sticker5.png), url(../../../assets/img/stickers/sticker6.png), url(../../../assets/img/stickers/sticker7.png);
-  background-position: 50rem 190rem, 50rem 200rem, 50rem 120rem, 50rem 130rem, 50rem 10rem, 50rem 10rem, 50rem 190rem;
-  background-size: 20%, 30%, 30%, 30%, 30%, 30%, 30%;
+  background-position: 5rem 240rem, 50rem 270rem, 50rem 289rem, 50rem 210rem, 50rem 310rem, 50rem 320rem, 50rem 250rem;
+  background-size: 20%, 15%, 10%, 20%, 10%, 15%, 10%;
   background-repeat: no-repeat;
 }
 
@@ -229,20 +229,15 @@
   grid-area: form;
 }
 
-.intro-list-item2-form-input {
-  width: 30%;
-  height: 4.5rem;
+.intro-list-item2-form-textarea {
+  resize: none;
+  height: 28rem;
+  width: 100%;
   background-color: #f4442b;
   border: black solid .1rem;
 }
 
-.intro-list-item2-form-textarea {
-  resize: none;
-  width: 61rem;
-  height: 28rem;
-}
-
-.intro-list-item2-form a {
+.item2-form-button {
   background-color: black;
   text-align: center;
   width: 30%;
@@ -250,8 +245,14 @@
   border: none;
   height: 4rem;
   padding-top: .5rem;
+  font-size: 2rem;
   font-family: 'Integral CF', sans-serif;
   font-weight: bold;
+}
+
+.item2-form-button:hover {
+  background-color: white;
+  color: black;
 }
 
 .item2-form-bottom {
@@ -353,15 +354,11 @@
   line-height: 3rem;
 }
 
-.main-button a {
-  width: 80rem;
-}
-
-.main-button p {
-  text-align: right;
+.main-button p, .main-button a {
+  width: 48rem;
   color: white;
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: 2rem;
   margin-top: 5rem;
 }
