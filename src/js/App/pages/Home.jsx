@@ -41,40 +41,54 @@ class Home extends Component {
     );
   };
 
+  postToDatabase = (user, userid, caption, kunstwerkId) => {
+    base
+    .push(`kunstwerken/${kunstwerkId}/captions`, {
+      data: {
+        caption: caption,
+        userName: user,
+        userid: userid,
+        kunstwerkId: kunstwerkId
+      }
+    })
+    .then(() => {
+      base.push(`captions/${userid}`, {
+        data: {
+          caption: caption,
+          userName: user,
+          userid: userid,
+          kunstwerkId: kunstwerkId
+        }
+      });
+    })
+    .then(() => {
+      this.captionForm.reset();
+    });
+  }
+
   handleSubmitCaption = e => {
     e.preventDefault();
     const caption = this.captionInput.value;
-    const user = app.auth().currentUser.displayName;
-    const userid = app.auth().currentUser.uid;
     const kunstwerkId = 12;
 
+    //hebben ze caption ingevuld?
     if (caption.trim().length !== 0) {
-      base
-        .push(`kunstwerken/${kunstwerkId}/captions`, {
-          data: {
-            caption: caption,
-            userName: user,
-            userid: userid,
-            kunstwerkId: kunstwerkId
-          }
-        })
-        .then(() => {
-          base.push(`captions/${userid}`, {
-            data: {
-              caption: caption,
-              userName: user,
-              userid: userid,
-              kunstwerkId: kunstwerkId
-            }
-          });
-        })
-        .then(() => {
-          this.captionForm.reset();
-        })
-        .catch(err => {
-          console.log(err);
-        });
+      //zijn ze ingelogd of niet?
+      app.auth().onAuthStateChanged(user => {
+        if (user) {
+          const user = app.auth().currentUser.displayName;
+          const userid = app.auth().currentUser.uid;
+          this.postToDatabase(user, userid, caption, kunstwerkId)
+        } else {
+          const user = 'unknown';
+          const userid = 'unknownUsers';
+          this.postToDatabase(user, userid, caption, kunstwerkId)
+        }
+      });
     }
+
+
+
   }
 
   render() {
