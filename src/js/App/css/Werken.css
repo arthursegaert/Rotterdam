@@ -13,8 +13,8 @@
   grid-area: grid;
   display: grid;
   grid-template-columns: repeat(5, 20%);
-  grid-template-rows: 10vh 30vh 50vh 0 26vh 50vh 0 70vh 0 15vh repeat(7, 30vh);
-  grid-template-areas: 'kunstwerk_nine . . . .''. . . kunstwerk_two .''. kunstwerk_eleven . . .''kunstwerk_eight . . . .''. . kunstwerk_seven . .''. . . . kunstwerk_twelve''. kunstwerk_three . . .''. . . kunstwerk_fourteen .''kunstwerk_six . . . .''. . kunstwerk_thirteen . .''. . . . kunstwerk_four''. werken-nav werken-nav werken-nav .''. kunstwerk_one . . .''. kunstwerk_five . . .''. kunstwerk_null . . .''. kunstwerk_ten . . .''. kunstwerk_fifteen . . .';
+  grid-template-rows: 10vh 30vh 50vh 0 26vh 50vh 0 70vh 0 15vh 45vh 10vh 38vh 14vh 6vh 40vh;
+  grid-template-areas: 'kunstwerk_nine . . . .''. . . kunstwerk_two .''. kunstwerk_eleven . . .''kunstwerk_eight . . . .''. . kunstwerk_seven . .''. . . . kunstwerk_twelve''. kunstwerk_three . . .''. . . kunstwerk_fourteen .''kunstwerk_six . . . .''. . kunstwerk_thirteen . .''. . . . kunstwerk_four''. kunstwerk_one . . .''. . . kunstwerk_five . ''kunstwerk_null . . . .''. . kunstwerk_ten . .''. . . . kunstwerk_fifteen''. werken-nav werken-nav werken-nav .';
 }
 
 .page-title-werken {
@@ -38,62 +38,92 @@
 }
 
 .kunstwerk-author-p-9 {
-  left: 11vw;
-  top: 15vh;
+  left: 5vw;
+  top: -8vh;
 }
 
 .kunstwerk-author-p-2 {
-  left: 9vw;
-  top: 37vh;
+  left: 5vw;
+  top: -8vh;
 }
 
 .kunstwerk-author-p-11 {
-  left: -7rem;
-  top: 14rem;
+  left: -7vw;
+  top: -14vh;
   transform: rotate(90deg);
 }
 
 .kunstwerk-author-p-8 {
-  top: 28rem;
+  left: 2vw;
+  top: -4vh;
 }
 
 .kunstwerk-author-p-7 {
-  top: 5rem;
-  left: 14rem;
+  left: 9vw;
+  top: -20vh;
   transform: rotate(-90deg);
 }
 
 .kunstwerk-author-p-12 {
-  top: -3rem;
-  left: -4rem;
+  left: 2vw;
+  top: -24vh;
 }
 
 .kunstwerk-author-p-3 {
-  top: -3rem;
-  left: 20rem;
+  left: 2vw;
+  top: -28vh;
 }
 
 .kunstwerk-author-p-14 {
-  top: 17rem;
-  left: 10rem;
+  left: 9vw;
+  top: -24vh;
   transform: rotate(90deg);
 }
 
 .kunstwerk-author-p-6 {
-  top: 25rem;
-  left: 7rem;
+  left: 3vw;
+  top: -4vh;
   transform: rotate(-90deg);
 }
 
 .kunstwerk-author-p-13 {
-  top: 16rem;
-  left: 5rem;
+  left: 3vw;
+  top: -4vh;
 }
 
 .kunstwerk-author-p-4 {
-  left: -5rem;
+  left: -9vw;
+  top: -14vh;
   transform: rotate(-90deg);
 }
+
+.kunstwerk-author-p-1 {
+  left: -9vw;
+  top: -8vh;
+}
+
+.kunstwerk-author-p-5 {
+  left: -10vw;
+  top: -8vh;
+  transform: rotate(-90deg);
+}
+
+.kunstwerk-author-p-0 {
+  left: 2vw;
+  top: -4vh;
+}
+
+.kunstwerk-author-p-10 {
+  left: 10vw;
+  top: -24vh;
+  transform: rotate(90deg);
+}
+
+.kunstwerk-author-p-15 {
+  left: -10vw;
+  top: -24vh;
+}
+
 
 .werken-kunstwerk {
   position: relative;
