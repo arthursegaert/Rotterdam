@@ -215,6 +215,12 @@ class WerkDetail extends Component {
                         <p>Dit werk heeft nog geen captions</p>
                       )}
                     </div>
+                    {/* is de gebruiker ingelogt?*/}
+                    {authenticated ? (
+                      ""
+                    ) : (
+                      <p>Bij registratie kan je jouw captions bijhouden</p>
+                    )}
                     <form
                       ref={form => {
                         this.captionForm = form;

@@ -13,6 +13,14 @@ class Login extends Component {
     };
   }
 
+  componentDidMount() {
+    app.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.setState({ redirect: true });
+      }
+    });
+  }
+
   authWithFacebook = () => {
     app
       .auth()
