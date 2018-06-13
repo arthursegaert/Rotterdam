@@ -1,4 +1,4 @@
-.account-background {
+.account-background, .two-sec-page {
   background-image: linear-gradient(35deg, black 80%, #283dd2);
   color: white;
 }
