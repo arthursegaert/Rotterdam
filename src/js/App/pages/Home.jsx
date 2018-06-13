@@ -525,9 +525,6 @@ class Home extends Component {
             <footer>
               <ul className="footer-ul">
                 <li className="footer-left">
-                  different <br /> vision
-                </li>
-                <li className="footer-right">
                   <a className="footer-logo" href="https://www.boijmans.nl">
                     <img
                       data-src="https://static.boijmans.nl/build/images/boijmans-logo-invert.svg"
@@ -535,6 +532,9 @@ class Home extends Component {
                       src="https://static.boijmans.nl/build/images/boijmans-logo-invert.svg"
                     />
                   </a>
+                </li>
+                <li className="footer-right">
+                  <p>different<br />vision</p>
                 </li>
               </ul>
             </footer>
