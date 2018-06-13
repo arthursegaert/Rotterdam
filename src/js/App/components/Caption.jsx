@@ -31,6 +31,18 @@ class Caption extends Component {
       });
   };
 
+  handleClickDelete = (e, caption) => {
+    console.log(e.currentTarget, caption);
+    base
+      .remove(`captions/${caption.userid}/${caption.key}`)
+      .then(() => {
+        console.log("verwijderd");
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
+
   render() {
     const {
       caption,
@@ -42,7 +54,7 @@ class Caption extends Component {
     } = this.props;
     return (
       <article className={`caption`}>
-        <h3 className="caption-content">{caption}</h3>
+        <h3 className="caption-content">{caption.caption}</h3>
         <p className="caption-author">{userName}</p>
         <a className="caption-link-sticker" href="#b">
           maak de sticker
@@ -81,7 +93,7 @@ class Caption extends Component {
         )}
         {deleteOption ? (
           <a
-            onClick={e => this.handleClickLike(captionId, likes, kunstwerkId)}
+            onClick={e => this.handleClickDelete(e, caption)}
             className="caption-link-like"
           >
             <svg className="delete-icon" viewBox="0 0 550 550">

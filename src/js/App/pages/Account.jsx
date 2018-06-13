@@ -80,7 +80,7 @@ class Account extends Component {
                 <div className="section-right-account-captions">
                   {this.state.captions.map(caption => (
                     <Caption
-                      caption={caption.caption}
+                      caption={caption}
                       userName={caption.userName}
                       deleteOption="true"
                     />
