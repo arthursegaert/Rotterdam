@@ -1,4 +1,6 @@
-import * as firebase from "firebase";
+import firebase from "firebase/app";
+import database from "firebase/database";
+import auth from "firebase/auth";
 import Rebase from "re-base";
 
 const config = {
@@ -10,7 +12,6 @@ const config = {
 const app = firebase.initializeApp(config);
 const db = firebase.database(app);
 const base = Rebase.createClass(db);
-const ref = firebase.database().ref();
 const facebookProvider = new firebase.auth.FacebookAuthProvider();
 
-export { app, db, base, facebookProvider, ref };
+export { app, db, base, facebookProvider };

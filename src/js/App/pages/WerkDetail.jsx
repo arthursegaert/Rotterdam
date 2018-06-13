@@ -239,7 +239,7 @@ class WerkDetail extends Component {
                                 //is de caption niet undefined?
                                 c[1].caption !== undefined ? (
                                   <Caption
-                                    caption={c[1].caption}
+                                    caption={c[1]}
                                     captionId={captionId}
                                     key={c[0]}
                                     userName={c[1].userName}
