@@ -40,14 +40,23 @@
   height: 2rem;
 }
 
-.heart-icon:hover .inner-heart {
+.heart-icon:hover .inner-heart, .delete-icon:hover .cross-delete {
   fill: #f14634;
 }
 
-.heart-icon:hover {
+.heart-icon:hover, .delete-icon:hover {
   cursor: pointer;
 }
 
 .amount-of-likes {
   padding-left: .5rem;
+}
+
+.delete-icon {
+  height: 2rem;
+}
+
+.cross-delete {
+  fill: white;
+  height: 2rem;
 }
