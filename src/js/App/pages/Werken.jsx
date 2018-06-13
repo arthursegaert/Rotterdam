@@ -56,6 +56,11 @@ class Werken extends Component {
                     kunstwerk
                   }}
                 >
+                  <img
+                    alt={kunstwerk.author}
+                    className={"kunstwerk-img"}
+                    src={kunstwerk.img}
+                  />
                   <div className="nav-list-item-link">
                     <span className="nav-list-item-link-title">
                       <span
@@ -70,11 +75,6 @@ class Werken extends Component {
                       </span>
                     </span>
                   </div>
-                  <img
-                    alt={kunstwerk.author}
-                    className={"kunstwerk-img"}
-                    src={kunstwerk.img}
-                  />
                   <p className="kunstwerk-captions-amount">
                     {[
                       aantalCaptions,
