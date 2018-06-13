@@ -229,11 +229,17 @@
   grid-area: form;
 }
 
-.intro-list-item2-form input {
+.intro-list-item2-form-input {
   width: 30%;
   height: 4.5rem;
   background-color: #f4442b;
   border: black solid .1rem;
+}
+
+.intro-list-item2-form-textarea {
+  resize: none;
+  width: 61rem;
+  height: 28rem;
 }
 
 .intro-list-item2-form a {

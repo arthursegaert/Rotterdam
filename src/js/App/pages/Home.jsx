@@ -41,6 +41,42 @@ class Home extends Component {
     );
   };
 
+  handleSubmitCaption = e => {
+    e.preventDefault();
+    const caption = this.captionInput.value;
+    const user = app.auth().currentUser.displayName;
+    const userid = app.auth().currentUser.uid;
+    const kunstwerkId = 12;
+
+    if (caption.trim().length !== 0) {
+      base
+        .push(`kunstwerken/${kunstwerkId}/captions`, {
+          data: {
+            caption: caption,
+            userName: user,
+            userid: userid,
+            kunstwerkId: kunstwerkId
+          }
+        })
+        .then(() => {
+          base.push(`captions/${userid}`, {
+            data: {
+              caption: caption,
+              userName: user,
+              userid: userid,
+              kunstwerkId: kunstwerkId
+            }
+          });
+        })
+        .then(() => {
+          this.captionForm.reset();
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
+  }
+
   render() {
     return (
       <StatusContext.Consumer>
@@ -269,8 +305,12 @@ class Home extends Component {
                     <div className="intro-container">
                       <h3>Write down what you see</h3>
                       <div className="intro-list-item2-form">
-                        <form action="">
-                          <textarea />
+                        <form ref={form => {
+                          this.captionForm = form;
+                        }} onSubmit={this.handleSubmitCaption}>
+                          <textarea ref={input => {
+                            this.captionInput = input;
+                          }} className="intro-list-item2-form-textarea" />
                           <input
                             className="item2-form-bottom"
                             type="submit"
