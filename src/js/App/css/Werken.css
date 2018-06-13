@@ -2,7 +2,7 @@
   background: linear-gradient(33deg, #0000 92%, #742dab), repeating-linear-gradient(to right, black 5%, black 23%, #727272 23%, #727272 23.05%);
   display: grid;
   grid-template: 2fr 1fr max-content / 5% repeat(5, 18%) 5%;
-  grid-template-areas: '. title . . . nav .' '. filter filter . . . .' '. grid grid grid grid grid .';
+  grid-template-areas: '. title . . nav nav nav' '. filter filter . . . .' '. grid grid grid grid grid .';
 }
 
 .werken-div-nav {
