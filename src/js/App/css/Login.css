@@ -1,7 +1,6 @@
 .two-sec-page {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(4, 1fr);
-  background-color: black;
 }
 
 .page-title {
@@ -10,10 +9,14 @@
   font-family: 'Integral CF', sans-serif;
 }
 
+.two-sec-page-login {
+  background-image: linear-gradient(245deg, black 82%, #742DAB 110%);
+}
+
 .page-title-login {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
-  margin-right: 5rem;
+  margin-left: 5rem;
 }
 
 .login-nav, .register-nav {
@@ -63,7 +66,7 @@
 }
 
 .section-right-login {
-  background-image: url(../../../assets/img/koningen.jpg);
+  background-image: linear-gradient(35deg, #0000 65%, #283dd2 90%), url(../../../assets/img/koningen.jpg);
 }
 
 .section-left-form-login {

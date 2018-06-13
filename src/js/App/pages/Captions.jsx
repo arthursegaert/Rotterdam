@@ -47,12 +47,12 @@ class Captions extends Component {
               className="captions-div-instagram-img"
             />
             <img
-              src="../assets/img/judd.jpg"
+              src="../assets/img/social-three.jpg"
               alt="Dit is een geshared foto van de stickeractie via sociale media."
               className="captions-div-instagram-img"
             />
             <img
-              src="../assets/img/judd.jpg"
+              src="../assets/img/social-four.jpg"
               alt="Dit is een geshared foto van de stickeractie via sociale media."
               className="captions-div-instagram-img"
             />
