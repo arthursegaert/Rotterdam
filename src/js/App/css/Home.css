@@ -138,6 +138,10 @@
   grid-template: 80rem 50rem 55rem 30rem 30rem 30rem/ 42vw 58vw;
   grid-gap: 5rem;
   grid-template-areas: 'item1 item1' 'item2 item2' 'item4 item3' 'item4 item3' 'item5 item5' 'item6 item6' 'item7 item7';
+  background-image: url(../../../assets/img/stickers/sticker1.png), url(../../../assets/img/stickers/sticker2.png), url(../../../assets/img/stickers/sticker3.png), url(../../../assets/img/stickers/sticker4.png), url(../../../assets/img/stickers/sticker5.png), url(../../../assets/img/stickers/sticker6.png), url(../../../assets/img/stickers/sticker7.png);
+  background-position: 50rem 190rem, 50rem 200rem, 50rem 120rem, 50rem 130rem, 50rem 10rem, 50rem 10rem, 50rem 190rem;
+  background-size: 20%, 30%, 30%, 30%, 30%, 30%, 30%;
+  background-repeat: no-repeat;
 }
 
 .intro-list li::before {
@@ -276,7 +280,10 @@
 
 .intro-item4-preview {
   margin-top: 10rem;
-  background-color: #f4442b;
+  background-color: #283dd2;
+  color: white;
+  font-size: 2rem;
+  font-family: 'Integral CF', sans-serif;
   border-radius: 50%;
   height: 40rem;
   width: 40rem;
