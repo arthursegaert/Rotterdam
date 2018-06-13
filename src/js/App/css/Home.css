@@ -249,7 +249,8 @@
 }
 
 .intro-list-item3::before {
-  top: 0;
+  top: -1.2rem;
+  position: relative;
 }
 
 .intro-container {
@@ -267,7 +268,7 @@
   justify-content: space-around;
 }
 
-.intro-list-item2 h3 {
+.intro-list-titel {
   grid-area: title;
 }
 
@@ -318,22 +319,41 @@
   grid-area: item3;
   border: #283dd2 solid;
   width: 85%;
-  margin-top: 12rem;
+  margin-top: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 2rem;
 }
 
-.intro-list-item3 h3 {
+.item3-captions {
+  height: 55rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
-  top: -10rem;
+  top: -8rem;
+}
+
+.main-meer div {
+  margin-top: -5rem;
+  height: 15rem;
+
+}
+
+.main-meer p {
+  margin-top: 0;
+}
+
+.intro-list-item3 .intro-list-titel {
+  position: relative;
+  top: -12rem;
   margin-left: 2rem;
 }
 
 .intro-list-item4 {
   grid-area: item4;
-  margin-top: 35rem;
+  margin-top: 12rem;
   margin-left: 10rem;
   width: 80%;
 }
@@ -420,12 +440,11 @@
 }
 
 .main-button p, .main-button a {
-  width: 48rem;
+  width: 100%;
   color: white;
   text-transform: uppercase;
   font-size: 2.5rem;
   padding: 2rem;
-  margin-top: 5rem;
 }
 
 .main-button-color {
@@ -454,10 +473,6 @@
 .main-meer {
   width: 100%;
   height: 20rem;
-}
-
-.item3-captions {
-  height: 39rem;
 }
 
 .main-button-pijl {
