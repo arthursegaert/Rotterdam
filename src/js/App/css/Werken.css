@@ -190,7 +190,7 @@
   grid-area: werken-nav;
   display: grid;
   grid-template-columns: repeat(3, 16%);
-  grid-template-rows: 2rem;
+  grid-template-rows: 1fr;
   grid-template-areas: 'werken-nav-button-vorige werken-nav-span werken-nav-button-volgende';
   justify-content: center;
 }
@@ -427,6 +427,23 @@
 
   .page-title-werken {
     display: none;
+  }
+
+  .werken-nav {
+    grid-area: werken-nav;
+    display: grid;
+    grid-template-columns: repeat(3, 16%);
+    grid-template-areas: 'werken-nav-button-vorige werken-nav-span werken-nav-button-volgende';
+    justify-content: center;
+  }
+
+  .werken-nav-button {
+    font-size: 2rem;
+  }
+
+  .werken-nav-span {
+    font-size: 6rem;
+    grid-area: werken-nav-span;
   }
 
 }
