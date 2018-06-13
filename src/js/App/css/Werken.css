@@ -488,7 +488,19 @@
 
 /*RESPONSIVE*/
 
+@media only screen and (max-width: 1024px) {
+
+  .werken-nav {
+    grid-template-columns: repeat(3, 20%);
+  }
+
+}
+
 @media only screen and (max-width: 768px) {
+
+  .werken-nav {
+    grid-template-columns: repeat(3, 50%);
+  }
 
   .werken-div-background {
     background: repeating-linear-gradient(to right, black, black 33%, #727272 33%, #727272 33.05%);
@@ -693,6 +705,10 @@
 
   .kunstwerk-captions-amount {
     top: -8vw;
+  }
+
+  .werken-nav {
+    grid-template-columns: repeat(3, 28%);
   }
 
 }
