@@ -255,7 +255,7 @@
 }
 
 @media (width >=10px) and (width <=1000px) {
-  .login-circle {
+  .login-circle, .registreer-circle {
     display: none;
   }
   .two-sec-page {
@@ -266,19 +266,20 @@
   .section-left-login::after {
     content: '';
   }
-  .page-title-login {
+  .page-title-login, .page-title-register {
     grid-area: title;
   }
-  .login-nav, .page-title-login {
+  .login-nav, .page-title-login, .register-nav, .page-title-register {
     z-index: 1;
   }
-  .section-left-login {
+  .section-left-login, .section-left-register {
     grid-area: content;
     height: 60vh;
     align-items: center;
     justify-items: center;
+    width: 100%;
   }
-  .section-right-login {
+  .section-right-login, .section-right-register {
     grid-row: 1 / 3;
     grid-column: 1 / 5;
     opacity: .3;
@@ -288,13 +289,13 @@
   .section-right-link-svg {
     display: none;
   }
-  .section-left-login {
-    width: 100%;
-  }
-  .section-left-form-login {
+  .section-left-form-login, .section-left-register .section-left-form-register {
     width: 80%;
     height: 150%;
     margin-left: 0;
     grid-column-gap: 4vmax;
+  }
+  .section-left-button {
+    padding-top: 12rem;
   }
 }
