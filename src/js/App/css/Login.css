@@ -264,23 +264,29 @@
 }
 
 @media (width >=10px) and (width <=1000px) {
+  
   .login-circle, .registreer-circle {
     display: none;
   }
+
   .two-sec-page {
     max-height: 100vh;
     grid-template: .5fr 3fr / 5% 1fr 1fr 5%;
     grid-template-areas: '. title nav .' '. content content .'
   }
+
   .section-left-login::after {
     content: '';
   }
+
   .page-title-login, .page-title-register {
     grid-area: title;
   }
+
   .login-nav, .page-title-login, .register-nav, .page-title-register {
     z-index: 1;
   }
+
   .section-left-login, .section-left-register {
     grid-area: content;
     height: 60vh;
@@ -288,6 +294,7 @@
     justify-items: center;
     width: 100%;
   }
+
   .section-right-login, .section-right-register {
     grid-row: 1 / 3;
     grid-column: 1 / 5;
@@ -295,15 +302,18 @@
     z-index: 0;
     width: 100%;
   }
+
   .section-right-link-svg {
     display: none;
   }
+
   .section-left-form-login, .section-left-register .section-left-form-register {
     width: 80%;
     height: 150%;
     margin-left: 0;
     grid-column-gap: 4vmax;
   }
+
   .section-left-button {
     padding-top: 12rem;
   }

@@ -208,7 +208,7 @@
   grid-gap: 5rem;
   grid-template-areas: 'item1 item1' 'item2 item2' 'item4 item3' 'item4 item3' 'item5 item5' 'item6 item6' 'item7 item7';
   background-image: url(../../../assets/img/stickers/sticker1.png), url(../../../assets/img/stickers/sticker2.png), url(../../../assets/img/stickers/sticker6.png), url(../../../assets/img/stickers/sticker4.png), url(../../../assets/img/stickers/sticker5.png), url(../../../assets/img/stickers/sticker3.png), url(../../../assets/img/stickers/sticker7.png);
-  background-position: -1rem 235rem, -2rem 306rem, 110rem 255rem, 37rem 217rem, 107rem 305rem, 104% 87%, 127rem 309rem;
+  background-position: -1% 70%, 6% 100%, 10% 45rem, 36rem 217rem, 89% 82%, 104% 87%, 96% 100%;
   background-size: 20%, 19%, 15%, 15%, 10%, 21%, 14%;
   background-repeat: no-repeat;
 }
@@ -475,6 +475,7 @@
 }
 
 @keyframes slide {
+
   100% {
     transform: translateX(66.67%);
   }
@@ -614,6 +615,11 @@
 
 @media only screen and (max-width: 850px) {
 
+  .header-title {
+    font-size: 7rem;
+    line-height: 7rem;
+  }
+
   .intro-list {
     grid-template: 80rem 50rem 95rem 15rem 20rem 25rem/ 100vw;
     grid-gap: 5rem;
@@ -658,4 +664,10 @@
   .intro-list-item4 {
     margin-top: -5rem;
   }
+
+  .footer-right p {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 }
+
