@@ -283,6 +283,7 @@ class Home extends Component {
                       <img
                         src="assets/img/merry.jpg"
                         alt=""
+                        className="item1-img"
                         width="746"
                         height="520"
                       />
@@ -292,6 +293,7 @@ class Home extends Component {
                             classname="item2-grid-cta"
                           />
                       <svg
+                        className="svg-item1"
                         width="477px"
                         height="276px"
                         viewBox="0 0 477 276"
@@ -471,9 +473,9 @@ class Home extends Component {
                           })
                       )}
                     </div>
-                    <div className="main-meer main-button">
+                    <div className="item3-meer-button">
                       <Link to="/werkdetail/12">
-                        <div className="main-werken-color main-button-color">
+                        <div>
                           <svg
                             className="main-button-pijl"
                             xmlns="http://www.w3.org/2000/svg"
@@ -505,7 +507,7 @@ class Home extends Component {
                               />
                             </g>
                           </svg>
-                          <p className="main-werken-button">
+                          <p className="item3-meer-button-text">
                             lees <br /> alle captions
                           </p>
                         </div>
