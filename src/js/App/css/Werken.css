@@ -430,11 +430,7 @@
   }
 
   .werken-nav {
-    grid-area: werken-nav;
-    display: grid;
-    grid-template-columns: repeat(3, 16%);
-    grid-template-areas: 'werken-nav-button-vorige werken-nav-span werken-nav-button-volgende';
-    justify-content: center;
+    grid-template-columns: repeat(3, 20%);
   }
 
   .werken-nav-button {
@@ -442,7 +438,7 @@
   }
 
   .werken-nav-span {
-    font-size: 6rem;
+    font-size: 8rem;
     grid-area: werken-nav-span;
   }
 
