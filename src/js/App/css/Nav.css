@@ -1,6 +1,4 @@
 .nav {
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
   padding: 1.5rem;
 }
 
@@ -23,10 +21,14 @@
 }
 
 .nav-list-item-link-title-inner[data-hover] {
-  -webkit-text-stroke: .1rem white;/* stylelint-disable-line */
-  text-stroke: .1rem white;/* stylelint-disable-line */
-  -webkit-text-fill-color: transparent;/* stylelint-disable-line */
-  text-fill-color: transparent;/* stylelint-disable-line */
+  -webkit-text-stroke: .1rem white;
+  /* stylelint-disable-line */
+  text-stroke: .1rem white;
+  /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent;
+  /* stylelint-disable-line */
+  text-fill-color: transparent;
+  /* stylelint-disable-line */
   color: transparent;
 }
 
@@ -39,10 +41,14 @@
   height: 0;
   overflow: hidden;
   white-space: nowrap;
-  -webkit-text-stroke: 0;/* stylelint-disable-line */
-  text-stroke: 0;/* stylelint-disable-line */
-  -webkit-text-fill-color: white;/* stylelint-disable-line */
-  text-fill-color: white;/* stylelint-disable-line */
+  -webkit-text-stroke: 0;
+  /* stylelint-disable-line */
+  text-stroke: 0;
+  /* stylelint-disable-line */
+  -webkit-text-fill-color: white;
+  /* stylelint-disable-line */
+  text-fill-color: white;
+  /* stylelint-disable-line */
   color: white;
   transition: all .5s;
 }
