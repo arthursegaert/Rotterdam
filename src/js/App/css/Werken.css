@@ -17,7 +17,7 @@
   grid-area: grid;
   display: grid;
   grid-template-columns: repeat(5, 20%);
-  grid-template-rows: 10rem 25rem 30rem 0 8rem 35rem 0 40rem 0 15rem repeat(7, 30rem);
+  grid-template-rows: 10vh 30vh 50vh 0 26vh 50vh 0 70vh 0 15vh repeat(7, 30vh);
   grid-template-areas: 'kunstwerk_nine . . . .''. . . kunstwerk_two .''. kunstwerk_eleven . . .''kunstwerk_eight . . . .''. . kunstwerk_seven . .''. . . . kunstwerk_twelve''. kunstwerk_three . . .''. . . kunstwerk_fourteen .''kunstwerk_six . . . .''. . kunstwerk_thirteen . .''. . . . kunstwerk_four''. werken-nav werken-nav werken-nav .''. kunstwerk_one . . .''. kunstwerk_five . . .''. kunstwerk_null . . .''. kunstwerk_ten . . .''. kunstwerk_fifteen . . .';
 }
 
