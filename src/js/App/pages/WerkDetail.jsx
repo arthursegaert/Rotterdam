@@ -16,7 +16,8 @@ class WerkDetail extends Component {
       kunstwerken: [],
       captions: [],
       loading: true,
-      showFlash: false
+      showSuccessFlash: false,
+      showErrorFlash: false
     };
   }
   componentDidMount() {
@@ -69,11 +70,11 @@ class WerkDetail extends Component {
       })
       .then(() => {
         this.setState({
-          showFlash: true
+          showSuccessFlash: true
         });
         setTimeout(() => {
           this.setState({
-            showFlash: false
+            showSuccessFlash: false
           });
         }, 2000);
       })
@@ -99,6 +100,15 @@ class WerkDetail extends Component {
           this.postToDatabase(user, userid, caption, kunstwerkId);
         }
       });
+    } else {
+      this.setState({
+        showErrorFlash: true
+      });
+      setTimeout(() => {
+        this.setState({
+          showErrorFlash: false
+        });
+      }, 2000);
     }
   };
 
@@ -114,8 +124,13 @@ class WerkDetail extends Component {
       if (this.state.match) {
         return (
           <div>
-            {this.state.showFlash ? (
+            {this.state.showSuccessFlash ? (
               <Flash flashState={{ referer: "addCaption" }} />
+            ) : (
+              ""
+            )}
+            {this.state.showErrorFlash ? (
+              <Flash flashState={{ referer: "addEmptyCaption" }} />
             ) : (
               ""
             )}

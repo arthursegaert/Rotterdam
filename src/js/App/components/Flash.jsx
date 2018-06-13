@@ -21,6 +21,10 @@ const Flash = ({ flashState }) => {
         type = "info";
         text = "Caption toegevoegd!";
         break;
+      case "addEmptyCaption":
+        type = "error";
+        text = "Je kan geen lege caption toevoegen!";
+        break;
       default:
         console.log("Error showing flash message.");
     }
