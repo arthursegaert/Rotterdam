@@ -65,13 +65,13 @@ class Captions extends Component {
               {this.state.captions.map(captions =>
                 Object.entries(captions).map(
                   c =>
-                  c[1].caption !== undefined ? (
-                    <Caption
-                      caption={c[1].caption}
-                      key={c[0]}
-                      userName={c[1].userName}
-                      likes={c[1].likes >= 0 ? c[1].likes : "0"}
-                    />
+                    c[1].caption !== undefined ? (
+                      <Caption
+                        caption={c[1].caption}
+                        key={c[0]}
+                        userName={c[1].userName}
+                        likes={c[1].likes >= 0 ? c[1].likes : "0"}
+                      />
                     ) : (
                       ""
                     )
@@ -82,21 +82,21 @@ class Captions extends Component {
           <section className="captions-section">
             <h2 className="captions-h2">Boijmans keuze</h2>
             <ul>
-              {this.state.captions.map(captions =>
-                Object.entries(captions).map(
-                  c =>
-                  c[1].caption !== undefined ? (
+              {this.state.captions.map(captions => {
+                console.log(captions);
+                return Object.entries(captions).map(c => {
+                  return c[1].caption !== undefined ? (
                     <Caption
                       caption={c[1].caption}
                       key={c[0]}
                       userName={c[1].userName}
                       likes={c[1].likes >= 0 ? c[1].likes : "0"}
                     />
-                    ) : (
-                      ""
-                    )
-                )
-              )}
+                  ) : (
+                    ""
+                  );
+                });
+              })}
             </ul>
           </section>
         </div>
