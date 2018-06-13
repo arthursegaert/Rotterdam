@@ -34,17 +34,17 @@
   color: transparent;
   text-transform: uppercase;
   font-size: 4rem;
-  position: absolute;
+  position: relative;
 }
 
 .kunstwerk-author-p-9 {
-  left: 10rem;
-  top: 17rem;
+  left: 11vw;
+  top: 15vh;
 }
 
 .kunstwerk-author-p-2 {
-  left: 10rem;
-  top: 34rem;
+  left: 9vw;
+  top: 37vh;
 }
 
 .kunstwerk-author-p-11 {
@@ -367,25 +367,30 @@
 /*RESPONSIVE*/
 
 @media only screen and (max-width: 768px) {
+
   .werken-div-background {
     background: repeating-linear-gradient(to right, black, black 33%, #727272 33%, #727272 33.05%);
     display: grid;
     grid-template: 2fr 1fr max-content / repeat(3, 33%);
     grid-template-areas: 'title . nav' 'filter . .' 'grid grid  grid';
   }
+
   .werken-grid {
     grid-template-columns: repeat(3, 33%);
     grid-template-rows: 10vh 30vh 50vh 20vh 56vh 20vh 20vh 50vh 15vh 50vh repeat(7, 30vh);
     grid-template-areas: 'kunstwerk_nine . .'' . . kunstwerk_two''. kunstwerk_eleven .''. kunstwerk_seven kunstwerk_seven''kunstwerk_eight . .'' . . kunstwerk_twelve''kunstwerk_three kunstwerk_three .''. . kunstwerk_fourteen''kunstwerk_six . .''. kunstwerk_four kunstwerk_four''. kunstwerk_thirteen .''. werken-nav .''. kunstwerk_one .''. kunstwerk_five .''. kunstwerk_null .''. kunstwerk_ten .''. kunstwerk_fifteen .';
   }
+
   .kunstwerk-img {
     width: 25vw;
     height: auto;
   }
+
   .werken-kunstwerk-9, .werken-kunstwerk-8, .werken-kunstwerk-6, .werken-kunstwerk-13 {
     display: flex;
     justify-content: flex-end;
   }
+
   .werken-kunstwerk-4, .werken-kunstwerk-3, .werken-kunstwerk-7 {
     display: flex;
     justify-content: center;
@@ -393,36 +398,45 @@
 }
 
 @media only screen and (max-width: 425px) {
+
   .werken-div-background {
     background: none;
     background-color: black;
     display: flex;
     flex-direction: column;
   }
+
   .werken-grid {
     display: flex;
     flex-direction: column;
   }
+
   .kunstwerk-img {
     width: 85vw;
     height: auto;
   }
+
   .werken-kunstwerk {
     display: flex;
     justify-content: center;
   }
+
   .section-right-link-svg {
     display: none;
   }
+
   .page-title-werken {
     display: none;
   }
+
   .werken-nav {
     grid-template-columns: repeat(3, 20%);
   }
+
   .werken-nav-button {
     font-size: 2rem;
   }
+
   .werken-nav-span {
     font-size: 8rem;
     grid-area: werken-nav-span;
