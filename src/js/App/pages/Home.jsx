@@ -191,19 +191,31 @@ class Home extends Component {
                 </span>
                 <div className="banner">
                   <p className="banner-text">
-                    What do you see in artworks? Fantasise about the story in
-                    the picture but also behind the picture.
+                    What do you see in an artwork? What is the story in the picture? Use your imagination !
                   </p>
                 </div>
                 <ol className="intro-list">
                   <li className="intro-list-item1">
                     <h3>Look at the artwork and fantasise …</h3>
-                    <img
-                      src="assets/img/merry.jpg"
-                      alt=""
-                      width="746"
-                      height="520"
-                    />
+                    <div>
+                      <img
+                        src="assets/img/merry.jpg"
+                        alt=""
+                        width="746"
+                        height="520"
+                      />
+                      <svg width="477px" height="276px" viewBox="0 0 477 276" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                             <g id="Home-1440-Copy-3" transform="translate(-902.000000, -1029.000000)" stroke="#F4442B" stroke-width="2">
+                                  <g id="Group-2" transform="translate(1140.500000, 1167.000000) rotate(-360.000000) translate(-1140.500000, -1167.000000) translate(902.000000, 940.000000)">
+                                      <rect id="Rectangle-2-Copy-4" x="1" y="90" width="475" height="274"></rect>
+                                      <path d="M2,90 L476,362 L2,90 Z" id="Path-2-Copy-9"></path>
+                                      <path d="M-27,165 L504,289 L-27,165 Z" id="Path-2-Copy-10" transform="translate(238.500000, 227.000000) rotate(-43.000000) translate(-238.500000, -227.000000) "></path>
+                                  </g>
+                              </g>
+                          </g>
+                      </svg>
+                    </div>
                   </li>
                   <li className="intro-list-item2">
                     <div className="intro-container">
@@ -315,6 +327,7 @@ class Home extends Component {
                   </li>
                   <li className="intro-list-item4">
                     <h3>Get your caption on a sticker!</h3>
+                    <p className="intro-item4-preview">tetsttetstfstf efesf fesfs</p>
                     <div />
                   </li>
                   <li className="intro-list-item5">
