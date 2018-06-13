@@ -367,21 +367,24 @@ class Home extends Component {
                   <li className="intro-list-item3">
                     <h3>Open up for new visions by reading other captions</h3>
                     <div className="item3-captions">
-                      {this.state.kunstwerken[12] === undefined
-                        ? console.log("tis nog undefined")
-                        : Object.entries(
-                            this.state.kunstwerken[12].captions
-                          ).map(caption => {
+                      {this.state.kunstwerken[12] === undefined ? (
+                        <p>Loading...</p>
+                      ) : (
+                        Object.entries(this.state.kunstwerken[12].captions).map(
+                          caption => {
                             return (
                               <Caption
+                                key={caption[0]}
                                 caption={caption[1].caption}
                                 userName={caption[1].userName}
                               />
                             );
-                          })}
+                          }
+                        )
+                      )}
                     </div>
                     <div className="main-meer main-button">
-                      <Link to="/werken">
+                      <Link to="/werkdetail/12">
                         <div className="main-werken-color main-button-color">
                           <svg
                             className="main-button-pijl"
