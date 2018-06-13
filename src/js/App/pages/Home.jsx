@@ -5,6 +5,7 @@ import Nav from "../components/Nav.jsx";
 import Caption from "../components/Caption.jsx";
 import { StatusContext } from "../context/statusContext.js";
 import { app, base } from "../config/fire.js";
+import Flash from "../components/Flash.jsx";
 
 class Home extends Component {
   constructor(props) {
@@ -43,28 +44,28 @@ class Home extends Component {
 
   postToDatabase = (user, userid, caption, kunstwerkId) => {
     base
-    .push(`kunstwerken/${kunstwerkId}/captions`, {
-      data: {
-        caption: caption,
-        userName: user,
-        userid: userid,
-        kunstwerkId: kunstwerkId
-      }
-    })
-    .then(() => {
-      base.push(`captions/${userid}`, {
+      .push(`kunstwerken/${kunstwerkId}/captions`, {
         data: {
           caption: caption,
           userName: user,
           userid: userid,
           kunstwerkId: kunstwerkId
         }
+      })
+      .then(() => {
+        base.push(`captions/${userid}`, {
+          data: {
+            caption: caption,
+            userName: user,
+            userid: userid,
+            kunstwerkId: kunstwerkId
+          }
+        });
+      })
+      .then(() => {
+        this.captionForm.reset();
       });
-    })
-    .then(() => {
-      this.captionForm.reset();
-    });
-  }
+  };
 
   handleSubmitCaption = e => {
     e.preventDefault();
@@ -78,22 +79,27 @@ class Home extends Component {
         if (user) {
           const user = app.auth().currentUser.displayName;
           const userid = app.auth().currentUser.uid;
-          this.postToDatabase(user, userid, caption, kunstwerkId)
+          this.postToDatabase(user, userid, caption, kunstwerkId);
         } else {
-          const user = 'unknown';
-          const userid = 'unknownUsers';
-          this.postToDatabase(user, userid, caption, kunstwerkId)
+          const user = "unknown";
+          const userid = "unknownUsers";
+          this.postToDatabase(user, userid, caption, kunstwerkId);
         }
       });
     }
-
-  }
+  };
 
   render() {
     return (
       <StatusContext.Consumer>
         {({ authenticated, username }) => (
           <div>
+            {this.checkFlashMessage}
+            {this.props.location.state === undefined ? (
+              ""
+            ) : (
+              <Flash flashState={this.props.location.state} />
+            )}
             <header className="header">
               <div className="header-wrap">
                 <h1 className="header-title">Different Vision</h1>
@@ -317,12 +323,18 @@ class Home extends Component {
                     <div className="intro-container">
                       <h3>Write down what you see</h3>
                       <div className="intro-list-item2-form">
-                        <form ref={form => {
-                          this.captionForm = form;
-                        }} onSubmit={this.handleSubmitCaption}>
-                          <textarea ref={input => {
-                            this.captionInput = input;
-                          }} className="intro-list-item2-form-textarea" />
+                        <form
+                          ref={form => {
+                            this.captionForm = form;
+                          }}
+                          onSubmit={this.handleSubmitCaption}
+                        >
+                          <textarea
+                            ref={input => {
+                              this.captionInput = input;
+                            }}
+                            className="intro-list-item2-form-textarea"
+                          />
                           <input
                             className="item2-form-bottom"
                             type="submit"

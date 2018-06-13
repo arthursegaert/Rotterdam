@@ -69,7 +69,16 @@ class Login extends Component {
 
   render() {
     if (this.state.redirect) {
-      return <Redirect to="/" />;
+      return (
+        <div>
+          <Redirect
+            to={{
+              pathname: "/",
+              state: { referer: "login" }
+            }}
+          />) />
+        </div>
+      );
     } else {
       return (
         <main className="two-sec-page">

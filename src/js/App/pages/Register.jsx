@@ -84,7 +84,14 @@ class Register extends Component {
 
   render() {
     if (this.state.redirect) {
-      return <Redirect to="/" />;
+      return (
+        <Redirect
+          to={{
+            pathname: "/",
+            state: { referer: "register" }
+          }}
+        />
+      );
     } else {
       return (
         <main className="two-sec-page">
