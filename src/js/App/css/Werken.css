@@ -402,12 +402,8 @@
   .werken-div-background {
     background: none;
     background-color: black;
-    display: grid;
-    grid-template: 2fr 1fr max-content / repeat(3, 33%);
-    grid-template-areas:
-      'title . nav'
-      'filter . .'
-      'grid grid  grid';
+    display: flex;
+    flex-direction: column;
   }
 
   .werken-grid {
@@ -426,6 +422,10 @@
   }
 
   .section-right-link-svg {
+    display: none;
+  }
+
+  .page-title-werken {
     display: none;
   }
 
