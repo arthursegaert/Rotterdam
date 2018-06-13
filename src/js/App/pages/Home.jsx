@@ -118,9 +118,9 @@ class Home extends Component {
                     src="https://static.boijmans.nl/build/images/boijmans-logo-invert.svg"
                   />
                 </a>
-                <div className="header-img" />
+                <div className="header-img"></div>
                 <KunstwerkCTA
-                            kunstwerkId="12"
+                            kunstwerkId="10"
                             color="#f4442b"
                             classname="header-grid-cta"
                           />
@@ -351,7 +351,7 @@ class Home extends Component {
                             ref={input => {
                               this.captionInput = input;
                             }}
-                            className="intro-list-item2-form-textarea"
+                            className="intro-list-item2-form-textarea" maxLength="300"
                           />
                           <div className="item2-form-bottom">
                             <input
