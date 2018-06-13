@@ -51,6 +51,7 @@ class Werken extends Component {
                 ].join(" ")}
               >
                 <Link
+                  className={"kunstwerk-container"}
                   to={{
                     pathname: `/werkdetail/${kunstwerk.id}`,
                     kunstwerk

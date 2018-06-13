@@ -184,6 +184,11 @@
   left: 16rem;
 }
 
+.kunstwerk-container:hover .nav-list-item-link-title-inner::before {
+  height: 100%;
+  width: 100%;
+}
+
 /* tijdelijk END */
 
 .werken-nav {
