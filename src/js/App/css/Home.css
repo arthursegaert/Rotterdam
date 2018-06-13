@@ -8,7 +8,7 @@
 }
 
 .header {
-  height: 100vh;
+  height: 58rem;
   background-color: black;
   font-family: 'Archivo Black', sans-serif;
 }
@@ -60,7 +60,7 @@
 
 .header-account {
   grid-area: cta;
-  height: 39rem;
+  height: 50vh;
   background-color: #283dd2;
   color: white;
   min-height: 15rem;
@@ -134,7 +134,7 @@
 .intro-list {
   counter-reset: counter1;
   display: grid;
-  grid-template: 80rem 50rem 50rem 50rem 50rem 50rem/ 42vw 58vw;
+  grid-template: 80rem 50rem 50rem 30rem 30rem 30rem/ 42vw 58vw;
   grid-gap: 5rem;
   grid-template-areas: 'item1 item1' 'item2 item2' 'item4 item3' 'item4 item3' 'item5 item5' 'item6 item6' 'item7 item7';
 }
@@ -142,15 +142,18 @@
 .intro-list li::before {
   content: counter(counter1);
   counter-increment: counter1;
-  position: relative;
-  top: 10rem;
-  left: -4rem;
   font-family: 'Integral CF', sans-serif;
   font-size: 9.5rem;
   -webkit-text-stroke: .1rem white;/* stylelint-disable-line */
   text-stroke: .1rem white;/* stylelint-disable-line */
   -webkit-text-fill-color: transparent;/* stylelint-disable-line */
   text-fill-color: transparent;/* stylelint-disable-line */
+}
+
+.intro-list-item1::before, .intro-list-item2::before, .intro-list-item4::before, .intro-list-item5::before, .intro-list-item6::before, .intro-list-item7::before {
+  position: relative;
+  left: -4rem;
+  top: 10rem;
 }
 
 .intro-list h3 {
@@ -162,13 +165,33 @@
 .intro-list-item1 {
   grid-area: item1;
   padding: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-list-item1 div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.intro-list-item1 h3 {
+  width: 40rem;
+}
+
+.svg-main {
+  transform: rotate(90deg);
 }
 
 .intro-list-item2 {
   grid-area: item2;
   width: 100vw;
   height: 90rem;
-  padding: 10rem;
+  padding: 0 10rem;
+}
+
+.intro-list-item3::before {
+  top: 0;
 }
 
 .intro-container {
@@ -234,38 +257,73 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 1rem;
+  padding: 2rem;
+}
+
+.intro-list-item3 h3 {
+  position: relative;
+  top: -10rem;
+  margin-left: 2rem;
 }
 
 .intro-list-item3 div {
-  background-color: pink;
   height: 50%;
 }
 
 .intro-list-item4 {
   grid-area: item4;
-  background-color: yellow;
-  margin-top: 25rem;
+  margin-top: 35rem;
+  margin-left: 10rem;
+  width: 80%;
+}
+
+.intro-item4-preview {
+  margin-top: 10rem;
+  background-color: #f4442b;
+  border-radius: 50%;
+  height: 40rem;
+  width: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .intro-list-item5 {
   grid-area: item5;
+  padding-left: 45vw;
 }
 
 .intro-list-item6 {
   grid-area: item6;
+  padding-left: 10vw;
+}
+
+.intro-list-item6 p {
+  font-size: 5rem;
+  font-family: 'Integral CF', sans-serif;
+  -webkit-text-stroke: .1rem white;/* stylelint-disable-line */
+  text-stroke: .1rem white;/* stylelint-disable-line */
+  -webkit-text-fill-color: transparent;/* stylelint-disable-line */
+  text-fill-color: transparent;/* stylelint-disable-line */
+  text-align: center;
 }
 
 .intro-list-item7 {
   grid-area: item7;
+  padding-left: 45vw;
 }
 
 .banner {
   overflow: hidden;
-  width: 100vw;
+  height: 9rem;
+  text-overflow: clip;
+  position: relative;
+  top: 80rem;
 }
 
 .banner-text {
+  width: 350vw;
   font-family: 'Archivo Black', sans-serif;
   -webkit-text-stroke: .2rem white;/* stylelint-disable-line */
   text-stroke: .2rem white;/* stylelint-disable-line */
@@ -274,7 +332,7 @@
   color: transparent;
   text-transform: uppercase;
   font-size: 7rem;
-  animation: 10s linear 0s infinite reverse running banner;
+  animation: 20s linear 0s infinite reverse running banner;
 }
 
 .main-button {
