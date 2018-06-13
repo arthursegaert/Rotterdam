@@ -45,39 +45,48 @@ class WerkDetail extends Component {
       });
   }
 
-  handleNewCaptionSubmit = e => {
-    e.preventDefault();
-    const caption = this.captionInput.value;
-    const user = app.auth().currentUser.displayName;
-    const userid = app.auth().currentUser.uid;
-    const kunstwerkId = parseInt(this.props.match.params.id, 10);
-
-    if (caption.trim().length !== 0) {
-      base
-        .push(`kunstwerken/${kunstwerkId}/captions`, {
+  postToDatabase = (user, userid, caption, kunstwerkId) => {
+    base
+      .push(`kunstwerken/${kunstwerkId}/captions`, {
+        data: {
+          caption: caption,
+          userName: user,
+          userid: userid,
+          kunstwerkId: kunstwerkId
+        }
+      })
+      .then(() => {
+        base.push(`captions/${userid}`, {
           data: {
             caption: caption,
             userName: user,
             userid: userid,
             kunstwerkId: kunstwerkId
           }
-        })
-        .then(() => {
-          base.push(`captions/${userid}`, {
-            data: {
-              caption: caption,
-              userName: user,
-              userid: userid,
-              kunstwerkId: kunstwerkId
-            }
-          });
-        })
-        .then(() => {
-          this.captionForm.reset();
-        })
-        .catch(err => {
-          console.log(err);
         });
+      })
+      .then(() => {
+        this.captionForm.reset();
+      });
+  };
+
+  handleNewCaptionSubmit = e => {
+    e.preventDefault();
+    const caption = this.captionInput.value;
+    const kunstwerkId = parseInt(this.props.match.params.id, 10);
+
+    if (caption.trim().length !== 0) {
+      app.auth().onAuthStateChanged(user => {
+        if (user) {
+          const user = app.auth().currentUser.displayName;
+          const userid = app.auth().currentUser.uid;
+          this.postToDatabase(user, userid, caption, kunstwerkId);
+        } else {
+          const user = "unknown";
+          const userid = "unknownUsers";
+          this.postToDatabase(user, userid, caption, kunstwerkId);
+        }
+      });
     }
   };
 
@@ -206,32 +215,26 @@ class WerkDetail extends Component {
                         <p>Dit werk heeft nog geen captions</p>
                       )}
                     </div>
-                    {/* is de gebruiker ingelogt?*/}
-                    {authenticated ? (
-                      <form
-                        ref={form => {
-                          this.captionForm = form;
+                    <form
+                      ref={form => {
+                        this.captionForm = form;
+                      }}
+                      onSubmit={this.handleNewCaptionSubmit}
+                      className="caption-add-form"
+                    >
+                      <textarea
+                        className="work-detail-add-caption"
+                        ref={input => {
+                          this.captionInput = input;
                         }}
-                        onSubmit={this.handleNewCaptionSubmit}
-                        className="caption-add-form"
-                      >
-                        <textarea
-                          className="work-detail-add-caption"
-                          ref={input => {
-                            this.captionInput = input;
-                          }}
-                          placeholder="wat zie je?"
-                        />
-                        <input
-                          className="section-left-form-submit caption-add-submit"
-                          type="submit"
-                          value="caption-it!"
-                        />
-                      </form>
-                    ) : (
-                      //als de gebruiker niet is ingelogd
-                      <p>Je moet ingelogd zijn om een caption te schrijven</p>
-                    )}
+                        placeholder="wat zie je?"
+                      />
+                      <input
+                        className="section-left-form-submit caption-add-submit"
+                        type="submit"
+                        value="caption-it!"
+                      />
+                    </form>
                   </article>
                 </section>
               )}
