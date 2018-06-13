@@ -101,13 +101,13 @@ class Home extends Component {
               <Flash flashState={this.props.location.state} />
             )}
             <header className="header">
-            <div className="circle-container">
-              <div className="white-circle home-circle" />
-              <div className="white-circle home-circle" />
-              <div className="white-circle home-circle" />
-              <div className="white-circle home-circle" />
-              <div className="white-circle home-circle" />
-            </div>
+              <div className="circle-container">
+                <div className="white-circle home-circle" />
+                <div className="white-circle home-circle" />
+                <div className="white-circle home-circle" />
+                <div className="white-circle home-circle" />
+                <div className="white-circle home-circle" />
+              </div>
               <div className="header-wrap">
                 <h1 className="header-title">Different Vision</h1>
                 <a className="header-subtitle" href="https://www.boijmans.nl">
@@ -445,17 +445,18 @@ class Home extends Component {
                       {this.state.kunstwerken[12] === undefined ? (
                         <p>Loading...</p>
                       ) : (
-                        Object.entries(this.state.kunstwerken[12].captions).map(
-                          caption => {
+                        Object.entries(this.state.kunstwerken[12].captions)
+                          .slice(0, 3)
+                          .map(caption => {
+                            console.log(caption);
                             return (
                               <Caption
-                                key={caption[1]}
-                                caption={caption[1].caption}
+                                key={caption[0]}
+                                caption={caption[1]}
                                 userName={caption[1].userName}
                               />
                             );
-                          }
-                        )
+                          })
                       )}
                     </div>
                     <div className="main-meer main-button">
@@ -541,7 +542,9 @@ class Home extends Component {
                   </a>
                 </li>
                 <li className="footer-right">
-                  <p>different<br />vision</p>
+                  <p>
+                    different<br />vision
+                  </p>
                 </li>
               </ul>
             </footer>
