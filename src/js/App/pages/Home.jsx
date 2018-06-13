@@ -6,6 +6,7 @@ import Caption from "../components/Caption.jsx";
 import { StatusContext } from "../context/statusContext.js";
 import { app, base } from "../config/fire.js";
 import Flash from "../components/Flash.jsx";
+import KunstwerkCTA from "../components/KunstwerkCTA.jsx";
 
 class Home extends Component {
   constructor(props) {
@@ -118,6 +119,11 @@ class Home extends Component {
                   />
                 </a>
                 <div className="header-img" />
+                <KunstwerkCTA
+                            kunstwerkId="12"
+                            color="#f4442b"
+                            classname="header-grid-cta"
+                          />
                 <Nav />
                 <div className="header-account">
                   {authenticated ? (
@@ -280,6 +286,11 @@ class Home extends Component {
                         width="746"
                         height="520"
                       />
+                         <KunstwerkCTA
+                            kunstwerkId="12"
+                            color="#f4442b"
+                            classname="item2-grid-cta"
+                          />
                       <svg
                         width="477px"
                         height="276px"
