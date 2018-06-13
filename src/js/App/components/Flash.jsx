@@ -17,6 +17,10 @@ const Flash = ({ flashState }) => {
         type = "info";
         text = "Je bent succesvol geregistreerd!";
         break;
+      case "logout":
+        type = "info";
+        text = "Je bent uitgelogd!";
+        break;
       case "addCaption":
         type = "info";
         text = "Caption toegevoegd!";
