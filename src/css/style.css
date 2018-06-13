@@ -31,7 +31,7 @@ html {
 body {
   font-size: var(--font-size-bodycopy);
   line-height: 1.6;
-  font-family: Circular Std, sans-serif;
+  font-family: 'Circular Std', sans-serif;
 }
 
 .container {

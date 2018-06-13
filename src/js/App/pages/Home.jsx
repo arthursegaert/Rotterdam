@@ -101,6 +101,13 @@ class Home extends Component {
               <Flash flashState={this.props.location.state} />
             )}
             <header className="header">
+            <div className="circle-container">
+              <div className="white-circle home-circle" />
+              <div className="white-circle home-circle" />
+              <div className="white-circle home-circle" />
+              <div className="white-circle home-circle" />
+              <div className="white-circle home-circle" />
+            </div>
               <div className="header-wrap">
                 <h1 className="header-title">Different Vision</h1>
                 <a className="header-subtitle" href="https://www.boijmans.nl">

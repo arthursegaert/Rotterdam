@@ -247,8 +247,8 @@
   position: fixed;
   content: '';
   border-radius: 50%;
-  width: 23rem;
-  height: 23rem;
+  width: 12rem;
+  height: 12rem;
   background-color: white;
   z-index: 20;
   right: 60vw;
