@@ -10,7 +10,8 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      captions: []
+      captions: [],
+      kunstwerken: []
     };
   }
 
@@ -25,9 +26,23 @@ class Home extends Component {
         });
       }
     });
+    base.syncState(`kunstwerken`, {
+      context: this,
+      state: "kunstwerken",
+      asArray: true
+    });
+  };
+
+  getRandomArtWork = () => {
+    return (
+      Math.floor(
+        Math.random() * (parseInt(this.state.kunstwerken.length, 10) - 0 + 1)
+      ) + 0
+    );
   };
 
   render() {
+    console.log(this.state.kunstwerken);
     return (
       <StatusContext.Consumer>
         {({ authenticated, username }) => (
@@ -191,7 +206,8 @@ class Home extends Component {
                 </span>
                 <div className="banner">
                   <p className="banner-text">
-                    What do you see in an artwork? What is the story in the picture? Use your imagination !
+                    What do you see in an artwork? What is the story in the
+                    picture? Use your imagination !
                   </p>
                 </div>
                 <ol className="intro-list">
@@ -204,16 +220,49 @@ class Home extends Component {
                         width="746"
                         height="520"
                       />
-                      <svg width="477px" height="276px" viewBox="0 0 477 276" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                             <g id="Home-1440-Copy-3" transform="translate(-902.000000, -1029.000000)" stroke="#F4442B" stroke-width="2">
-                                  <g id="Group-2" transform="translate(1140.500000, 1167.000000) rotate(-360.000000) translate(-1140.500000, -1167.000000) translate(902.000000, 940.000000)">
-                                      <rect id="Rectangle-2-Copy-4" x="1" y="90" width="475" height="274"></rect>
-                                      <path d="M2,90 L476,362 L2,90 Z" id="Path-2-Copy-9"></path>
-                                      <path d="M-27,165 L504,289 L-27,165 Z" id="Path-2-Copy-10" transform="translate(238.500000, 227.000000) rotate(-43.000000) translate(-238.500000, -227.000000) "></path>
-                                  </g>
-                              </g>
+                      <svg
+                        width="477px"
+                        height="276px"
+                        viewBox="0 0 477 276"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          id="Page-1"
+                          stroke="none"
+                          strokeWidth="1"
+                          fill="none"
+                          fillRule="evenodd"
+                        >
+                          <g
+                            id="Home-1440-Copy-3"
+                            transform="translate(-902.000000, -1029.000000)"
+                            stroke="#F4442B"
+                            strokeWidth="2"
+                          >
+                            <g
+                              id="Group-2"
+                              transform="translate(1140.500000, 1167.000000) rotate(-360.000000) translate(-1140.500000, -1167.000000) translate(902.000000, 940.000000)"
+                            >
+                              <rect
+                                id="Rectangle-2-Copy-4"
+                                x="1"
+                                y="90"
+                                width="475"
+                                height="274"
+                              />
+                              <path
+                                d="M2,90 L476,362 L2,90 Z"
+                                id="Path-2-Copy-9"
+                              />
+                              <path
+                                d="M-27,165 L504,289 L-27,165 Z"
+                                id="Path-2-Copy-10"
+                                transform="translate(238.500000, 227.000000) rotate(-43.000000) translate(-238.500000, -227.000000) "
+                              />
+                            </g>
                           </g>
+                        </g>
                       </svg>
                     </div>
                   </li>
@@ -264,9 +313,12 @@ class Home extends Component {
                                   />
                                 </g>
                               </svg>
-                              <p className="main-random-button">
+                              <Link
+                                className="main-random-button"
+                                to={`werkdetail/${this.getRandomArtWork()}`}
+                              >
                                 ga naar een <br /> willekeurig kunstwerk
-                              </p>
+                              </Link>
                             </div>
                           </Link>
                         </div>
@@ -324,49 +376,51 @@ class Home extends Component {
                       ))}
                     </div>
                     <div className="main-meer main-button">
-                          <Link to="/werken">
-                            <div className="main-werken-color main-button-color">
-                              <svg
-                                className="main-button-pijl"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="54.2px"
-                                height="54.3px"
-                                viewBox="0 0 54.2 54.3"
-                              >
-                                <g fill="#EE483C" fillRule="evenodd">
-                                  <polygon
-                                    className="st0"
-                                    points="8.1,2.7 42.6,2.6 43.9,2.6 51.6,2.6 51.6,10.2 51.6,11.5 51.7,46 54.2,46 54.1,0 8.1,0.1 "
-                                  />
-                                  <polygon
-                                    className="st0"
-                                    points="38.5,10.3 35,10.3 8.1,10.3 8.1,12.9 32.4,12.8 0,45.4 1.8,47.2 36,12.8 "
-                                  />
-                                  <polygon
-                                    className="st0"
-                                    points="43.9,15.6 41.4,18.2 7.2,52.5 9,54.3 41.4,21.8 41.4,46.1 44,46.1 43.9,19.2 "
-                                  />
-                                  <polygon
-                                    className="st0"
-                                    points="43.9,12 43.9,10.3 42.1,10.3 39.6,12.8 3.6,49 5.4,50.8 41.4,14.6 "
-                                  />
-                                  <polygon
-                                    className="st0"
-                                    points="49,10.5 49,7.7 49,5.1 46.5,5.1 43.6,5.1 40.1,5.1 8.1,5.2 8.1,7.8 37.5,7.7 41.1,7.7 44.7,7.7
+                      <Link to="/werken">
+                        <div className="main-werken-color main-button-color">
+                          <svg
+                            className="main-button-pijl"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="54.2px"
+                            height="54.3px"
+                            viewBox="0 0 54.2 54.3"
+                          >
+                            <g fill="#EE483C" fillRule="evenodd">
+                              <polygon
+                                className="st0"
+                                points="8.1,2.7 42.6,2.6 43.9,2.6 51.6,2.6 51.6,10.2 51.6,11.5 51.7,46 54.2,46 54.1,0 8.1,0.1 "
+                              />
+                              <polygon
+                                className="st0"
+                                points="38.5,10.3 35,10.3 8.1,10.3 8.1,12.9 32.4,12.8 0,45.4 1.8,47.2 36,12.8 "
+                              />
+                              <polygon
+                                className="st0"
+                                points="43.9,15.6 41.4,18.2 7.2,52.5 9,54.3 41.4,21.8 41.4,46.1 44,46.1 43.9,19.2 "
+                              />
+                              <polygon
+                                className="st0"
+                                points="43.9,12 43.9,10.3 42.1,10.3 39.6,12.8 3.6,49 5.4,50.8 41.4,14.6 "
+                              />
+                              <polygon
+                                className="st0"
+                                points="49,10.5 49,7.7 49,5.1 46.5,5.1 43.6,5.1 40.1,5.1 8.1,5.2 8.1,7.8 37.5,7.7 41.1,7.7 44.7,7.7
                       46.5,7.7 46.5,9.5 46.5,13.1 46.5,16.6 46.6,46.1 49.1,46.1 49,14.1 "
-                                  />
-                                </g>
-                              </svg>
-                              <p className="main-werken-button">
-                                lees <br /> alle captions
-                              </p>
-                            </div>
-                          </Link>
+                              />
+                            </g>
+                          </svg>
+                          <p className="main-werken-button">
+                            lees <br /> alle captions
+                          </p>
                         </div>
+                      </Link>
+                    </div>
                   </li>
                   <li className="intro-list-item4">
                     <h3>Get your caption on a sticker!</h3>
-                    <p className="intro-item4-preview">tetsttetstfstf efesf fesfs</p>
+                    <p className="intro-item4-preview">
+                      tetsttetstfstf efesf fesfs
+                    </p>
                     <div />
                   </li>
                   <li className="intro-list-item5">
