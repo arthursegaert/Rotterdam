@@ -32,7 +32,14 @@ class Caption extends Component {
   };
 
   render() {
-    const { caption, userName, likes, captionId, kunstwerkId } = this.props;
+    const {
+      caption,
+      userName,
+      likes,
+      captionId,
+      kunstwerkId,
+      deleteOption
+    } = this.props;
     return (
       <article className={`caption`}>
         <h3 className="caption-content">{caption}</h3>
@@ -68,6 +75,22 @@ class Caption extends Component {
             <span className="amount-of-likes">
               {likes} {likes === 1 ? "like" : "likes"}
             </span>
+          </a>
+        ) : (
+          ""
+        )}
+        {deleteOption ? (
+          <a
+            onClick={e => this.handleClickLike(captionId, likes, kunstwerkId)}
+            className="caption-link-like"
+          >
+            <svg className="delete-icon" viewBox="0 0 550 550">
+              <polygon
+                className="cross-delete"
+                points="404.176,0 256,148.176 107.824,0 0,107.824 148.176,256 0,404.176 107.824,512 256,363.824
+	404.176,512 512,404.176 363.824,256 512,107.824 "
+              />
+            </svg>
           </a>
         ) : (
           ""

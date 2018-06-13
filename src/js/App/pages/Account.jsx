@@ -82,6 +82,7 @@ class Account extends Component {
                     <Caption
                       caption={caption.caption}
                       userName={caption.userName}
+                      deleteOption="true"
                     />
                   ))}
                 </div>
