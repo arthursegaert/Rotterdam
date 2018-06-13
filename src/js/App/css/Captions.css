@@ -69,6 +69,7 @@
 /*RESPONSIVE*/
 
 @media only screen and (max-width: 1380px) {
+
   .captions-div-instagram-img {
     width: 24rem;
     height: 24rem;
@@ -76,23 +77,28 @@
 }
 
 @media only screen and (max-width: 1200px) {
+
   .captions-div-instagram-img {
     width: 20rem;
     height: 20rem;
   }
+
   .captions-h2 {
     font-size: 3.2rem;
   }
 }
 
 @media only screen and (max-width: 980px) {
+
   .captions-div-instagram-img {
     width: 28rem;
     height: 28rem;
   }
+
   .captions-div {
     flex-direction: column;
   }
+
   .captions-section {
     width: 70vw;
     margin: 0 auto;
@@ -100,12 +106,15 @@
 }
 
 @media only screen and (max-width: 670px) {
+
   .captions-h1 {
     font-size: 4rem;
   }
+
   .captions-h2 {
     font-size: 2rem;
   }
+
   .captions-div-instagram {
     flex-direction: column;
     align-items: flex-start;
