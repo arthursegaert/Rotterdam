@@ -66,6 +66,10 @@
   margin-bottom: 2rem;
 }
 
+.caption {
+  grid-template-areas: 'content content content' 'author author link ';
+}
+
 /*RESPONSIVE*/
 
 @media only screen and (max-width: 1380px) {
@@ -119,4 +123,18 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .caption {
+    grid-template: 1.5fr 1fr 1fr/ 1fr .8fr .8fr;
+    grid-template-areas: 'content content content' 'author author author' 'link link .';
+  }
+
+  .captions-section {
+    width: 90vw;
+  }
+
+  .caption-link-sticker {
+    justify-self: flex-start;
+  }
+
 }

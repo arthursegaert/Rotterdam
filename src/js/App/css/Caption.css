@@ -21,6 +21,7 @@
 }
 
 .caption-author {
+  grid-area: author;
   color: #283dd2;
   text-transform: uppercase;
 }
