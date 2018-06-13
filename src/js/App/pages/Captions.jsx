@@ -67,7 +67,7 @@ class Captions extends Component {
                   c =>
                     c[1].caption !== undefined ? (
                       <Caption
-                        caption={c[1].caption}
+                        caption={c[1]}
                         key={c[0]}
                         userName={c[1].userName}
                         likes={c[1].likes >= 0 ? c[1].likes : "0"}
