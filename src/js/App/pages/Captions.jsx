@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { base } from "../config/fire.js";
 import Nav from "../components/Nav.jsx";
+import Caption from "../components/Caption.jsx";
 import "../css/Captions.css";
 
 class Captions extends Component {
@@ -64,10 +65,13 @@ class Captions extends Component {
               {this.state.captions.map(captions =>
                 Object.entries(captions).map(
                   c =>
-                    c[1].caption !== undefined ? (
-                      <li key={c[0]}>
-                        {c[1].caption} - Posted by {c[1].userName}
-                      </li>
+                  c[1].caption !== undefined ? (
+                    <Caption
+                      caption={c[1].caption}
+                      key={c[0]}
+                      userName={c[1].userName}
+                      likes={c[1].likes >= 0 ? c[1].likes : "0"}
+                    />
                     ) : (
                       ""
                     )
@@ -81,10 +85,13 @@ class Captions extends Component {
               {this.state.captions.map(captions =>
                 Object.entries(captions).map(
                   c =>
-                    c[1].caption !== undefined ? (
-                      <li key={c[0]}>
-                        {c[1].caption} - Posted by {c[1].userName}
-                      </li>
+                  c[1].caption !== undefined ? (
+                    <Caption
+                      caption={c[1].caption}
+                      key={c[0]}
+                      userName={c[1].userName}
+                      likes={c[1].likes >= 0 ? c[1].likes : "0"}
+                    />
                     ) : (
                       ""
                     )
