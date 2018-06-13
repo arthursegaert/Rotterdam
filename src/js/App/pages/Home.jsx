@@ -16,6 +16,11 @@ class Home extends Component {
   }
 
   componentDidMount = () => {
+    base.syncState(`kunstwerken`, {
+      context: this,
+      state: "kunstwerken",
+      asArray: true
+    });
     app.auth().onAuthStateChanged(user => {
       if (user) {
         const userid = app.auth().currentUser.uid;
@@ -25,11 +30,6 @@ class Home extends Component {
           asArray: true
         });
       }
-    });
-    base.syncState(`kunstwerken`, {
-      context: this,
-      state: "kunstwerken",
-      asArray: true
     });
   };
 
@@ -42,7 +42,6 @@ class Home extends Component {
   };
 
   render() {
-    console.log(this.state.kunstwerken);
     return (
       <StatusContext.Consumer>
         {({ authenticated, username }) => (
@@ -368,12 +367,18 @@ class Home extends Component {
                   <li className="intro-list-item3">
                     <h3>Open up for new visions by reading other captions</h3>
                     <div className="item3-captions">
-                      {this.state.captions.map(caption => (
-                        <Caption
-                          caption={caption.caption}
-                          userName={caption.userName}
-                        />
-                      ))}
+                      {this.state.kunstwerken[12] === undefined
+                        ? console.log("tis nog undefined")
+                        : Object.entries(
+                            this.state.kunstwerken[12].captions
+                          ).map(caption => {
+                            return (
+                              <Caption
+                                caption={caption[1].caption}
+                                userName={caption[1].userName}
+                              />
+                            );
+                          })}
                     </div>
                     <div className="main-meer main-button">
                       <Link to="/werken">
