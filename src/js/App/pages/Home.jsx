@@ -335,12 +335,14 @@ class Home extends Component {
                             }}
                             className="intro-list-item2-form-textarea"
                           />
-                          <input
-                            className="item2-form-bottom"
-                            type="submit"
-                            value="caption this"
-                          />
-                          <p>500 characters over</p>
+                          <div className="item2-form-bottom">
+                            <input
+                              className="item2-form-button"
+                              type="submit"
+                              value="caption this"
+                            />
+                            <p>500 characters over</p>
+                          </div>
                         </form>
                       </div>
                       <div className="intro-list-item2-buttons">
@@ -440,7 +442,7 @@ class Home extends Component {
                           caption => {
                             return (
                               <Caption
-                                key={caption[0]}
+                                key={caption[1]}
                                 caption={caption[1].caption}
                                 userName={caption[1].userName}
                               />
