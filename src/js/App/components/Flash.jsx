@@ -7,7 +7,7 @@ const Flash = ({ flashState }) => {
 
   const checkFlashState = () => {
     const flashType = flashState.referer;
-
+    console.log(flashType);
     switch (flashType) {
       case "login":
         type = "info";
@@ -16,6 +16,10 @@ const Flash = ({ flashState }) => {
       case "register":
         type = "info";
         text = "Je bent succesvol geregistreerd!";
+        break;
+      case "addCaption":
+        type = "info";
+        text = "Caption toegevoegd!";
         break;
       default:
         console.log("Error showing flash message.");

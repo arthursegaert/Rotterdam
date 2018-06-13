@@ -9,6 +9,7 @@
   padding: 3rem 0;
   text-align: center;
   animation: showFlash 2s 0s 1 ease-in-out forwards;
+  z-index: 100000000000;
 }
 
 .flash-error {
