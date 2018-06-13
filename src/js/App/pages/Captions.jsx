@@ -87,7 +87,7 @@ class Captions extends Component {
                 return Object.entries(captions).map(c => {
                   return c[1].caption !== undefined ? (
                     <Caption
-                      caption={c[1].caption}
+                      caption={c[1]}
                       key={c[0]}
                       userName={c[1].userName}
                       likes={c[1].likes >= 0 ? c[1].likes : "0"}
