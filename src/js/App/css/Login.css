@@ -254,7 +254,7 @@
   top: 13vh;
 }
 
-@media (width >=500px) and (width <=1000px) {
+@media (width >=10px) and (width <=1000px) {
   .login-circle {
     display: none;
   }
@@ -295,5 +295,6 @@
     width: 80%;
     height: 150%;
     margin-left: 0;
+    grid-column-gap: 4vmax;
   }
 }
