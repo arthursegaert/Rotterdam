@@ -232,26 +232,28 @@ class WerkDetail extends Component {
                       <div className="werkdetail-captions">
                         {/*check of er captions zijn voor het kunstwerk*/}
                         {result.captions ? (
-                          Object.entries(result.captions).map(captions => {
-                            const captionId = captions[0];
-                            return Object.entries(captions).map(
-                              c =>
-                                //is de caption niet undefined?
-                                c[1].caption !== undefined ? (
-                                  <Caption
-                                    caption={c[1]}
-                                    captionId={captionId}
-                                    key={c[0]}
-                                    userName={c[1].userName}
-                                    likes={c[1].likes >= 0 ? c[1].likes : "0"}
-                                    kunstwerkId={kunstwerkId}
-                                  />
-                                ) : (
-                                  //as het undefined is, toon niks:
-                                  ""
-                                )
-                            );
-                          })
+                          Object.entries(result.captions)
+                            .reverse()
+                            .map(captions => {
+                              const captionId = captions[0];
+                              return Object.entries(captions).map(
+                                c =>
+                                  //is de caption niet undefined?
+                                  c[1].caption !== undefined ? (
+                                    <Caption
+                                      caption={c[1]}
+                                      captionId={captionId}
+                                      key={c[0]}
+                                      userName={c[1].userName}
+                                      likes={c[1].likes >= 0 ? c[1].likes : "0"}
+                                      kunstwerkId={kunstwerkId}
+                                    />
+                                  ) : (
+                                    //as het undefined is, toon niks:
+                                    ""
+                                  )
+                              );
+                            })
                         ) : (
                           //als er nog geen captions zijn:
                           <p>Dit werk heeft nog geen captions</p>

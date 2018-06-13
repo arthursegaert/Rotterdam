@@ -446,6 +446,7 @@ class Home extends Component {
                         <p>Loading...</p>
                       ) : (
                         Object.entries(this.state.kunstwerken[12].captions)
+                          .reverse()
                           .slice(0, 3)
                           .map(caption => {
                             console.log(caption);
