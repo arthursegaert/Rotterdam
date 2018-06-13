@@ -76,7 +76,10 @@ class Werken extends Component {
                       </span>
                     </span>
                   </div>
-                  <p className="kunstwerk-captions-amount">
+                  <p className={[
+                    "kunstwerk-captions-amount",
+                    ["kunstwerk-captions-amount", kunstwerk.id].join("-")
+                  ].join(" ")}>
                     {[
                       aantalCaptions,
                       aantalCaptions === 1 ? " caption" : " captions"
