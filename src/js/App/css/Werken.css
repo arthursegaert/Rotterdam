@@ -1,12 +1,8 @@
-
 .werken-div-background {
   background: repeating-linear-gradient(to right, black 5%, black 23%, #727272 23%, #727272 23.05%);
   display: grid;
   grid-template: 2fr 1fr max-content / 5% repeat(5, 18%) 5%;
-  grid-template-areas:
-    '. title . . . nav .'
-    '. filter filter . . . .'
-    '. grid grid grid grid grid .';
+  grid-template-areas: '. title . . . nav .' '. filter filter . . . .' '. grid grid grid grid grid .';
 }
 
 .werken-div-nav {
@@ -27,10 +23,14 @@
 
 .kunstwerk-author-p {
   font-family: 'Archivo Black', sans-serif;
-  -webkit-text-stroke: .1rem white;/* stylelint-disable-line */
-  text-stroke: .1rem white;/* stylelint-disable-line */
-  -webkit-text-fill-color: transparent;/* stylelint-disable-line */
-  text-fill-color: transparent;/* stylelint-disable-line */
+  -webkit-text-stroke: .1rem white;
+  /* stylelint-disable-line */
+  text-stroke: .1rem white;
+  /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent;
+  /* stylelint-disable-line */
+  text-fill-color: transparent;
+  /* stylelint-disable-line */
   color: transparent;
   text-transform: uppercase;
   font-size: 4rem;
@@ -205,10 +205,14 @@
 
 .werken-nav-span {
   font-family: 'Archivo Black', sans-serif;
-  -webkit-text-stroke: 0.3rem #7333a8;/* stylelint-disable-line */
-  text-stroke: .3rem  #7333a8;/* stylelint-disable-line */
-  -webkit-text-fill-color: transparent;/* stylelint-disable-line */
-  text-fill-color: transparent;/* stylelint-disable-line */
+  -webkit-text-stroke: 0.3rem #7333a8;
+  /* stylelint-disable-line */
+  text-stroke: .3rem #7333a8;
+  /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent;
+  /* stylelint-disable-line */
+  text-fill-color: transparent;
+  /* stylelint-disable-line */
   color: transparent;
   text-transform: uppercase;
   font-size: 10rem;
@@ -363,83 +367,64 @@
 /*RESPONSIVE*/
 
 @media only screen and (max-width: 768px) {
-
   .werken-div-background {
     background: repeating-linear-gradient(to right, black, black 33%, #727272 33%, #727272 33.05%);
     display: grid;
     grid-template: 2fr 1fr max-content / repeat(3, 33%);
-    grid-template-areas:
-      'title . nav'
-      'filter . .'
-      'grid grid  grid';
+    grid-template-areas: 'title . nav' 'filter . .' 'grid grid  grid';
   }
-
   .werken-grid {
     grid-template-columns: repeat(3, 33%);
     grid-template-rows: 10vh 30vh 50vh 20vh 56vh 20vh 20vh 50vh 15vh 50vh repeat(7, 30vh);
     grid-template-areas: 'kunstwerk_nine . .'' . . kunstwerk_two''. kunstwerk_eleven .''. kunstwerk_seven kunstwerk_seven''kunstwerk_eight . .'' . . kunstwerk_twelve''kunstwerk_three kunstwerk_three .''. . kunstwerk_fourteen''kunstwerk_six . .''. kunstwerk_four kunstwerk_four''. kunstwerk_thirteen .''. werken-nav .''. kunstwerk_one .''. kunstwerk_five .''. kunstwerk_null .''. kunstwerk_ten .''. kunstwerk_fifteen .';
   }
-
   .kunstwerk-img {
     width: 25vw;
     height: auto;
   }
-
   .werken-kunstwerk-9, .werken-kunstwerk-8, .werken-kunstwerk-6, .werken-kunstwerk-13 {
     display: flex;
     justify-content: flex-end;
   }
-
   .werken-kunstwerk-4, .werken-kunstwerk-3, .werken-kunstwerk-7 {
     display: flex;
     justify-content: center;
   }
-
 }
 
 @media only screen and (max-width: 425px) {
-
   .werken-div-background {
     background: none;
     background-color: black;
     display: flex;
     flex-direction: column;
   }
-
   .werken-grid {
     display: flex;
     flex-direction: column;
   }
-
   .kunstwerk-img {
     width: 85vw;
     height: auto;
   }
-
   .werken-kunstwerk {
     display: flex;
     justify-content: center;
   }
-
   .section-right-link-svg {
     display: none;
   }
-
   .page-title-werken {
     display: none;
   }
-
   .werken-nav {
     grid-template-columns: repeat(3, 20%);
   }
-
   .werken-nav-button {
     font-size: 2rem;
   }
-
   .werken-nav-span {
     font-size: 8rem;
     grid-area: werken-nav-span;
   }
-
 }

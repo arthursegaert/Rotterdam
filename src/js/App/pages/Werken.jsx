@@ -17,7 +17,8 @@ class Werken extends Component {
   componentDidMount() {
     base.syncState(`kunstwerken`, {
       context: this,
-      state: "kunstwerken"
+      state: "kunstwerken",
+      asArray: true
     });
   }
   render() {
@@ -35,6 +36,7 @@ class Werken extends Component {
           <div className="white-circle werken-circle" />
           <div className="white-circle werken-circle" />
           {this.state.kunstwerken.map(kunstwerk => {
+            console.log(kunstwerk);
             const kunstenaarVoornaam = kunstwerk.author.split(" ").pop();
             const kunstwerkId = parseInt(kunstwerk.id, 10);
             const aantalCaptions = Object.keys(
