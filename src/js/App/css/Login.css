@@ -13,7 +13,7 @@
 .page-title-login {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
-  margin-right: 5rem;
+  margin-left: 5rem;
 }
 
 .login-nav, .register-nav {
