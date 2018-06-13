@@ -55,7 +55,7 @@
   background: linear-gradient(rgba(115, 51, 168, 0) 70%, rgba(115, 51, 168, 1)), url(../../../assets/img/reproduction.jpg) no-repeat center;
   background-size: cover;
   width: 40vw;
-  height: 120vh;
+  height: 171%;
 }
 
 .header-account {
@@ -121,8 +121,8 @@
 .intro {
   background-color: black;
   z-index: -6;
+  padding-bottom: 10rem;
   font-family: sans-serif;
-  height: 600rem;
 }
 
 .intro h3 {
@@ -135,12 +135,12 @@
 .intro-list {
   counter-reset: counter1;
   display: grid;
-  grid-template: 80rem 50rem 55rem 30rem 30rem 30rem/ 42vw 58vw;
+  grid-template: 80rem 50rem 55rem 30rem 30rem 30rem/ 40vw 55vw;
   grid-gap: 5rem;
   grid-template-areas: 'item1 item1' 'item2 item2' 'item4 item3' 'item4 item3' 'item5 item5' 'item6 item6' 'item7 item7';
   background-image: url(../../../assets/img/stickers/sticker1.png), url(../../../assets/img/stickers/sticker2.png), url(../../../assets/img/stickers/sticker3.png), url(../../../assets/img/stickers/sticker4.png), url(../../../assets/img/stickers/sticker5.png), url(../../../assets/img/stickers/sticker6.png), url(../../../assets/img/stickers/sticker7.png);
-  background-position: 5rem 240rem, 50rem 270rem, 50rem 289rem, 50rem 210rem, 50rem 310rem, 50rem 320rem, 50rem 250rem;
-  background-size: 20%, 15%, 10%, 20%, 10%, 15%, 10%;
+  background-position: 5rem 240rem, -2rem 306rem, 83rem 266rem, 37rem 240rem, 50rem 310rem, 69rem 265rem, 103rem 306rem;
+  background-size: 20%, 19%, 19%, 15%, 10%, 16%, 14%;
   background-repeat: no-repeat;
 }
 
@@ -178,6 +178,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 5rem;
+  width: 90vw;
 }
 
 .intro-list-item1 h3 {
@@ -331,10 +332,15 @@
   text-overflow: clip;
   position: relative;
   top: 80rem;
+  transform: translate3d(0, 0, 0);
 }
 
 .banner-text {
-  width: 350vw;
+  width: 3000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   font-family: 'Archivo Black', sans-serif;
   -webkit-text-stroke: .2rem white;/* stylelint-disable-line */
   text-stroke: .2rem white;/* stylelint-disable-line */
@@ -343,7 +349,14 @@
   color: transparent;
   text-transform: uppercase;
   font-size: 7rem;
-  animation: 20s linear 0s infinite reverse running banner;
+  animation: slide 10s linear 0s infinite reverse running;
+}
+
+@keyframes slide {
+
+  100% {
+    transform: translateX(66.67%);
+  }
 }
 
 .main-button {

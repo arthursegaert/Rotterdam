@@ -35,7 +35,7 @@ class Caption extends Component {
     const { caption, userName, likes, captionId, kunstwerkId } = this.props;
     return (
       <article className={`caption`}>
-        <h3 className="caption-content">{caption}</h3>
+        <h4 className="caption-content">{caption}</h4>
         <p className="caption-author">{userName}</p>
         <a className="caption-link-sticker" href="#b">
           maak de sticker
