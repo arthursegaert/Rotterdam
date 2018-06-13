@@ -139,7 +139,7 @@ class Login extends Component {
           <section className="section-right section-right-login">
             <Nav />
             <KunstwerkCTA
-              kunstwerkId="1"
+              kunstwerkId="7"
               color="#7333a8"
               classname="section-right-link"
             />
