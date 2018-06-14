@@ -49,6 +49,11 @@ class Account extends Component {
                     }}
                     className="section-left-input"
                   />
+                  <input
+                    className="section-left-form-submit"
+                    type="submit"
+                    value="submit"
+                  />
                 </form>
                 <ul className="section-left-awards">
                   <li className="section-left-award">1/10</li>
