@@ -27,6 +27,10 @@ class Account extends Component {
     });
   };
 
+  handleAddAward = e => {
+    e.preventDefault();
+  }
+
   render() {
     return (
       <StatusContext.Consumer>
@@ -39,7 +43,7 @@ class Account extends Component {
                 <h2 className="page-subtitle section-left-subtitle">
                   Mijn awards
                 </h2>
-                <form className="section-left-awards-form">
+                <form className="section-left-awards-form" onClick={this.handleAddAward}>
                   <label className="section-left-label">Offline code</label>
                   <input
                     name="offlinecode"
