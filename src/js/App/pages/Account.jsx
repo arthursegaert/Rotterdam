@@ -39,7 +39,28 @@ class Account extends Component {
                 <h2 className="page-subtitle section-left-subtitle">
                   Mijn awards
                 </h2>
-                <p>Awards here...</p>
+                <form>
+                  <label className="section-left-label">Offline code</label>
+                  <input
+                    name="offlinecode"
+                    type="text"
+                    ref={input => {
+                      this.offlinecodeInput = input;
+                    }}
+                    className="section-left-input"
+                  />
+                </form>
+                <ul className="section-left-awards">
+                  <li className="section-left-award">1/10</li>
+                  <li className="section-left-award">0/25</li>
+                  <li className="section-left-award">0/30</li>
+                  <li className="section-left-award">0/100</li>
+                  <li className="section-left-award">9/100</li>
+                  <li className="section-left-award">1/150</li>
+                  <li className="section-left-award">1/150</li>
+                  <li className="section-left-award">12/150</li>
+                  <li className="section-left-award">11/150</li>
+                </ul>
               </section>
               <section className="section-right section-right-account">
                 <h2 className="page-subtitle section-right-subtitle">
