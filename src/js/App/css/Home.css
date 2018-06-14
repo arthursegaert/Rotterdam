@@ -482,7 +482,7 @@
 }
 
 .banner-text {
-  width: 750rem;
+  width: 780rem;
   position: absolute;
   top: 0;
   left: 100%;
@@ -771,6 +771,14 @@
 }
 
 @media only screen and (max-width: 500px) {
+
+  .item3-meer-button svg {
+    left: 75%;
+  }
+
+  .item3-captions article {
+    margin-top: 2rem;
+  }
 
   .header-wrap {
     grid-template: 20vh 58vh 10vh 10vh / 100vw;
