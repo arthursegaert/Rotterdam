@@ -63,9 +63,32 @@ class Captions extends Component {
             <h2 className="captions-h2">Populair deze week</h2>
             <ul>
               {this.state.captions.map(captions =>
-                Object.entries(captions).map(
-                  c =>
-                    c[1].caption !== undefined ? (
+                Object.entries(captions)
+                  .slice(0, 1)
+                  .map(
+                    c =>
+                      c[1].caption !== undefined ? (
+                        <Caption
+                          caption={c[1]}
+                          key={c[0]}
+                          userName={c[1].userName}
+                          likes={c[1].likes >= 0 ? c[1].likes : "0"}
+                        />
+                      ) : (
+                        ""
+                      )
+                  )
+              )}
+            </ul>
+          </section>
+          <section className="captions-section">
+            <h2 className="captions-h2">Boijmans keuze</h2>
+            <ul>
+              {this.state.captions.map(captions => {
+                return Object.entries(captions)
+                  .slice(0, 1)
+                  .map(c => {
+                    return c[1].caption !== undefined ? (
                       <Caption
                         caption={c[1]}
                         key={c[0]}
@@ -74,27 +97,8 @@ class Captions extends Component {
                       />
                     ) : (
                       ""
-                    )
-                )
-              )}
-            </ul>
-          </section>
-          <section className="captions-section">
-            <h2 className="captions-h2">Boijmans keuze</h2>
-            <ul>
-              {this.state.captions.map(captions => {
-                return Object.entries(captions).map(c => {
-                  return c[1].caption !== undefined ? (
-                    <Caption
-                      caption={c[1]}
-                      key={c[0]}
-                      userName={c[1].userName}
-                      likes={c[1].likes >= 0 ? c[1].likes : "0"}
-                    />
-                  ) : (
-                    ""
-                  );
-                });
+                    );
+                  });
               })}
             </ul>
           </section>

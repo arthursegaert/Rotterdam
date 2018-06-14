@@ -60,14 +60,10 @@
 
 .werkdetail-werken-nav-span {
   font-family: 'Integral CF', sans-serif;
-  -webkit-text-stroke: 0.3rem black;
-  /* stylelint-disable-line */
-  text-stroke: .3rem black;
-  /* stylelint-disable-line */
-  -webkit-text-fill-color: transparent;
-  /* stylelint-disable-line */
-  text-fill-color: transparent;
-  /* stylelint-disable-line */
+  -webkit-text-stroke: 0.3rem black; /* stylelint-disable-line */
+  text-stroke: .3rem black; /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent; /* stylelint-disable-line */
+  text-fill-color: transparent; /* stylelint-disable-line */
   color: transparent;
   text-transform: uppercase;
   font-size: 8rem;
@@ -103,14 +99,10 @@
 .werkdetail-article-captions-h2 {
   font-size: 4.5rem;
   font-family: 'Integral CF', sans-serif;
-  -webkit-text-stroke: .1rem #f4442b;
-  /* stylelint-disable-line */
-  text-stroke: .1rem #f4442b;
-  /* stylelint-disable-line */
-  -webkit-text-fill-color: transparent;
-  /* stylelint-disable-line */
-  text-fill-color: transparent;
-  /* stylelint-disable-line */
+  -webkit-text-stroke: .1rem #f4442b; /* stylelint-disable-line */
+  text-stroke: .1rem #f4442b; /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent; /* stylelint-disable-line */
+  text-fill-color: transparent; /* stylelint-disable-line */
 }
 
 .werkdetail-article-captions-li {
@@ -149,14 +141,10 @@
 }
 
 .werkdetail-article-info-span {
-  -webkit-text-stroke: 0.1rem white;
-  /* stylelint-disable-line */
-  text-stroke: .1rem white;
-  /* stylelint-disable-line */
-  -webkit-text-fill-color: transparent;
-  /* stylelint-disable-line */
-  text-fill-color: transparent;
-  /* stylelint-disable-line */
+  -webkit-text-stroke: 0.1rem white; /* stylelint-disable-line */
+  text-stroke: .1rem white; /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent; /* stylelint-disable-line */
+  text-fill-color: transparent; /* stylelint-disable-line */
   color: transparent;
   font-size: 11rem;
   position: absolute;
@@ -185,17 +173,12 @@
   height: 15rem;
   background: transparent;
   border: 1px solid #7232a4;
-  color: white;
   font-size: 3rem;
-  font-family: integral cf, sans-serif;
-  -webkit-text-stroke: 0.1rem #f4442b;
-  /* stylelint-disable-line */
-  text-stroke: .1rem #f4442b;
-  /* stylelint-disable-line */
-  -webkit-text-fill-color: transparent;
-  /* stylelint-disable-line */
-  text-fill-color: transparent;
-  /* stylelint-disable-line */
+  font-family: integral, sans-serif;
+  -webkit-text-stroke: .1rem #f4442b; /* stylelint-disable-line */
+  text-stroke: .1rem #f4442b; /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent; /* stylelint-disable-line */
+  text-fill-color: transparent; /* stylelint-disable-line */
   color: transparent;
   padding-left: 1rem;
   caret-color: white;
