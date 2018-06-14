@@ -4,6 +4,7 @@ import App from "./App/App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from "./App/components/ScrollToTop.jsx";
 import WebfontLoader from "@dr-kobros/react-webfont-loader";
+
 import integral from "../assets/fonts/integral/integral.css";
 import circular from "../assets/fonts/circular/circular.css";
 import sinkinsans from "../assets/fonts/sinkinsans/sinkinsans.css";
@@ -20,6 +21,8 @@ const config = {
     ]
   }
 };
+
+/* basename */
 
 ReactDOM.render(
   <BrowserRouter>

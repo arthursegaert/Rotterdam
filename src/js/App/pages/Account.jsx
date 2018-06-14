@@ -32,6 +32,13 @@ class Account extends Component {
 
   handleAddAward = e => {
     e.preventDefault();
+    this.offlincodeForm.reset();
+
+    if(this.offlinecodeInput.value.isEmpty){
+      console.log('empty');
+    } else {
+      console.log('niet empty');
+    }
     this.setState({
       showSuccessFlash: true
     });
@@ -66,7 +73,10 @@ class Account extends Component {
                 </h2>
                 <form
                   className="section-left-awards-form"
-                  onClick={this.handleAddAward}
+                  onSubmit={this.handleAddAward}
+                  ref={form => {
+                    this.offlincodeForm = form;
+                  }}
                 >
                   <label className="section-left-label awards-label">
                     Offline code
