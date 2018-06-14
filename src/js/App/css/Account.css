@@ -93,6 +93,43 @@
   align-self: center;
 }
 
+.section-left-awards-form {
+  display: flex;
+  flex-direction: column;
+  height: 15rem;
+  justify-content: space-between;
+}
+
+.awards-label {
+  align-self: flex-start;
+}
+
+.awards-submit {
+  align-self: flex-end;
+  height: 4rem;
+}
+
+.section-left-awards {
+  padding-top: 2rem;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
+
+.section-left-award {
+  background-color: transparent;
+  border: .1rem solid #283dd2;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+}
+
 @media only screen and (max-width: 1024px) {
 
   .two-sec-page-account {
