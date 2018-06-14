@@ -22,7 +22,7 @@ class Caption extends Component {
   handleClickLike = (captionId, prevlikes, kunstwerkId) => {
     base
       .update(`kunstwerken/${kunstwerkId}/captions/${captionId}`, {
-        data: { likes: prevlikes++ }
+        data: { likes: parseInt(prevlikes, 10) + 1 }
       })
       .then(console.log("geliked"))
       .catch(err => {

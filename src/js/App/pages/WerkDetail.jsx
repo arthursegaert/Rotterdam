@@ -5,6 +5,7 @@ import Nav from "../components/Nav.jsx";
 import Caption from "../components/Caption.jsx";
 import Loading from "../components/Loading.jsx";
 import Flash from "../components/Flash.jsx";
+import ImageZoom from "../components/ImageZoom.jsx";
 import "../css/WerkDetail.css";
 import { Link } from "react-router-dom";
 
@@ -17,7 +18,8 @@ class WerkDetail extends Component {
       captions: [],
       loading: true,
       showSuccessFlash: false,
-      showErrorFlash: false
+      showErrorFlash: false,
+      zoom: false
     };
   }
   componentDidMount() {
@@ -120,7 +122,9 @@ class WerkDetail extends Component {
       const result = this.state.kunstwerken.filter(
         kunstwerk => kunstwerk.id === kunstwerkId
       )[0];
-
+      if (this.state.zoom) {
+        return <ImageZoom kunstwerk={result} />;
+      }
       if (this.state.match) {
         return (
           <div>
@@ -156,7 +160,14 @@ class WerkDetail extends Component {
                           </p>
                         </div>
                       </a>
-                      <div className="werkdetail-article-zoom">
+                      <div
+                        onClick={() =>
+                          this.setState({
+                            zoom: true
+                          })
+                        }
+                        className="werkdetail-article-zoom"
+                      >
                         <svg
                           version="1.1"
                           xmlns="http://www.w3.org/2000/svg"
@@ -227,9 +238,9 @@ class WerkDetail extends Component {
                     </article>
                     <article className="werkdetail-article-captions">
                       <div className="werkdetail-captions">
-                      <h2 className="werkdetail-article-captions-h2">
-                        Captions
-                      </h2>
+                        <h2 className="werkdetail-article-captions-h2">
+                          Captions
+                        </h2>
                         {/*check of er captions zijn voor het kunstwerk*/}
                         {result.captions ? (
                           Object.entries(result.captions)
