@@ -39,7 +39,7 @@ class Account extends Component {
                 <h2 className="page-subtitle section-left-subtitle">
                   Mijn awards
                 </h2>
-                <form>
+                <form className="section-left-awards-form">
                   <label className="section-left-label">Offline code</label>
                   <input
                     name="offlinecode"

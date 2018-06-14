@@ -93,7 +93,13 @@
   align-self: center;
 }
 
+.section-left-awards-form {
+  display: flex;
+  flex-direction: column;
+}
+
 .section-left-awards {
+  padding-top: 2rem;
   color: white;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
