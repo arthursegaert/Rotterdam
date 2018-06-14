@@ -20,9 +20,6 @@ class Caption extends Component {
   }
 
   handleClickLike = (captionId, prevlikes, kunstwerkId) => {
-    const newLikes = prevlikes++;
-    console.log(newLikes);
-    console.log(`kunstwerken/${kunstwerkId}/captions/${captionId}`);
     base
       .update(`kunstwerken/${kunstwerkId}/captions/${captionId}`, {
         data: { likes: prevlikes++ }

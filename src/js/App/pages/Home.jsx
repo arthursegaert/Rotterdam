@@ -118,12 +118,12 @@ class Home extends Component {
                     src="https://static.boijmans.nl/build/images/boijmans-logo-invert.svg"
                   />
                 </a>
-                <div className="header-img"></div>
+                <div className="header-img" />
                 <KunstwerkCTA
-                            kunstwerkId="10"
-                            color="#f4442b"
-                            classname="header-grid-cta"
-                          />
+                  kunstwerkId="10"
+                  color="#f4442b"
+                  classname="header-grid-cta"
+                />
                 <Nav />
                 <div className="header-account">
                   {authenticated ? (
@@ -278,7 +278,9 @@ class Home extends Component {
                 </div>
                 <ol className="intro-list">
                   <li className="intro-list-item1">
-                    <h3 className="intro-list-titel">Look at the artwork and fantasise …</h3>
+                    <h3 className="intro-list-titel">
+                      Look at the artwork and fantasise …
+                    </h3>
                     <div>
                       <img
                         src="assets/img/merry.jpg"
@@ -287,11 +289,11 @@ class Home extends Component {
                         width="746"
                         height="520"
                       />
-                         <KunstwerkCTA
-                            kunstwerkId="12"
-                            color="#f4442b"
-                            classname="item2-grid-cta"
-                          />
+                      <KunstwerkCTA
+                        kunstwerkId="12"
+                        color="#f4442b"
+                        classname="item2-grid-cta"
+                      />
                       <svg
                         className="svg-item1"
                         width="477px"
@@ -341,7 +343,9 @@ class Home extends Component {
                   </li>
                   <li className="intro-list-item2">
                     <div className="intro-container">
-                      <h3 className="intro-list-titel">Write down what you see</h3>
+                      <h3 className="intro-list-titel">
+                        Write down what you see
+                      </h3>
                       <div className="intro-list-item2-form">
                         <form
                           ref={form => {
@@ -353,7 +357,8 @@ class Home extends Component {
                             ref={input => {
                               this.captionInput = input;
                             }}
-                            className="intro-list-item2-form-textarea" maxLength="300"
+                            className="intro-list-item2-form-textarea"
+                            maxLength="300"
                           />
                           <div className="item2-form-bottom">
                             <input
@@ -453,7 +458,9 @@ class Home extends Component {
                     </div>
                   </li>
                   <li className="intro-list-item3">
-                    <h3 className="intro-list-titel">Open up for new visions by reading other captions</h3>
+                    <h3 className="intro-list-titel">
+                      Open up for new visions by reading other captions
+                    </h3>
                     <div className="item3-captions">
                       {this.state.kunstwerken[12] === undefined ? (
                         <p>Loading...</p>
@@ -462,7 +469,6 @@ class Home extends Component {
                           .reverse()
                           .slice(0, 3)
                           .map(caption => {
-                            console.log(caption);
                             return (
                               <Caption
                                 key={caption[0]}
@@ -515,7 +521,9 @@ class Home extends Component {
                     </div>
                   </li>
                   <li className="intro-list-item4">
-                    <h3 className="intro-list-titel">Get your caption on a sticker!</h3>
+                    <h3 className="intro-list-titel">
+                      Get your caption on a sticker!
+                    </h3>
                     <p className="intro-item4-preview">
                       tetsttetstfstf efesf fesfs
                     </p>
