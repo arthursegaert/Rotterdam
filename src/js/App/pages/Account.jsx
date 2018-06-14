@@ -90,8 +90,8 @@ class Account extends Component {
             </main>
           ) : (
             <main className="two-sec-page-account">
-              <h1 className="page-title">Mijn Account</h1>
-              <Nav />
+              <h1 className="page-title page-title-account">Mijn Account</h1>
+              <Nav classname="account-nav" />
               <section className="section-left section-left-account section-left-account-not-signed-in">
                 <Link
                   className="page-subtitle section-left-subtitle"

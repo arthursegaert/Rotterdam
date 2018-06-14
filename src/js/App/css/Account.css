@@ -16,6 +16,7 @@
 
 .page-title-account {
   grid-area: title;
+  margin-left: 5rem;
 }
 
 .section-left-account, .section-right-account {
@@ -103,4 +104,10 @@
 
 .page-title {
   align-self: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .two-sec-page-account {
+    grid-area: nav-acc;
+  }
 }
