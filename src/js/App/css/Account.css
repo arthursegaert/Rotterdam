@@ -49,6 +49,12 @@
   font-style: italic;
 }
 
+.page-subtitle:hover {
+  -webkit-text-fill-color: #f4442b; /* stylelint-disable-line */
+  text-fill-color: #f4442b; /* stylelint-disable-line */
+  color: #f4442b;
+}
+
 .section-left-account {
   display: flex;
   flex-direction: column;
