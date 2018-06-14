@@ -179,6 +179,21 @@
   padding: .5rem;
 }
 
+.svg-zoom:hover {
+  cursor: pointer;
+}
+
+.svg-zoom-svg {
+  transform: scale(0.9);
+  transform-origin: 50% 50%;
+}
+
+.svg-zoom:hover .svg-zoom-svg {
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  fill: #f4442b;
+}
+
 .work-detail-add-caption {
   width: 100%;
   height: 15rem;
