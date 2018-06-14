@@ -3,10 +3,17 @@
   color: white;
 }
 
+.captions-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .captions-h1 {
   font-family: archivo, sans-serif;
   text-transform: uppercase;
-  font-size: 6rem;
+  font-size: 5rem;
+  margin-left: 5rem;
 }
 
 .captions-h2 {

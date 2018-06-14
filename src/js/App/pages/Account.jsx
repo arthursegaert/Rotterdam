@@ -3,6 +3,7 @@ import { app, base } from "../config/fire.js";
 import { StatusContext } from "../context/statusContext.js";
 import Nav from "../components/Nav.jsx";
 import Caption from "../components/Caption.jsx";
+import Flash from "../components/Flash.jsx";
 import { Link } from "react-router-dom";
 import "../css/Account.css";
 
@@ -10,7 +11,9 @@ class Account extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      captions: []
+      captions: [],
+      showSuccessFlash: false,
+      showErrorFlash: false
     };
   }
 
@@ -29,7 +32,15 @@ class Account extends Component {
 
   handleAddAward = e => {
     e.preventDefault();
-  }
+    this.setState({
+      showSuccessFlash: true
+    });
+    setTimeout(() => {
+      this.setState({
+        showSuccessFlash: false
+      });
+    }, 2000);
+  };
 
   render() {
     return (
@@ -37,14 +48,29 @@ class Account extends Component {
         {({ authenticated }) =>
           authenticated ? (
             <main className="two-sec-page-account">
+              {this.state.showSuccessFlash ? (
+                <Flash flashState={{ referer: "addAwardCode" }} />
+              ) : (
+                ""
+              )}
+              {this.state.showErrorFlash ? (
+                <Flash flashState={{ referer: "addAwardCode" }} />
+              ) : (
+                ""
+              )}
               <h1 className="page-title page-title-account">Mijn Account</h1>
               <Nav classname="account-nav" />
               <section className="section-left section-left-account">
                 <h2 className="page-subtitle section-left-subtitle">
                   Mijn awards
                 </h2>
-                <form className="section-left-awards-form" onClick={this.handleAddAward}>
-                  <label className="section-left-label awards-label">Offline code</label>
+                <form
+                  className="section-left-awards-form"
+                  onClick={this.handleAddAward}
+                >
+                  <label className="section-left-label awards-label">
+                    Offline code
+                  </label>
                   <input
                     name="offlinecode"
                     type="text"

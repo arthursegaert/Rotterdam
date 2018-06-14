@@ -23,9 +23,11 @@ class Captions extends Component {
   render() {
     return (
       <div className="captions-background">
-        <Nav />
-        <section className="captions-section-instagram">
+        <div className="captions-wrap">
           <h1 className="captions-h1">Captions</h1>
+          <Nav />
+        </div>
+        <section className="captions-section-instagram">
           <div className="captions-div-instagram">
             <h2 className="captions-h2">#boijmanscaptions</h2>
             <a
