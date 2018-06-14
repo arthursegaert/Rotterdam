@@ -229,7 +229,7 @@
   grid-gap: 5rem;
   grid-template-areas: 'item1 item1' 'item2 item2' 'item4 item3' 'item4 item3' 'item5 item5' 'item6 item6' 'item7 item7';
   background-image: url(../../../assets/img/stickers/sticker1.png), url(../../../assets/img/stickers/sticker2.png), url(../../../assets/img/stickers/sticker6.png), url(../../../assets/img/stickers/sticker4.png), url(../../../assets/img/stickers/sticker5.png), url(../../../assets/img/stickers/sticker3.png), url(../../../assets/img/stickers/sticker7.png);
-  background-position: -1% 70%, 6% 100%, 91% 74%, 32% 70%, 89% 82%, 104% 87%, 96% 100%;
+  background-position: -1% 70%, 6% 100%, 92% 74%, 21% 78%, 89% 82%, 104% 87%, 96% 100%;
   background-size: 20%, 19%, 15%, 15%, 10%, 21%, 14%;
   background-repeat: no-repeat;
 }
@@ -623,7 +623,7 @@
 
   .header-account {
     height: 21vh;
-    padding: 2rem;
+    padding: 3rem 2rem;
   }
 
   .header-account-preview .svg-pijl {
@@ -677,7 +677,7 @@
     grid-template: 80rem 50rem 95rem 15rem 20rem 25rem/ 100vw;
     grid-gap: 5rem;
     grid-template-areas: 'item1 ' ' item2' ' item3' ' item4' ' item5' ' item6' ' item7';
-    background-position: -2% 76%, 6% 100%, 91% 75%, 32% 70%, 89% 82%, 104% 87%, 96% 100%;
+    background-position: -2% 84%, 6% 100%, 91% 75%, 32% 70%, 89% 82%, 104% 87%, 96% 100%;
     background-size: 20%, 19%, 15%, 0%, 0%, 21%, 0%;
 
     & h3 {
@@ -724,6 +724,7 @@
 
   .intro-list-item4 {
     margin-top: -5rem;
+    width: 66vw;
   }
 
   .intro-list-item6 p {
@@ -740,7 +741,7 @@
 @media only screen and (max-width: 600px) {
 
   .intro-list {
-    grid-template: 80rem 100rem 100rem 15rem 20rem 25rem/ 100vw;
+    grid-template: 65rem 100rem 100rem 15rem 20rem 25rem/ 100vw;
   }
 
   .intro-list-item2-buttons {
@@ -766,8 +767,81 @@
 @media only screen and (max-width: 500px) {
 
   .header-wrap {
-    grid-template: 20vh .5fr .5fr / 100vw;
+    grid-template: 20vh 58vh 10vh 10vh / 100vw;
     grid-template-areas: 'sub' 'title' ' cta';
+  }
+
+  .intro-list {
+    background: none;
+  }
+
+  .header-img {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+  }
+
+  .intro-list-item7, .intro-list-item6, .intro-list-item5, .intro-list-item4 {
+    padding-left: 20vw;
+    height: 20rem;
+    margin: 0;
+  }
+
+  .header-account {
+    padding: 1rem 2rem;
+    margin-top: 8rem;
+    height: 20rem;
+  }
+
+  .intro-list-item1 {
+    padding: 12rem 0 0 6rem;
+  }
+
+  .section-right-link-svg {
+    width: 8rem;
+  }
+
+  .item2-grid-cta {
+    top: 109rem;
+    left: 2rem;
+  }
+
+  .header-title {
+    font-size: 12vw;
+    line-height: 12vw;
+    width: 85%;
+  }
+
+  .item1-img {
+    width: 100%;
+  }
+
+  .header-subtitle {
+    width: 85%;
+  }
+
+  .intro-item4-preview {
+    margin-top: -22rem;
+  }
+
+  .header-subtitle img {
+    width: 50vw;
+  }
+
+  .intro-list-item2-form {
+    margin: 0 auto;
+    width: 85%;
+    height: 43rem;
+  }
+
+  .intro-list h3 {
+    max-width: 80%;
+    font-size: 1.6rem;
+  }
+
+  .header-grid-cta {
+    left: 80vw;
+    top: 69rem;
   }
 
 }
