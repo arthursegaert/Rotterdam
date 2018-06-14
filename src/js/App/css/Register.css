@@ -107,3 +107,9 @@
   right: 18vw;
   top: -12vh;
 }
+
+.register-nav {
+  position: absolute;
+  z-index: 100;
+  right: 0;
+}
