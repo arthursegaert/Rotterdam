@@ -561,7 +561,7 @@
 
 /*RESPONSIVE*/
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1224px) {
 
   .werken-nav {
     grid-template-columns: repeat(3, 20%);

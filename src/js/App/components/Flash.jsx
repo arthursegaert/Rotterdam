@@ -28,6 +28,10 @@ const Flash = ({ flashState }) => {
         type = "error";
         text = "Je kan geen lege caption toevoegen!";
         break;
+      case "addAwardCode":
+        type = "info";
+        text = "Jouw sticker-code is toegevoegd. Blijf verzamelen!";
+        break;
       default:
         console.log("Error showing flash message.");
     }
