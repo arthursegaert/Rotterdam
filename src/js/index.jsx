@@ -5,14 +5,17 @@ import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from "./App/components/ScrollToTop.jsx";
 import WebfontLoader from "@dr-kobros/react-webfont-loader";
 import integral from "../assets/fonts/integral/integral.css";
+import circular from "../assets/fonts/circular/circular.css";
+import sinkinsans from "../assets/fonts/sinkinsans/sinkinsans.css";
+import archivo from "../assets/fonts/archivo/archivo.css";
 
 const config = {
   custom: {
     families: ["circular", "sinkinsans", "archivo", "integral"],
     urls: [
-      "./assets/fonts/circular/circular.css",
-      "./assets/fonts/sinkinsans/sinkinsans.css",
-      "./assets/fonts/archivo/archivo.css",
+      circular,
+      sinkinsans,
+      archivo,
       integral
     ]
   }
