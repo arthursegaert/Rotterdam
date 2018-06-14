@@ -2,9 +2,9 @@
   background-color: black;
   color: white;
   display: grid;
-  grid-template-columns: 5% 1fr 1fr 5%;
+  grid-template-columns: 1fr 1.4fr;
   grid-template-rows: min-content 2fr;
-  grid-template-areas: 'werkdetail-article werkdetail-article nav .' 'werkdetail-article werkdetail-article werkdetail-article-captions .';
+  grid-template-areas: 'werkdetail-article nav .' 'werkdetail-article werkdetail-article-captions .';
   height: 100vh;
 }
 
@@ -21,6 +21,7 @@
 .werkdetail-article {
   grid-area: werkdetail-article;
   position: relative;
+  width: 45vw;
 }
 
 .werkdetail-article-captions {
@@ -253,4 +254,40 @@
   z-index: 20;
   right: 60vw;
   bottom: 12.5vh;
+}
+
+@media only screen and (max-width: 425px) {
+
+  .werkdetail-result {
+    width: 100vw;
+  }
+
+  .werkdetail-section {
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: 100vh 1fr 1fr;
+    grid-template-areas: 'werkdetail-article nav' 'werkdetail-article .' 'werkdetail-article-captions werkdetail-article-captions';
+  }
+
+  .werkdetail-article {
+    width: 90vw;
+  }
+
+  .werkdetail-article-captions {
+    width: 90vw;
+  }
+
+  .werkdetail-nav {
+    position: absolute;
+    z-index: 3;
+    right: 0;
+  }
+
+  .werkendetail-nav-button-vorige, .werkendetail-nav-button-volgende {
+    font-size: 3rem;
+  }
+
+  .werkdetail-werken-nav {
+    width: 100vw;
+  }
+
 }
