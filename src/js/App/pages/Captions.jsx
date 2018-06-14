@@ -63,7 +63,7 @@ class Captions extends Component {
         <div className="captions-div">
           <section className="captions-section">
             <h2 className="captions-h2">Populair deze week</h2>
-            <ul>
+            <ul className="captions-captions">
               {this.state.captions.map(captions =>
                 Object.entries(captions)
                   .slice(0, 1)
@@ -85,7 +85,7 @@ class Captions extends Component {
           </section>
           <section className="captions-section">
             <h2 className="captions-h2">Boijmans keuze</h2>
-            <ul>
+            <ul className="captions-captions">
               {this.state.captions.map(captions => {
                 return Object.entries(captions)
                   .slice(0, 1)
