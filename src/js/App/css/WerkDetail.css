@@ -20,8 +20,9 @@
 
 .werkdetail-article {
   grid-area: werkdetail-article;
-  position: relative;
+  position: fixed;
   width: 45vw;
+  height: 100%;
 }
 
 .werkdetail-article-captions {
@@ -31,7 +32,7 @@
   width: 40vw;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 .werkdetail-werken-nav {
@@ -54,7 +55,7 @@
 .werkdetail-werken-nav-button {
   font-family: archivo, sans-serif;
   color: white;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
 }
 
@@ -90,10 +91,13 @@
 
 .werkdetail-captions {
   height: 45vh;
-  overflow-y: scroll;
   display: grid;
   grid-row-gap: 2vh;
   margin-top: 1rem;
+}
+
+.werkdetail-captions .caption {
+  grid-template-areas: 'content content content' 'author link like ';
 }
 
 .werkdetail-article-captions-h2 {
@@ -239,20 +243,35 @@
   bottom: 12.5vh;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 625px) {
 
   .werkdetail-result {
     width: 100vw;
+  }
+
+  .werkdetail-article {
+    grid-area: werkdetail-article;
+    position: relative;
+    width: 45vw;
+    height: 100%;
+  }
+
+  .werkdetail-circle:nth-of-type(1)::after {
+    position: relative;
+  }
+
+  .werkdetail-circle:nth-of-type(2)::after {
+    position: relative;
+  }
+
+  .werkdetail-circle:nth-of-type(3)::after {
+    position: relative;
   }
 
   .werkdetail-section {
     grid-template-columns: 1fr min-content;
     grid-template-rows: 100vh 1fr 1fr;
     grid-template-areas: 'werkdetail-article nav' 'werkdetail-article .' 'werkdetail-article-captions werkdetail-article-captions';
-  }
-
-  .werkdetail-article {
-    width: 90vw;
   }
 
   .werkdetail-article-captions {
@@ -266,11 +285,12 @@
   }
 
   .werkendetail-nav-button-vorige, .werkendetail-nav-button-volgende {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .werkdetail-werken-nav {
     width: 100vw;
+    padding: 0;
   }
 
 }

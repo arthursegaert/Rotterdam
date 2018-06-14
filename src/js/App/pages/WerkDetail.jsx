@@ -226,10 +226,10 @@ class WerkDetail extends Component {
                       </div>
                     </article>
                     <article className="werkdetail-article-captions">
+                      <div className="werkdetail-captions">
                       <h2 className="werkdetail-article-captions-h2">
                         Captions
                       </h2>
-                      <div className="werkdetail-captions">
                         {/*check of er captions zijn voor het kunstwerk*/}
                         {result.captions ? (
                           Object.entries(result.captions)
@@ -273,6 +273,7 @@ class WerkDetail extends Component {
                         className="caption-add-form"
                       >
                         <textarea
+                          maxLength="300"
                           className="work-detail-add-caption"
                           ref={input => {
                             this.captionInput = input;
