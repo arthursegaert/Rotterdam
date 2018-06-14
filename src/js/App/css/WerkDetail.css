@@ -162,8 +162,13 @@
   opacity: .7;
 }
 
+.werkdetail-article-info:hover {
+  background: #713da4;
+}
+
 .werkdetail-article-info-p {
   text-transform: uppercase;
+  z-index: 1;
 }
 
 .werkdetail-article-zoom {
