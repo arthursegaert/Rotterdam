@@ -9,6 +9,12 @@
   font-family: 'Integral CF', sans-serif;
 }
 
+.nav-list-item-link-active .nav-list-item-link-title .nav-list-item-link-title-inner {
+  -webkit-text-fill-color: white; /* stylelint-disable-line */
+  text-fill-color: white; /* stylelint-disable-line */
+  color: white;
+}
+
 .nav-list-item-link-title-inner {
   display: block;
   position: relative;
