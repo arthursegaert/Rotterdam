@@ -33,6 +33,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column-reverse;
+  margin-bottom: 20rem;
 }
 
 .werkdetail-werken-nav {
