@@ -524,7 +524,11 @@ class Home extends Component {
                       Get your caption on a sticker!
                     </h3>
                     <p className="intro-item4-preview">
-                      tetsttetstfstf efesf fesfs
+                    {this.state.kunstwerken[12] === undefined ? (
+                      <span>Loading...</span>
+                    ) : (
+                      <span>{Object.entries(this.state.kunstwerken[12].captions).reverse()[0][1].caption}</span>
+                    )}
                     </p>
                     <div />
                   </li>
