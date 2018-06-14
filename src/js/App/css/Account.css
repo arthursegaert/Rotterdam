@@ -86,7 +86,6 @@
   display: grid;
   grid-row-gap: 2vh;
   height: 45vh;
-  overflow-y: scroll;
 }
 
 .page-title {
@@ -133,6 +132,40 @@
 @media only screen and (max-width: 1024px) {
 
   .two-sec-page-account {
-    grid-area: nav-acc;
+    grid-template: 20rem 65rem 50rem / .5fr .5fr;
+    grid-template-areas: 'title nav-acc' 'sec1 sec1' 'sec2 sec2';
   }
+
+  .section-left-account {
+    width: 100vw;
+  }
+
+  .section-right-account {
+    width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .page-title {
+    display: none;
+  }
+
+  .section-left-award {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .section-left-account {
+    width: 90vw;
+    max-width: 30rem;
+    margin: 0 auto;
+    padding-left: 1rem;
+  }
+
+  .section-left-awards {
+    grid-gap: 1rem;
+  }
+
 }
