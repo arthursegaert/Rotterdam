@@ -10,7 +10,7 @@ const Nav = ({ classname }) => {
           <NavLink
             activeClassName="nav-list-item-link-active"
             className="nav-list-item-link"
-            to="/"
+            to="/home"
           >
             <span className="nav-list-item-link-title">
               <span

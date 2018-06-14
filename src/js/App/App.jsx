@@ -48,7 +48,7 @@ class App extends Component {
       <StatusContext.Provider value={this.state}>
         <div className="App">
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/home" component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/Register" component={Register} />
             <Route exact path="/logout" component={Logout} />
