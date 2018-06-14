@@ -4,7 +4,6 @@ import "../css/Flash.css";
 const Flash = ({ flashState }) => {
   let type;
   let text;
-
   const checkFlashState = () => {
     const flashType = flashState.referer;
     console.log(flashType);

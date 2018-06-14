@@ -263,6 +263,12 @@
   top: 13vh;
 }
 
+.login-nav {
+  position: absolute;
+  z-index: 100;
+  right: 0;
+}
+
 @media (width >=10px) and (width <=1000px) {
   
   .login-circle, .registreer-circle {

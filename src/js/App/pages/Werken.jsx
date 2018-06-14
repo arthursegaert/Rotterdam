@@ -25,9 +25,14 @@ class Werken extends Component {
       <div className="werken-div-background">
         <div className="white-circle werken-circle" />
         <div className="white-circle werken-circle" />
+        <div className="white-circle werken-circle" />
         <h1 className="page-title page-title-werken">Werken</h1>
         <Nav classname="werken-div-nav" />
         <div className="werken-grid">
+          <div className="white-circle werken-circle" />
+          <div className="white-circle werken-circle" />
+          <div className="white-circle werken-circle" />
+          <div className="white-circle werken-circle" />
           <div className="white-circle werken-circle" />
           <div className="white-circle werken-circle" />
           <div className="white-circle werken-circle" />
