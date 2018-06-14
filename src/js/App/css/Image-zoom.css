@@ -6,6 +6,14 @@
   align-items: center;
 }
 
+.back-arrow-svg:hover {
+  cursor: pointer;
+}
+
+.image-zoom-container .back-arrow {
+  fill: white;
+}
+
 .image-zoom {
   width: 50%;
   object-fit: fill;
