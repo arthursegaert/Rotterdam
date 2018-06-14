@@ -366,7 +366,7 @@ class Home extends Component {
                               type="submit"
                               value="caption this"
                             />
-                            <p>500 characters over</p>
+                            <p>max. 300 characters</p>
                           </div>
                         </form>
                       </div>
