@@ -1,10 +1,15 @@
 import React from "react";
+import "../css/Image-zoom.css";
 
 const imageZoom = ({ kunstwerk }) => {
   return (
-    <div>
+    <div className="image-zoom-container">
       {console.log(kunstwerk)}
-      <img alt={kunstwerk.title} src={["../", kunstwerk.img].join("")} />
+      <img
+        className="image-zoom"
+        alt={kunstwerk.title}
+        src={["../", kunstwerk.img].join("")}
+      />
     </div>
   );
 };

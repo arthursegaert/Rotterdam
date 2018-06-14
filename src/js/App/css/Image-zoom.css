@@ -1,0 +1,12 @@
+.image-zoom-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-zoom {
+  width: 50%;
+  object-fit: fill;
+}
