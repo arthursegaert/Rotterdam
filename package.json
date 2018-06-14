@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "author": "Yves Rijckaert Arthur Segaert Justine Vanderplancke",
   "license": "MIT",
+  "homepage": "https://student.howest.be/yves.rijckaert/20172018/ma4/bvb",
   "scripts": {
     "production": "rm -rf dist/ && npm run copydist && NODE_ENV=production webpack -p",
     "development": "NODE_ENV=development webpack-dev-server --open 'Google Chrome'",
