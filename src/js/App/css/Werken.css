@@ -22,7 +22,7 @@
 }
 
 .kunstwerk-author-p {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: archivo, sans-serif;
   -webkit-text-stroke: .1rem white; /* stylelint-disable-line */
   text-stroke: .1rem white; /* stylelint-disable-line */
   -webkit-text-fill-color: transparent; /* stylelint-disable-line */
@@ -310,7 +310,7 @@
 }
 
 .werken-nav-button {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: archivo, sans-serif;
   color: white;
   font-size: 4rem;
   margin-top: 6rem;
@@ -318,7 +318,7 @@
 }
 
 .werken-nav-span {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: archivo, sans-serif;
   -webkit-text-stroke: .3rem #7333a8; /* stylelint-disable-line */
   text-stroke: .3rem #7333a8; /* stylelint-disable-line */
   -webkit-text-fill-color: transparent; /* stylelint-disable-line */

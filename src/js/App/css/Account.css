@@ -73,7 +73,7 @@
   grid-area: text;
   font-size: 3.5rem;
   color: white;
-  font-family: 'Integral CF', sans-serif;
+  font-family: integral, sans-serif;
   -webkit-text-stroke: .1rem #742dab; /* stylelint-disable-line */
   text-stroke: .1rem #742dab; /* stylelint-disable-line */
   -webkit-text-fill-color: transparent; /* stylelint-disable-line */

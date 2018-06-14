@@ -6,7 +6,7 @@
   color: white;
   font-size: 5rem;
   text-transform: uppercase;
-  font-family: 'Integral CF', sans-serif;
+  font-family: integral, sans-serif;
 }
 
 .nav-list-item-link-active .nav-list-item-link-title .nav-list-item-link-title-inner {

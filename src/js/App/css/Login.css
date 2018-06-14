@@ -6,7 +6,7 @@
 .page-title {
   font-size: 5rem;
   color: white;
-  font-family: 'Integral CF', sans-serif;
+  font-family: integral, sans-serif;
 }
 
 .two-sec-page-login {
@@ -50,7 +50,7 @@
   max-width: 50%;
   text-align: center;
   font-style: italic;
-  font-family: 'Integral CF', sans-serif;
+  font-family: integral, sans-serif;
   color: white;
   font-size: 18.2rem;
   opacity: .1;
@@ -108,7 +108,7 @@
 
 .section-left-form-submit, .section-left-form-fb {
   border: none;
-  font-family: 'Integral CF', sans-serif;
+  font-family: integral, sans-serif;
   color: white;
   font-size: 2rem;
   font-style: italic;

@@ -10,7 +10,7 @@
 .header {
   height: 58rem;
   background-color: black;
-  font-family: 'Archivo Black', sans-serif;
+  font-family: archivo, sans-serif;
 }
 
 .circle-container {
@@ -219,7 +219,7 @@
   font-size: 3rem;
   line-height: 3rem;
   color: white;
-  font-family: 'Integral CF', sans-serif;
+  font-family: integral, sans-serif;
 }
 
 .intro-list {
@@ -237,7 +237,7 @@
 .intro-list li::before {
   content: counter(counter1);
   counter-increment: counter1;
-  font-family: 'Integral CF', sans-serif;
+  font-family: integral, sans-serif;
   font-size: 9.5rem;
   -webkit-text-stroke: .1rem white;/* stylelint-disable-line */
   text-stroke: .1rem white;/* stylelint-disable-line */
@@ -348,7 +348,7 @@
   height: 4rem;
   padding-top: .5rem;
   font-size: 1.8rem;
-  font-family: 'Integral CF', sans-serif;
+  font-family: integral, sans-serif;
   font-weight: bold;
 }
 
@@ -434,7 +434,7 @@
   background-color: #283dd2;
   color: white;
   font-size: 2rem;
-  font-family: 'Integral CF', sans-serif;
+  font-family: integral, sans-serif;
   border-radius: 50%;
   height: 30vw;
   width: 30vw;
@@ -456,7 +456,7 @@
 
 .intro-list-item6 p {
   font-size: 5rem;
-  font-family: 'Integral CF', sans-serif;
+  font-family: integral, sans-serif;
   -webkit-text-stroke: .1rem white;/* stylelint-disable-line */
   text-stroke: .1rem white;/* stylelint-disable-line */
   -webkit-text-fill-color: transparent; /* stylelint-disable-line */
@@ -484,7 +484,7 @@
   top: 0;
   left: 0;
   height: 100%;
-  font-family: 'Archivo Black', sans-serif;
+  font-family: archivo, sans-serif;
   -webkit-text-stroke: .2rem white;/* stylelint-disable-line */
   text-stroke: .2rem white;/* stylelint-disable-line */
   -webkit-text-fill-color: transparent;/* stylelint-disable-line */
@@ -506,7 +506,7 @@
   display: flex;
   width: 50vw;
   height: 17rem;
-  font-family: 'Integral CF', sans-serif;
+  font-family: integral, sans-serif;
   line-height: 3rem;
 }
 
@@ -522,7 +522,7 @@
 
 .item3-meer-button-text {
   color: white;
-  font-family: 'Integral CF', sans-serif;
+  font-family: integral, sans-serif;
   font-size: 3rem;
 }
 

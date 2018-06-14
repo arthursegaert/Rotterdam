@@ -31,7 +31,7 @@ html {
 body {
   font-size: var(--font-size-bodycopy);
   line-height: 1.6;
-  font-family: 'Circular Std', sans-serif;
+  font-family: circular, sans-serif;
 }
 
 .container {
@@ -76,7 +76,7 @@ footer {
   font-size: 4.4rem;
   color: white;
   text-align: right;
-  font-family: 'Integral CF', sans-serif;
+  font-family: integral, sans-serif;
   line-height: 4.4rem;
 }
 
