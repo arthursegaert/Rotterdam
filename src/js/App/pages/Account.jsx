@@ -134,7 +134,7 @@ class Account extends Component {
               <Nav classname="account-nav" />
               <section className="section-left section-left-account section-left-account-not-signed-in">
                 <Link
-                  className="page-subtitle section-left-subtitle"
+                  className="page-subtitle section-left-subtitle subtitle-left-not-signed-in"
                   to="/login"
                 >
                   Login
@@ -142,7 +142,7 @@ class Account extends Component {
               </section>
               <section className="section-right section-right-account section-right-account-not-signed-in">
                 <Link
-                  className="page-subtitle section-left-subtitle"
+                  className="page-subtitle section-right-subtitle subtitle-right-not-signed-in"
                   to="/register"
                 >
                   Registreer
