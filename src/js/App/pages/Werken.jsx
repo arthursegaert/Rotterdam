@@ -34,6 +34,8 @@ class Werken extends Component {
           <div className="white-circle werken-circle" />
           <div className="white-circle werken-circle" />
           <div className="white-circle werken-circle" />
+          <div className="white-circle werken-circle" />
+          <div className="white-circle werken-circle" />
           {this.state.kunstwerken.map(kunstwerk => {
             console.log(kunstwerk);
             const kunstenaarVoornaam = kunstwerk.author.split(" ").pop();
