@@ -1,8 +1,8 @@
 @font-face {
-    font-family: integral;
-    src: url(integral-bold.woff2) format('woff2'), url(integral-bold.woff) format('woff');
-    font-weight: bold;
-    font-style: normal;
+  font-family: integral;
+  src: url(integral-bold.woff2) format('woff2'), url(integral-bold.woff) format('woff');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
