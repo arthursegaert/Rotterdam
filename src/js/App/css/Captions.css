@@ -74,7 +74,13 @@
 .captions-section article {
   margin: 2rem 0;
 =======
+.captions-captions {
+  height: 30rem;
+  overflow-y: scroll;
+}
 
+.captions-captions .caption {
+  margin-bottom: 3rem;
 >>>>>>> 3aa8d8cefaf658a1520edb9607668310e3bf53bf
 }
 
