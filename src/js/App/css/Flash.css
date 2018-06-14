@@ -1,6 +1,6 @@
 .flash-info, .flash-error {
   text-transform: uppercase;
-  font-family: 'Archivo Black', sans-serif;
+  font-family: archivo, sans-serif;
   position: absolute;
   top: -1rem;
   left: 0;

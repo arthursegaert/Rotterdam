@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'circular';
+  font-family: circular;
   src: url(circular-medium.woff2) format('woff2'), url(circular-medium.woff) format('woff');
   font-weight: 500;
   font-style: normal;

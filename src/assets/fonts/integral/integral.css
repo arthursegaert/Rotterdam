@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'integral';
+    font-family: integral;
     src: url(integral-bold.woff2) format('woff2'), url(integral-bold.woff) format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-  font-family: 'integral';
+  font-family: integral;
   src: url(integral-bold-oblique.woff2) format('woff2'), url(integral-bold-oblique.woff) format('woff');
   font-weight: bold;
   font-style: italic;

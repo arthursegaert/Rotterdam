@@ -37,35 +37,9 @@ class Account extends Component {
               <Nav classname="account-nav" />
               <section className="section-left section-left-account">
                 <h2 className="page-subtitle section-left-subtitle">
-                  Mijn informatie
+                  Mijn awards
                 </h2>
-                <form className="section-left-form-account">
-                  <label className="section-left-label">E-mail</label>
-                  <input
-                    required
-                    name="email"
-                    type="email"
-                    className="section-left-input"
-                  />
-                  <label className="section-left-label">Gebruikersnaam</label>
-                  <input
-                    required
-                    name="username"
-                    type="text"
-                    className="section-left-input"
-                  />
-                  <label className="section-left-label">Wachtwoord</label>
-                  <input
-                    name="password"
-                    type="password"
-                    className="section-left-input"
-                  />
-                  <input
-                    className="section-left-form-submit"
-                    type="submit"
-                    value="Save changes"
-                  />
-                </form>
+                <p>Awards here...</p>
               </section>
               <section className="section-right section-right-account">
                 <h2 className="page-subtitle section-right-subtitle">

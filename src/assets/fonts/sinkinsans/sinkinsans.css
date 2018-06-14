@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'sinkinsans';
+    font-family: sinkinsans;
     src: url(sinkinsans-medium.woff2) format('woff2'), url(sinkinsans-medium.woff) format('woff');
     font-weight: 500;
     font-style: normal;

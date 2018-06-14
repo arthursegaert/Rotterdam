@@ -4,13 +4,13 @@
 }
 
 .captions-h1 {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: archivo, sans-serif;
   text-transform: uppercase;
   font-size: 6rem;
 }
 
 .captions-h2 {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: archivo, sans-serif;
   -webkit-text-stroke: .1rem #f4442b; /* stylelint-disable-line */
   text-stroke: .1rem #f4442b; /* stylelint-disable-line */
   -webkit-text-fill-color: transparent; /* stylelint-disable-line */
