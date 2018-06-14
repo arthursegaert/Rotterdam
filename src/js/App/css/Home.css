@@ -757,4 +757,17 @@
     justify-content: space-between;
   }
 
+  .circle-container {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  .header-wrap {
+    grid-template: 20vh .5fr .5fr / 100vw;
+    grid-template-areas: 'sub' 'title' ' cta';
+  }
+
 }

@@ -61,7 +61,7 @@ footer {
   height: 12.5rem;
   display: flex;
   align-items: center;
-  padding: 0 10rem;
+  padding: 0 5rem;
 }
 
 .footer-ul {
@@ -89,3 +89,19 @@ footer {
   }
 }
 
+@media only screen and (max-width: 600px) {
+
+  footer {
+    padding: 0 2rem;
+  }
+
+  .footer-left {
+    width: 30vw;
+  }
+
+  .footer-right {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+}
