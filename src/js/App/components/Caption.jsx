@@ -6,7 +6,8 @@ class Caption extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      captions: []
+      captions: [],
+      showLikeFlash: false
     };
   }
 
@@ -26,6 +27,7 @@ class Caption extends Component {
       .update(`kunstwerken/${kunstwerkId}/captions/${captionId}`, {
         data: { likes: prevlikes++ }
       })
+      .then(console.log("geliked"))
       .catch(err => {
         console.log(err);
       });
