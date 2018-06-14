@@ -128,7 +128,7 @@ class Home extends Component {
                 <div className="header-account">
                   {authenticated ? (
                     <Link to="/account">
-                      <div className="header-account">
+                      <div className="header-account-preview header-account">
                         <svg
                           className="svg-pijl"
                           xmlns="http://www.w3.org/2000/svg"
@@ -372,7 +372,7 @@ class Home extends Component {
                       </div>
                       <div className="intro-list-item2-buttons">
                         <div className="main-random main-button">
-                          <Link to="/werkdetail/:id">
+                          <Link to={`werkdetail/${this.getRandomArtWork()}`}>
                             <div className="main-random-color main-button-color">
                               <svg
                                 className="main-button-pijl"
@@ -405,12 +405,11 @@ class Home extends Component {
                                   />
                                 </g>
                               </svg>
-                              <Link
+                              <p
                                 className="main-random-button"
-                                to={`werkdetail/${this.getRandomArtWork()}`}
                               >
                                 ga naar een <br /> willekeurig kunstwerk
-                              </Link>
+                              </p>
                             </div>
                           </Link>
                         </div>
