@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { app } from "./config/fire.js";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import Logout from "./pages/Logout.jsx";
@@ -9,7 +9,6 @@ import Werken from "./pages/Werken.jsx";
 import WerkDetail from "./pages/WerkDetail.jsx";
 import Account from "./pages/Account.jsx";
 import Captions from "./pages/Captions.jsx";
-import NoMatch from "./pages/NoMatch.jsx";
 import { StatusContext } from "./context/statusContext.js";
 import Loading from "./components/Loading.jsx";
 
@@ -40,6 +39,8 @@ class App extends Component {
     });
   };
 
+  createRedirect = to => () => <Redirect to={to} />
+
   render() {
     if (this.state.loading) {
       return <Loading />;
@@ -56,8 +57,8 @@ class App extends Component {
             <Route exact path="/account" component={Account} />
             <Route exact path="/captions" component={Captions} />
             <Route path="/werkdetail/:id" component={WerkDetail} />
-            <Route component={NoMatch} />
-          </Switch>
+            <Route path="/*" component={this.createRedirect('/home')} />
+            </Switch>
         </div>
       </StatusContext.Provider>
     );
