@@ -189,7 +189,7 @@
 }
 
 .svg-zoom-svg {
-  transform: scale(0.9);
+  transform: scale(.9);
   transform-origin: 50% 50%;
 }
 
