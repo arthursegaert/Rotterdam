@@ -16,7 +16,7 @@
 
 .caption-content {
   grid-area: content;
-  font-family: 'sinkinsans', sans-serif;
+  font-family: sinkinsans, sans-serif;
   word-wrap: break-word;
 }
 

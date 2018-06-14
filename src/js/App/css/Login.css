@@ -10,7 +10,7 @@
 }
 
 .two-sec-page-login {
-  background-image: linear-gradient(245deg, black 82%, #742DAB 110%);
+  background-image: linear-gradient(245deg, black 82%, #742dab 110%);
 }
 
 .page-title-login {
@@ -55,14 +55,10 @@
   font-size: 18.2rem;
   opacity: .1;
   line-height: 1.05;
-  -webkit-text-stroke: .3rem white;
-  /* stylelint-disable-line */
-  text-stroke: .3rem white;
-  /* stylelint-disable-line */
-  -webkit-text-fill-color: transparent;
-  /* stylelint-disable-line */
-  text-fill-color: transparent;
-  /* stylelint-disable-line */
+  -webkit-text-stroke: .3rem white; /* stylelint-disable-line */
+  text-stroke: .3rem white; /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent; /* stylelint-disable-line */
+  text-fill-color: transparent; /* stylelint-disable-line */
 }
 
 .section-right-login {
@@ -269,8 +265,8 @@
   right: 0;
 }
 
-@media (width >=10px) and (width <=1000px) {
-  
+@media (width >= 10px) and (width <= 1000px) {
+
   .login-circle, .registreer-circle {
     display: none;
   }
@@ -278,7 +274,7 @@
   .two-sec-page {
     max-height: 100vh;
     grid-template: .5fr 3fr / 5% 1fr 1fr 5%;
-    grid-template-areas: '. title nav .' '. content content .'
+    grid-template-areas: '. title nav .' '. content content .';
   }
 
   .section-left-login::after {

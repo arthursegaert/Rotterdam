@@ -1,13 +1,9 @@
 .two-sec-page-account {
-  background-image: linear-gradient(35deg, black 80%, #283dd2);
-  color: white;
-}
-
-.two-sec-page-account {
   display: grid;
   grid-template: 1fr 4fr / 1fr 1fr;
   grid-template-areas: 'title nav-acc' 'sec1 sec2';
   height: 100vh;
+  background-image: linear-gradient(35deg, black 80%, #283dd2);
 }
 
 .account-nav {
@@ -30,8 +26,7 @@
   display: grid;
   grid-template: repeat(6, 1fr) 1fr / repeat(2, 1fr);
   grid-template-areas: 'label1 label1' 'input1 input1' 'label2 label2' 'input2 input2' 'label3 label3' 'input3 input3' 'button1 .';
-  grid-column-gap: 6vmax;
-  grid-row-gap: 2vh;
+  grid-gap: 2vh / 6vmax;
   width: 32vw;
 }
 
@@ -47,14 +42,10 @@
   font-size: 4.5rem;
   color: white;
   font-family: 'Integral CF', sans-serif;
-  -webkit-text-stroke: .1rem #f4442b;
-  /* stylelint-disable-line */
-  text-stroke: .1rem #f4442b;
-  /* stylelint-disable-line */
-  -webkit-text-fill-color: transparent;
-  /* stylelint-disable-line */
-  text-fill-color: transparent;
-  /* stylelint-disable-line */
+  -webkit-text-stroke: .1rem #f4442b; /* stylelint-disable-line */
+  text-stroke: .1rem #f4442b; /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent; /* stylelint-disable-line */
+  text-fill-color: transparent; /* stylelint-disable-line */
   font-style: italic;
 }
 
@@ -83,14 +74,10 @@
   font-size: 3.5rem;
   color: white;
   font-family: 'Integral CF', sans-serif;
-  -webkit-text-stroke: .1rem #742dab;
-  /* stylelint-disable-line */
-  text-stroke: .1rem #742dab;
-  /* stylelint-disable-line */
-  -webkit-text-fill-color: transparent;
-  /* stylelint-disable-line */
-  text-fill-color: transparent;
-  /* stylelint-disable-line */
+  -webkit-text-stroke: .1rem #742dab; /* stylelint-disable-line */
+  text-stroke: .1rem #742dab; /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent; /* stylelint-disable-line */
+  text-fill-color: transparent; /* stylelint-disable-line */
 }
 
 .section-right-account-captions {
@@ -107,6 +94,7 @@
 }
 
 @media only screen and (max-width: 1024px) {
+
   .two-sec-page-account {
     grid-area: nav-acc;
   }

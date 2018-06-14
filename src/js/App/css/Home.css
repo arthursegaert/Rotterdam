@@ -332,7 +332,7 @@
   resize: none;
   height: 28rem;
   width: 100%;
-  font-family: 'sinkinsans', sans-serif;
+  font-family: sinkinsans, sans-serif;
   color: white;
   font-size: 3rem;
   background-color: #f4442b;
@@ -393,7 +393,7 @@
 }
 
 .item3-captions h3 {
-  font-family: 'sinkinsans', sans-serif;
+  font-family: sinkinsans, sans-serif;
   font-size: 2rem;
 }
 

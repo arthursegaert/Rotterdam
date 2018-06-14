@@ -1,6 +1,6 @@
 import firebase from "firebase/app";
-import database from "firebase/database";
-import auth from "firebase/auth";
+import  "firebase/database";
+import  "firebase/auth";
 import Rebase from "re-base";
 
 const config = {
