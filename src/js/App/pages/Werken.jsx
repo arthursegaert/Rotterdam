@@ -53,6 +53,9 @@ class Werken extends Component {
                   ["werken-kunstwerk", kunstwerk.id].join("-")
                 ].join(" ")}
               >
+              <h2 className="hide">
+              {kunstenaarVoornaam}
+              </h2>
                 <Link
                   className={"kunstwerk-container"}
                   to={{

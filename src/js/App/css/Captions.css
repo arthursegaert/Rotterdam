@@ -76,8 +76,7 @@
 }
 
 .captions-captions {
-  height: 30rem;
-  overflow-y: scroll;
+  height: 70rem;
 }
 
 .captions-captions .caption {
