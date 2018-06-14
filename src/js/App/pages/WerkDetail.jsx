@@ -114,6 +114,10 @@ class WerkDetail extends Component {
     }
   };
 
+  handleInputChange = () => {
+    this.setState({ zoom: false });
+  };
+
   render() {
     if (this.state.loading) {
       return <Loading />;
@@ -123,7 +127,12 @@ class WerkDetail extends Component {
         kunstwerk => kunstwerk.id === kunstwerkId
       )[0];
       if (this.state.zoom) {
-        return <ImageZoom kunstwerk={result} />;
+        return (
+          <ImageZoom
+            kunstwerk={result}
+            onChange={e => this.handleInputChange("location", e)}
+          />
+        );
       }
       if (this.state.match) {
         return (
