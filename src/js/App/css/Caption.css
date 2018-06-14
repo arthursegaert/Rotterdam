@@ -6,7 +6,7 @@
   width: 100%;
   display: grid;
   grid-row-gap: 1rem;
-  grid-template: 1.5fr 1fr / 1fr .8fr .8fr;
+  grid-template: 1fr .5fr / 1fr 1fr .8fr;
   grid-template-areas: 'content content content' 'author link like';
 }
 
@@ -29,6 +29,7 @@
 .caption-link-sticker {
   grid-area: link;
   justify-self: flex-end;
+  text-align: center;
 }
 
 .caption-link-like {

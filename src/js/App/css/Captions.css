@@ -62,10 +62,6 @@
   margin-bottom: 2rem;
 }
 
-.caption {
-  grid-template-areas: 'content content content' 'author author link ';
-}
-
 /*RESPONSIVE*/
 
 @media only screen and (max-width: 1380px) {
