@@ -44,7 +44,7 @@ class Account extends Component {
                   Mijn awards
                 </h2>
                 <form className="section-left-awards-form" onClick={this.handleAddAward}>
-                  <label className="section-left-label">Offline code</label>
+                  <label className="section-left-label awards-label">Offline code</label>
                   <input
                     name="offlinecode"
                     type="text"
@@ -54,7 +54,7 @@ class Account extends Component {
                     className="section-left-input"
                   />
                   <input
-                    className="section-left-form-submit"
+                    className="section-left-form-submit awards-submit"
                     type="submit"
                     value="submit"
                   />
