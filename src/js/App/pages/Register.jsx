@@ -87,7 +87,7 @@ class Register extends Component {
       return (
         <Redirect
           to={{
-            pathname: "/",
+            pathname: "/home",
             state: { referer: "register" }
           }}
         />

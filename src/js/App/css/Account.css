@@ -134,6 +134,11 @@
   justify-self: center;
 }
 
+.logout-subtitle {
+  font-size: 3rem;
+  padding-top: 3rem;
+}
+
 @media only screen and (max-width: 1024px) {
 
   .two-sec-page-account {

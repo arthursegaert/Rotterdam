@@ -73,7 +73,7 @@ class Login extends Component {
         <div>
           <Redirect
             to={{
-              pathname: "/",
+              pathname: "/home",
               state: { referer: "login" }
             }}
           />) />

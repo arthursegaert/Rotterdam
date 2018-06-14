@@ -106,6 +106,12 @@ class Account extends Component {
                   <li className="section-left-award">12/150</li>
                   <li className="section-left-award">11/150</li>
                 </ul>
+                <Link
+                  className="page-subtitle section-right-subtitle logout-subtitle"
+                  to="/logout"
+                >
+                  Logout
+                </Link>
               </section>
               <section className="section-right section-right-account">
                 <h2 className="page-subtitle section-right-subtitle">
@@ -123,6 +129,7 @@ class Account extends Component {
                       caption={caption}
                       userName={caption.userName}
                       deleteOption="true"
+
                     />
                   ))}
                 </div>

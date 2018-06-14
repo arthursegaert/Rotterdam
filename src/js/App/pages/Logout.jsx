@@ -23,7 +23,7 @@ class Logout extends Component {
       return (
         <Redirect
           to={{
-            pathname: "/",
+            pathname: "/home",
             state: { referer: "logout" }
           }}
         />
