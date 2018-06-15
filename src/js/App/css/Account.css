@@ -1,0 +1,195 @@
+.two-sec-page-account {
+  display: grid;
+  grid-template: 1fr 4fr / 1fr 1fr;
+  grid-template-areas: 'title nav-acc' 'sec1 sec2';
+  height: 100vh;
+  background-image: linear-gradient(35deg, black 80%, #283dd2);
+}
+
+.account-nav {
+  grid-area: nav-acc;
+}
+
+.page-title-account {
+  grid-area: title;
+  margin-left: 5rem;
+}
+
+.section-left-account, .section-right-account {
+  width: 40vw;
+  max-width: 50rem;
+  height: auto;
+}
+
+.section-left-form-account {
+  grid-area: form;
+  display: grid;
+  grid-template: repeat(6, 1fr) 1fr / repeat(2, 1fr);
+  grid-template-areas: 'label1 label1' 'input1 input1' 'label2 label2' 'input2 input2' 'label3 label3' 'input3 input3' 'button1 .';
+  grid-gap: 2vh / 6vmax;
+  width: 32vw;
+}
+
+.section-left-form-account .section-left-input:nth-of-type(3) {
+  grid-area: input3;
+}
+
+.section-left-form-account .section-left-form-submit {
+  grid-area: button1;
+}
+
+.page-subtitle {
+  font-size: 4.5rem;
+  color: white;
+  font-family: 'Integral CF', sans-serif;
+  -webkit-text-stroke: .1rem #f4442b; /* stylelint-disable-line */
+  text-stroke: .1rem #f4442b; /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent; /* stylelint-disable-line */
+  text-fill-color: transparent; /* stylelint-disable-line */
+  font-style: italic;
+}
+
+.page-subtitle:hover {
+  -webkit-text-fill-color: #f4442b; /* stylelint-disable-line */
+  text-fill-color: #f4442b; /* stylelint-disable-line */
+  color: #f4442b;
+}
+
+.section-left-account {
+  display: flex;
+  flex-direction: column;
+  grid-area: sec1;
+}
+
+.section-right-account {
+  grid-area: sec2;
+  display: grid;
+  grid-template: repeat(3, min-content) / 1fr;
+  grid-row-gap: 5vh;
+  grid-template-areas: 'title' 'text' 'captions';
+}
+
+.section-right-account-numbercaptions {
+  grid-area: text;
+  color: white;
+  font-family: integral, sans-serif;
+}
+
+.section-right-account-numberupvotes {
+  grid-area: text;
+  font-size: 3.5rem;
+  color: white;
+  font-family: integral, sans-serif;
+  -webkit-text-stroke: .1rem #742dab; /* stylelint-disable-line */
+  text-stroke: .1rem #742dab; /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent; /* stylelint-disable-line */
+  text-fill-color: transparent; /* stylelint-disable-line */
+}
+
+.section-right-account-captions {
+  grid-area: captions;
+  align-self: flex-start;
+  display: grid;
+  grid-row-gap: 2vh;
+  height: 45vh;
+}
+
+.page-title {
+  align-self: center;
+}
+
+.section-left-awards-form {
+  display: flex;
+  flex-direction: column;
+  height: 15rem;
+  justify-content: space-between;
+}
+
+.awards-label {
+  align-self: flex-start;
+}
+
+.awards-submit {
+  align-self: flex-end;
+  height: 4rem;
+}
+
+.section-left-awards {
+  padding-top: 2rem;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+.section-left-award {
+  background-color: transparent;
+  border: .1rem solid #283dd2;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+}
+
+.logout-subtitle {
+  font-size: 3rem;
+  padding-top: 3rem;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .two-sec-page-account {
+    grid-template: 20rem 65rem 50rem / .5fr .5fr;
+    grid-template-areas: 'title nav-acc' 'sec1 sec1' 'sec2 sec2';
+  }
+
+  .section-left-account {
+    width: 100vw;
+  }
+
+  .section-right-account {
+    width: 100vw;
+    margin: 0 auto;
+  }
+
+  .subtitle-right-not-signed-in, .subtitle-left-not-signed-in {
+    position: relative;
+  }
+
+  .subtitle-left-not-signed-in {
+    top: 5rem;
+    left: 5rem;
+  }
+
+  .subtitle-right-not-signed-in {
+    top: -50rem;
+    right: 5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .page-title {
+    display: none;
+  }
+
+  .section-left-award {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .section-left-account {
+    width: 90vw;
+    max-width: 30rem;
+    margin: 0 auto;
+    padding-left: 1rem;
+  }
+
+  .section-left-awards {
+    grid-gap: 1rem;
+  }
+
+}

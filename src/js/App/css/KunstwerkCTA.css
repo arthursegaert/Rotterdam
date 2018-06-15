@@ -1,0 +1,11 @@
+.svg-rotater:hover .link-svg-text {
+  transform-origin: center;
+  animation: rotator 6s linear running infinite forwards;
+}
+
+@keyframes rotator {
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

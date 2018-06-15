@@ -1,0 +1,159 @@
+.captions-background {
+  background-image: linear-gradient(38deg, black 82%, #f4442b);
+  color: white;
+}
+
+.captions-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.captions-h1 {
+  font-family: archivo, sans-serif;
+  text-transform: uppercase;
+  font-size: 5rem;
+  margin-left: 5rem;
+}
+
+.captions-h2 {
+  text-transform: uppercase;
+  font-family: archivo, sans-serif;
+  -webkit-text-stroke: .1rem #f4442b; /* stylelint-disable-line */
+  text-stroke: .1rem #f4442b; /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent; /* stylelint-disable-line */
+  text-fill-color: transparent; /* stylelint-disable-line */
+  color: transparent;
+  font-size: 4rem;
+}
+
+.captions-nadruk {
+  text-decoration: underline;
+}
+
+.captions-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.captions-section {
+  width: 44vw;
+}
+
+.captions-section-instagram {
+  width: 85vw;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.captions-a-instagram {
+  color: white;
+  text-decoration: none;
+}
+
+.captions-div-instagram {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.captions-div-instagram-images {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.captions-div-instagram-img {
+  width: 28rem;
+  height: 28rem;
+  margin-bottom: 2rem;
+}
+
+.captions-section article {
+  margin: 2rem 0;
+
+}
+
+.captions-captions {
+  height: 70rem;
+}
+
+.captions-captions .caption {
+  margin-bottom: 3rem;
+}
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 1380px) {
+
+  .captions-div-instagram-img {
+    width: 24rem;
+    height: 24rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .captions-div-instagram-img {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .captions-h2 {
+    font-size: 3.2rem;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+
+  .captions-div-instagram-img {
+    width: 28rem;
+    height: 28rem;
+  }
+
+  .captions-div {
+    flex-direction: column;
+  }
+
+  .captions-section {
+    width: 70vw;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+
+  .captions-h1 {
+    font-size: 4rem;
+    display: none;
+  }
+
+  .captions-wrap {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .captions-h2 {
+    font-size: 2rem;
+  }
+
+  .captions-div-instagram {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .caption {
+    grid-template: 1.5fr 1fr 1fr/ 1fr .8fr .8fr;
+    grid-template-areas: 'content content content' 'author author author' 'link link .';
+  }
+
+  .captions-section {
+    width: 90vw;
+  }
+
+  .caption-link-sticker {
+    justify-self: flex-start;
+  }
+
+}

@@ -1,0 +1,67 @@
+.nav {
+  padding: 1.5rem;
+}
+
+.nav-list-item-link {
+  color: white;
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-family: integral, sans-serif;
+}
+
+.nav-list-item-link-active .nav-list-item-link-title .nav-list-item-link-title-inner {
+  -webkit-text-fill-color: white; /* stylelint-disable-line */
+  text-fill-color: white; /* stylelint-disable-line */
+  color: white;
+}
+
+.nav-list-item-link-title-inner {
+  display: block;
+  position: relative;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: .15rem;
+  line-height: 1.25;
+  text-align: right;
+}
+
+.nav-list-item-link-title-inner[data-hover] {
+  -webkit-text-stroke: .1rem white; /* stylelint-disable-line */
+  text-stroke: .1rem white; /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent; /* stylelint-disable-line */
+  text-fill-color: transparent; /* stylelint-disable-line */
+  color: transparent;
+}
+
+.nav-list-item-link-title-inner::before {
+  content: attr(data-hover);
+  text-align: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-text-stroke: 0; /* stylelint-disable-line */
+  text-stroke: 0; /* stylelint-disable-line */
+  -webkit-text-fill-color: white; /* stylelint-disable-line */
+  text-fill-color: white; /* stylelint-disable-line */
+  color: white;
+  transition: all .5s;
+}
+
+.nav-list-item-link:hover .nav-list-item-link-title-inner::before {
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .header-wrap .nav {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+  }
+
+}

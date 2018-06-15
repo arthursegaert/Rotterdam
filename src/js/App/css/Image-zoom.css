@@ -1,0 +1,27 @@
+.image-zoom-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-arrow-svg {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 4vmax;
+}
+
+.back-arrow-svg:hover {
+  cursor: pointer;
+}
+
+.image-zoom-container .back-arrow {
+  fill: white;
+}
+
+.image-zoom {
+  width: 50%;
+  object-fit: fill;
+}

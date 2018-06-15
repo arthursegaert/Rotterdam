@@ -1,0 +1,325 @@
+.two-sec-page {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+}
+
+.page-title {
+  font-size: 5rem;
+  color: white;
+  font-family: integral, sans-serif;
+}
+
+.two-sec-page-login {
+  background-image: linear-gradient(245deg, black 82%, #742dab 110%);
+}
+
+.page-title-login {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  margin-left: 5rem;
+}
+
+.login-nav, .register-nav {
+  z-index: 100;
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+}
+
+/* linker sectie */
+
+.section-left {
+  grid-row: 1 / 4;
+  grid-column: 1 / 3;
+  height: 100vh;
+  width: 40vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  grid-template-areas: 'title title' 'form form' 'link link';
+  position: relative;
+  z-index: 10;
+  grid-area: sec1;
+}
+
+.section-left-login::after {
+  position: absolute;
+  z-index: -10;
+  content: 'Entering peoples fantasy';
+  top: 20vh;
+  left: -4vw;
+  display: block;
+  max-width: 50%;
+  text-align: center;
+  font-style: italic;
+  font-family: integral, sans-serif;
+  color: white;
+  font-size: 18.2rem;
+  opacity: .1;
+  line-height: 1.05;
+  -webkit-text-stroke: .3rem white; /* stylelint-disable-line */
+  text-stroke: .3rem white; /* stylelint-disable-line */
+  -webkit-text-fill-color: transparent; /* stylelint-disable-line */
+  text-fill-color: transparent; /* stylelint-disable-line */
+}
+
+.section-right-login {
+  background-image: linear-gradient(35deg, #0000 65%, #283dd2 90%), url(../../../assets/img/koningen.jpg);
+}
+
+.section-left-form-login {
+  grid-area: form;
+  display: grid;
+  grid-template: repeat(4, 1fr) .7fr / repeat(2, 1fr);
+  grid-template-areas: 'label1 label1' 'input1 input1' 'label2 label2' 'input2 input2' 'button1 button2';
+  grid-column-gap: 6vmax;
+  margin-left: 6rem;
+  width: 32vw;
+}
+
+.section-left-label {
+  color: white;
+  font-size: 2rem;
+  text-transform: lowercase;
+  align-self: flex-end;
+}
+
+.section-left-label:nth-child(1) {
+  grid-area: label1;
+}
+
+.section-left-label:nth-child(3) {
+  grid-area: label2;
+}
+
+.section-left-input {
+  background: none;
+  height: 4rem;
+  color: white;
+  font-size: 2rem;
+  padding-left: .5rem;
+  border: solid .1rem;
+}
+
+.section-left-input:nth-child(2) {
+  grid-area: input1;
+}
+
+.section-left-input:nth-child(4) {
+  grid-area: input2;
+}
+
+.section-left-form-submit, .section-left-form-fb {
+  border: none;
+  font-family: integral, sans-serif;
+  color: white;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.section-left-form-submit:hover, .section-left-form-fb:hover {
+  cursor: pointer;
+}
+
+.section-left-form-submit {
+  background-color: #f14634;
+}
+
+.section-left-form-fb {
+  background-color: #283dd2;
+}
+
+.section-left-button {
+  grid-area: link;
+  color: white;
+  font-size: 2rem;
+  padding-top: 2rem;
+}
+
+.section-left-button-link {
+  color: white;
+  text-decoration: underline;
+  padding-left: 1rem;
+}
+
+/* rechter sectie */
+
+.section-right {
+  grid-row: 1 / 4;
+  grid-column: 3 / 5;
+  height: 100vh;
+  width: 50vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 10;
+  display: grid;
+  grid-area: sec2;
+  align-items: flex-end;
+  justify-items: flex-end;
+}
+
+.section-right-link {
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+.link-svg-text {
+  transform-origin: center;
+  animation: rotator 6s linear paused infinite forwards;
+}
+
+.section-right-link-svg {
+  width: 10rem;
+  height: 10rem;
+}
+
+/* circles */
+
+.white-circle {
+  position: relative;
+  overflow: hidden;
+}
+
+.login-circle:nth-of-type(1), .registreer-circle:nth-of-type(1) {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
+
+.login-circle:nth-of-type(1)::after {
+  position: fixed;
+  content: '';
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem;
+  background-color: white;
+  z-index: 20;
+  right: 96vw;
+}
+
+.login-circle:nth-of-type(2), .registreer-circle:nth-of-type(2) {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+
+.login-circle:nth-of-type(2)::after {
+  position: fixed;
+  content: '';
+  border-radius: 50%;
+  width: 17.1rem;
+  height: 17.1rem;
+  background-color: white;
+  z-index: 20;
+  top: -5vh;
+}
+
+.login-circle:nth-of-type(3) {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+}
+
+.login-circle:nth-of-type(3)::after {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  width: 8.7rem;
+  height: 8.7rem;
+  background-color: white;
+  z-index: 20;
+  left: 5vw;
+  top: 15vh;
+}
+
+.login-circle:nth-of-type(4) {
+  grid-row: 3 / 4;
+  grid-column: 2 / 4;
+}
+
+.login-circle:nth-of-type(4)::after {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  width: 12.9rem;
+  height: 12.9rem;
+  background-color: white;
+  z-index: 20;
+  right: 21.5vw;
+  top: 13vh;
+}
+
+.login-circle:nth-of-type(5) {
+  grid-row: 2 / 4;
+  grid-column: 3 / 5;
+}
+
+.login-circle:nth-of-type(5)::after {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  width: 18.6rem;
+  height: 18.6rem;
+  background-color: white;
+  z-index: 20;
+  right: 18vw;
+  top: 13vh;
+}
+
+.login-nav {
+  position: absolute;
+  z-index: 100;
+  right: 0;
+}
+
+@media (width >= 10px) and (width <= 1000px) {
+
+  .login-circle, .registreer-circle {
+    display: none;
+  }
+
+  .two-sec-page {
+    max-height: 100vh;
+    grid-template: .5fr 3fr / 5% 1fr 1fr 5%;
+    grid-template-areas: '. title nav .' '. content content .';
+  }
+
+  .section-left-login::after {
+    content: '';
+  }
+
+  .page-title-login, .page-title-register {
+    grid-area: title;
+  }
+
+  .login-nav, .page-title-login, .register-nav, .page-title-register {
+    z-index: 1;
+  }
+
+  .section-left-login, .section-left-register {
+    grid-area: content;
+    height: 60vh;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+  }
+
+  .section-right-login, .section-right-register {
+    grid-row: 1 / 3;
+    grid-column: 1 / 5;
+    opacity: .3;
+    z-index: 0;
+    width: 100%;
+  }
+
+  .section-right-link-svg {
+    display: none;
+  }
+
+  .section-left-form-login, .section-left-register .section-left-form-register {
+    width: 80%;
+    height: 150%;
+    margin-left: 0;
+    grid-column-gap: 4vmax;
+  }
+
+  .section-left-button {
+    padding-top: 12rem;
+  }
+}

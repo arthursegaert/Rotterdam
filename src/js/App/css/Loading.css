@@ -1,0 +1,12 @@
+.loading-page {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-page-spinner {
+  width: 30rem;
+  height: 30rem;
+}

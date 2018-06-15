@@ -1,0 +1,33 @@
+.flash-info, .flash-error {
+  text-transform: uppercase;
+  font-family: archivo, sans-serif;
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  padding: 3rem 0;
+  text-align: center;
+  animation: showFlash 2s 0s 1 ease-in-out forwards;
+  z-index: 100000000000;
+}
+
+.flash-error {
+  background-color: #ec463d;
+  opacity: .8;
+}
+
+.flash-info {
+  opacity: .8;
+  background-color: white;
+}
+
+@keyframes showFlash {
+
+  0%, 100% {
+    transform: translateY(-10rem);
+  }
+
+  20%, 70% {
+    transform: translateY(0);
+  }
+}

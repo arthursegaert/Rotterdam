@@ -1,0 +1,6 @@
+{
+  "globals": {
+    "Anime": true
+  },
+  "extends": "devine/react"
+}
