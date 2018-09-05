@@ -38,7 +38,6 @@
   grid-template-areas: 'title title' 'form form' 'link link';
   position: relative;
   z-index: 10;
-  grid-area: sec1;
 }
 
 .section-left-login::after {
@@ -152,7 +151,6 @@
   background-repeat: no-repeat;
   z-index: 10;
   display: grid;
-  grid-area: sec2;
   align-items: flex-end;
   justify-items: flex-end;
 }
